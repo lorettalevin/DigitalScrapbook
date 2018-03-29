@@ -5,7 +5,6 @@ const bodyParser = require('body-parser');
 // const db = require('./db');
 const csrf = require('csurf');
 const cookieSession = require("cookie-session");
-const bcrypt = require('bcryptjs');
 const multer = require('multer');
 const uidSafe = require('uid-safe');
 const path = require('path');
@@ -68,34 +67,6 @@ const uploader = multer({
         fileSize: 2097152
     }
 });
-
-function checkPassword(textEnteredInLoginForm, hashedPasswordFromDatabase) {
-    return new Promise(function(resolve, reject) {
-        bcrypt.compare(textEnteredInLoginForm, hashedPasswordFromDatabase, function(err, doesMatch) {
-            if (err) {
-                reject(err);
-            } else {
-                resolve(doesMatch);
-            }
-        });
-    });
-}
-
-function hashPassword(plainTextPassword) {
-    return new Promise(function(resolve, reject) {
-        bcrypt.genSalt(function(err, salt) {
-            if (err) {
-                return reject(err);
-            }
-            bcrypt.hash(plainTextPassword, salt, function(err, hash) {
-                if (err) {
-                    return reject(err);
-                }
-                resolve(hash);
-            });
-        });
-    });
-}
 
 ////////////////////////////////////////////////////////////////////////////////ROUTES SECTION
 

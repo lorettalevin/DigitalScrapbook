@@ -1,22 +1,24 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import Welcome from './welcome';
 
 let router;
 
-// if (location.pathname == '/welcome') {
-//     router = <Welcome />
-// } else {
+if (location.pathname == '/welcome') {
+    router = <Welcome />
+}
+// else {
 //     router = <App />
 // }
 
 
 ReactDOM.render(
-    <HelloWorld />,
+    <Welcome />,
     document.querySelector('main')
 );
 
-function HelloWorld() {
-    return (
-        <div>Hello, World!</div>
-    );
-}
+// function HelloWorld() {
+//     return (
+//         <div>Hello, World!</div>
+//     );
+// }
