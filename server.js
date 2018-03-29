@@ -5,7 +5,6 @@ const bodyParser = require('body-parser');
 // const db = require('./db');
 const csrf = require('csurf');
 const cookieSession = require("cookie-session");
-const bcrypt = require('bcryptjs');
 const multer = require('multer');
 const uidSafe = require('uid-safe');
 const path = require('path');
@@ -69,6 +68,21 @@ const uploader = multer({
     }
 });
 
+<<<<<<< HEAD
+////////////////////////////////////////////////////////////////////////////////ROUTES SECTION
+
+
+
+
+
+
+
+
+
+
+
+
+=======
 function checkPassword(textEnteredInLoginForm, hashedPasswordFromDatabase) {
     return new Promise(function(resolve, reject) {
         bcrypt.compare(textEnteredInLoginForm, hashedPasswordFromDatabase, function(err, doesMatch) {
@@ -98,6 +112,7 @@ function hashPassword(plainTextPassword) {
 }
 
 //////////////////////////////////////////////////////////////////////////////
+>>>>>>> master
 
 app.use(require('./routers/auth-router'));
 app.use(require('./routers/scrapbook-router'));
