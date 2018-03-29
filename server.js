@@ -68,6 +68,7 @@ const uploader = multer({
     }
 });
 
+<<<<<<< HEAD
 ////////////////////////////////////////////////////////////////////////////////ROUTES SECTION
 
 
@@ -81,9 +82,44 @@ const uploader = multer({
 
 
 
+=======
+function checkPassword(textEnteredInLoginForm, hashedPasswordFromDatabase) {
+    return new Promise(function(resolve, reject) {
+        bcrypt.compare(textEnteredInLoginForm, hashedPasswordFromDatabase, function(err, doesMatch) {
+            if (err) {
+                reject(err);
+            } else {
+                resolve(doesMatch);
+            }
+        });
+    });
+}
 
+function hashPassword(plainTextPassword) {
+    return new Promise(function(resolve, reject) {
+        bcrypt.genSalt(function(err, salt) {
+            if (err) {
+                return reject(err);
+            }
+            bcrypt.hash(plainTextPassword, salt, function(err, hash) {
+                if (err) {
+                    return reject(err);
+                }
+                resolve(hash);
+            });
+        });
+    });
+}
 
 //////////////////////////////////////////////////////////////////////////////
+>>>>>>> master
+
+app.use(require('./routers/auth-router'));
+app.use(require('./routers/scrapbook-router'));
+app.use(require('./routers/users-router'));
+
+//////////////////////////////////////////////////////////////////////////////
+
 app.get('*', function(req, res) {
     res.sendFile(__dirname + '/index.html');
 });
