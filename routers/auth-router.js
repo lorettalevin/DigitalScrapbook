@@ -1,7 +1,6 @@
 const express = require('express');
-<<<<<<< HEAD
 const router = express.Router();
-const db = require('./db');
+const db = require('../db');
 const bcrypt = require('bcryptjs');
 
 function checkPassword(textEnteredInLoginForm, hashedPasswordFromDatabase) {
@@ -86,21 +85,6 @@ router.post('/login', (req, res) => {
         });
     }
 });
-=======
-
-const router = express.Router();
 
 
-
-
->>>>>>> master
-
-
-
-
-
-<<<<<<< HEAD
 module.exports = router;
-=======
-module.exports = router
->>>>>>> master
