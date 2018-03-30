@@ -1,14 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Welcome from './welcome';
-import App from './app';
-import {BrowserRouter, Route} from 'react-router-dom';
+import Welcome from './Welcome';
+import App from './App';
 
 let router;
 
 if (location.pathname == '/welcome') {
+    console.log("rendering welcome", location.pathname);
     router = <Welcome />
 } else {
+    console.log("rendering app", location.pathname);
+
     router = <App />
 }
 

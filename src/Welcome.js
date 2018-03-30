@@ -1,17 +1,21 @@
 import React from 'react';
-import {BrowserRouter, Route} from 'react-router-dom';
 import Registration from './registration'
 import Login from './login'
+import {HashRouter, Route} from 'react-router-dom';
+
+
 
 export default function Welcome(props) {
+    console.log(location.pathname);
     return (
-        <div id="welcome">
-            <BrowserRouter>
-                    <div>
-                        <Route exact path="/registration" component={Registration}/>
-                        <Route path="/login" component={Login} />
-                    </div>
-            </BrowserRouter>
+        <div>
+            <h1>welcome</h1>
+            <HashRouter>
+                <div>
+                    <Route exact path="/" component={Registration}/>
+                    <Route exact path="/login" component={Login} />
+                </div>
+            </HashRouter>
         </div>
     );
 }
