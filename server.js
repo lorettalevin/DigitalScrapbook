@@ -68,7 +68,7 @@ const uploader = multer({
     }
 });
 
-<<<<<<< HEAD
+
 ////////////////////////////////////////////////////////////////////////////////ROUTES SECTION
 
 
@@ -82,7 +82,7 @@ const uploader = multer({
 
 
 
-=======
+
 function checkPassword(textEnteredInLoginForm, hashedPasswordFromDatabase) {
     return new Promise(function(resolve, reject) {
         bcrypt.compare(textEnteredInLoginForm, hashedPasswordFromDatabase, function(err, doesMatch) {
@@ -112,7 +112,7 @@ function hashPassword(plainTextPassword) {
 }
 
 //////////////////////////////////////////////////////////////////////////////
->>>>>>> master
+
 
 app.use(require('./routers/auth-router'));
 app.use(require('./routers/scrapbook-router'));
