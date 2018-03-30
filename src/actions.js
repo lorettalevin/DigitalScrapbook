@@ -1,10 +1,14 @@
 import axios from './axios';
 
-export function addScrapbook() {
-    return axios.post('/addscrapbook').then(resp => {
+export function addScrapbook(data) {
+    console.log("running addScrapbook", data);
+    return axios.post('/addscrapbook', data).then(resp => {
+        const { scrapbook_title, theme, color } = resp.data;
         return {
-            type: 'ADD_SCRAPBOOK',
-            scrapbook: resp.data.scrapbook
+            type: 'ADD_SCRAPBOOK_HANDLE_SUBMIT',
+            scrapbook_title,
+            theme,
+            color
         };
     });
 }

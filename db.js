@@ -32,7 +32,24 @@ function checkCredentials(email) {
     });
 }
 
+function addScrapbook(userID, theme, color, title) {
+    return new Promise((resolve, reject) => {
+        const q = `
+        INSERT INTO scrapbook (user_id, theme, color, scrapbook_title)
+        VALUES ($1, $2, $3, $4)
+        RETURNING id
+        `;
+        const params = [userID, theme, color, title];
+        db.query(q, params).then(results => {
+            resolve(results.rows[0]);
+        }).catch(err => {
+            reject(err);
+        });
+    });
+}
+
 module.exports = {
     insertUserInfo,
-    checkCredentials
+    checkCredentials,
+    addScrapbook
 };
