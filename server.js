@@ -2,7 +2,6 @@ const express = require('express');
 const app = express();
 const compression = require('compression');
 const bodyParser = require('body-parser');
-// const db = require('./db');
 const csrf = require('csurf');
 const cookieSession = require("cookie-session");
 const multer = require('multer');
