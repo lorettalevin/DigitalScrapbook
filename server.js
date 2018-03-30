@@ -72,8 +72,28 @@ app.use(require('./routers/auth-router'));
 app.use(require('./routers/scrapbook-router'));
 
 //////////////////////////////////////////////////////////////////////////////
+app.get('/welcome', (req, res) => {
+    if (req.session.id) {
+        res.redirect('/');
+    } else {
+        res.sendFile(__dirname + '/index.html');
+    }
+});
+
+app.get('/', (req, res) => {
+    if (!req.session.id) {
+        res.redirect('/welcome');
+    } else {
+        res.sendFile(__dirname + '/index.html');
+    }
+});
+
 
 app.get('*', function(req, res) {
+    if (!req.session.id) {
+        res.redirect('/welcome');
+    }
+
     res.sendFile(__dirname + '/index.html');
 });
 
