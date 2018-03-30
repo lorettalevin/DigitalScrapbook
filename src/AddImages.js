@@ -1,7 +1,7 @@
 import React from 'react';
 import axios from './axios';
 
-export default class Images extends React.Component {
+export default class AddImages extends React.Component {
     constructor() {
         super();
     }

@@ -36,7 +36,7 @@ export default class Registration extends React.Component {
     render() {
         const {first, last, email, password} = this.state
         return (
-            <div>
+        <div>
             {this.state.error && <div>{this.state.errorMessage}</div>}
             <div>
                 <form>
