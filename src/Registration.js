@@ -37,16 +37,16 @@ export default class Registration extends React.Component {
 
         return (
         <div>
-            <h1>registration</h1>
+
             {this.state.error && <div>{this.state.errorMessage}</div>}
             <div>
-                <form>
+                <form id="registration-form">
                     <input onChange={this.handleChange} name="first" type="text" placeholder="First Name"/>
                     <input onChange={this.handleChange} name="last" type="text" placeholder="Last Name"/>
                     <input onChange={this.handleChange} name="email" type="text" placeholder="Email"/>
                     <input onChange={this.handleChange} name="password" type="password" placeholder="Password"/>
                     <div>
-                        <button onClick={this.handleSubmit}>SUBMIT</button>
+                        <button id="registration-button" onClick={this.handleSubmit}>SUBMIT</button>
                     </div>
                 </form>
             </div>
