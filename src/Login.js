@@ -36,7 +36,7 @@ export default class Login extends React.Component {
     }
 
     render() {
-        const {email, password} = this.state
+
         return (<div>
             {this.state.error && <div>{this.state.errorMessage}</div>}
             <div>
