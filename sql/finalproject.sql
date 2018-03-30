@@ -15,25 +15,24 @@ CREATE TABLE users (
 CREATE TABLE images (
         id SERIAL PRIMARY KEY,
         page_id INTEGER NOT NULL,
-        url VARCHAR (255),
-        description VARCHAR (255),
-        image_title VARCHAR (255),
+        url VARCHAR (255) NOT NULL,
+        description VARCHAR (255) NOT NULL,
+        image_title VARCHAR (255) NOT NULL,
         created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
     );
 
 CREATE TABLE scrapbook (
         id SERIAL PRIMARY KEY,
         user_id INTEGER NOT NULL,
-        theme VARCHAR (255),
-        size VARCHAR (255),
-        color VARCHAR (255),
-        scrapbook_title VARCHAR (255),
+        theme VARCHAR (255) NOT NULL,
+        color VARCHAR (255) NOT NULL,
+        scrapbook_title VARCHAR (255) NOT NULL,
         created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
     );
 
 CREATE TABLE pages (
         id SERIAL PRIMARY KEY,
         scrapbook_id INTEGER NOT NULL,
-        header VARCHAR (255),
-        description TEXT
+        header VARCHAR (255) NOT NULL,
+        created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
     );

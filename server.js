@@ -24,7 +24,6 @@ if (process.env.NODE_ENV != 'production') {
     app.use('/bundle.js', (req, res) => res.sendFile(`${__dirname}/bundle.js`));
 }
 
-
 app.use(express.static(__dirname + "/public"));
 
 app.use(compression());
@@ -67,55 +66,10 @@ const uploader = multer({
     }
 });
 
-
-////////////////////////////////////////////////////////////////////////////////ROUTES SECTION
-
-
-
-
-
-
-
-
-
-
-
-
-
-function checkPassword(textEnteredInLoginForm, hashedPasswordFromDatabase) {
-    return new Promise(function(resolve, reject) {
-        bcrypt.compare(textEnteredInLoginForm, hashedPasswordFromDatabase, function(err, doesMatch) {
-            if (err) {
-                reject(err);
-            } else {
-                resolve(doesMatch);
-            }
-        });
-    });
-}
-
-function hashPassword(plainTextPassword) {
-    return new Promise(function(resolve, reject) {
-        bcrypt.genSalt(function(err, salt) {
-            if (err) {
-                return reject(err);
-            }
-            bcrypt.hash(plainTextPassword, salt, function(err, hash) {
-                if (err) {
-                    return reject(err);
-                }
-                resolve(hash);
-            });
-        });
-    });
-}
-
 //////////////////////////////////////////////////////////////////////////////
-
 
 app.use(require('./routers/auth-router'));
 app.use(require('./routers/scrapbook-router'));
-app.use(require('./routers/users-router'));
 
 //////////////////////////////////////////////////////////////////////////////
 
