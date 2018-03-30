@@ -2,8 +2,6 @@ import React from 'react';
 import {BrowserRouter, Route} from 'react-router-dom';
 import Registration from './registration'
 import Login from './login'
-// import Logo from './logo';
-
 
 export default function Welcome(props) {
     return (
