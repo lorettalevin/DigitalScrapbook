@@ -41,6 +41,9 @@ router.post('/registration', (req, res) => {
         hashPassword(req.body.password).then(hash => {
             db.insertUserInfo(req.body.first, req.body.last, req.body.email, hash).then(results => {
                 req.session = {
+                    // first: req.body.first,
+                    // last: req.body.last,
+                    email: req.body.email,
                     id: results.id
                 };
                 res.json({success: true});
@@ -60,6 +63,7 @@ router.post('/login', (req, res) => {
             checkPassword(req.body.password, results.rows[0].hash).then(doesMatch => {
                 if (doesMatch) {
                     req.session = {
+                        email: req.body.email,
                         id: results.rows[0].id
                     };
                     res.json({success: true});

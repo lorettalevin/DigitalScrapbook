@@ -2,20 +2,29 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Welcome from './Welcome';
 import App from './App';
+import { createStore, applyMiddleware } from 'redux';
+import { Provider } from 'react-redux';
+import reduxPromise from 'redux-promise';
+import reducer from './reducers';
+import { composeWithDevTools } from 'redux-devtools-extension';
+
+export const store = createStore(reducer, composeWithDevTools(applyMiddleware(reduxPromise)));
 
 let router;
 
 if (location.pathname == '/welcome') {
-    console.log("rendering welcome", location.pathname);
     router = <Welcome />
 } else {
-    console.log("rendering app", location.pathname);
-
     router = <App />
 }
 
+const elem = (
+    <Provider store={store}>
+        { router }
+    </Provider>
+);
 
 ReactDOM.render(
-    router,
+    elem,
     document.querySelector('main')
 );
