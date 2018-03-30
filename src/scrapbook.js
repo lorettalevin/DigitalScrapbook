@@ -8,10 +8,10 @@ export default class Scrapbook extends React.Component {
     }
 
     render() {
-        {/*const {first, last, email, password} = this.state*/}
+
         return (
             <div>
-
+                SCRAPBOOK 
             </div>
     )}
 }

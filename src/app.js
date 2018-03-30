@@ -1,5 +1,9 @@
 import React from 'react';
 import axios from './axios';
+import AddScrapbook from './AddScrapbook';
+import MyScrapbooks from './MyScrapbooks';
+import EditScrapbook from './EditScrapbook';
+import Scrapbook from './Scrapbook';
 import {BrowserRouter, Route, Link} from 'react-router-dom'
 
 
@@ -10,7 +14,7 @@ export default class App extends React.Component {
 
     render() {
         return (
-            <div>
+        <div>
             <BrowserRouter>
                 <div>
                     {/*<nav>
@@ -28,6 +32,7 @@ export default class App extends React.Component {
                     <Route exact path="/scrapbook" component={Scrapbook} />
                 </div>
             </BrowserRouter>
-        </div>)
+        </div>
+        )
     }
 }
