@@ -21,8 +21,17 @@ router.get('/getmyscrapbooks', (req, res) => {
         res.json({
             success: true,
             scrapbooks
-        })
-    })
-})
+        });
+    });
+});
 
-module.exports = router
+router.get('/getsinglescrapbook', (req, res) => {
+    db.getScrapbook(req.session.id).then(scrapbooks => {
+        res.json({
+            success: true,
+            scrapbooks
+        });
+    });
+});
+
+module.exports = router;
