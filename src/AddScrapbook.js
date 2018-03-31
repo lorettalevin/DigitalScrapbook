@@ -22,7 +22,6 @@ class AddScrapbook extends React.Component {
     handleSubmit(e) {
         const { scrapbook_title, theme, color } = this.state;
         e.preventDefault();
-        console.log("TESTING THIS SHIT!", this.state);
         this.props.dispatch(addScrapbook({
             scrapbook_title,
             theme,
@@ -31,11 +30,11 @@ class AddScrapbook extends React.Component {
     }
 
     handleChange(e) {
-
         this.setState({
             [e.target.name]: e.target.value
         })
     }
+
     render() {
         return (
             <div>

@@ -1,6 +1,6 @@
 DROP TABLE IF EXISTS users;
 DROP TABLE IF EXISTS images;
-DROP TABLE IF EXISTS scrapbook;
+DROP TABLE IF EXISTS scrapbooks;
 DROP TABLE IF EXISTS pages;
 
 CREATE TABLE users (
@@ -21,7 +21,7 @@ CREATE TABLE images (
         created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
     );
 
-CREATE TABLE scrapbook (
+CREATE TABLE scrapbooks (
         id SERIAL PRIMARY KEY,
         user_id INTEGER NOT NULL,
         theme VARCHAR (255) NOT NULL,

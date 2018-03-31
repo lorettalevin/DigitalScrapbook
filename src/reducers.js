@@ -16,5 +16,11 @@ export default function reducer(state = INITIAL_STATE, action) {
         })
     }
 
+    if (action.type === 'GET_SCRAPBOOKS') {
+        state = Object.assign({}, state, {
+            scrapbooks: action.scrapbooks
+        })
+    }
+
     return state
 }
