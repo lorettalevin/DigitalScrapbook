@@ -22,6 +22,7 @@ class AddScrapbook extends React.Component {
     handleSubmit(e) {
         const { scrapbook_title, theme, color } = this.state;
         e.preventDefault();
+        console.log("TESTING THIS SHIT!", this.state);
         this.props.dispatch(addScrapbook({
             scrapbook_title,
             theme,
@@ -30,6 +31,7 @@ class AddScrapbook extends React.Component {
     }
 
     handleChange(e) {
+
         this.setState({
             [e.target.name]: e.target.value
         })
@@ -39,14 +41,14 @@ class AddScrapbook extends React.Component {
             <div>
                 <form>
                     <input onChange={this.handleChange} name="scrapbook_title" type="text" placeholder="Scrapbook Title"/>
-                    <select name="theme" id="">
+                    <select onChange={this.handleChange} name="theme" id="">
                         <option value="Default">Please select theme</option>
                         <option value="Travel">Travel</option>
                         <option value="New Year's Eve">New Year's Eve</option>
                         <option value="Graduation">Graduation</option>
                         <option value="Baby's First Milestones">Baby's First Milestones</option>
                     </select>
-                    <select name="color" id="">
+                    <select onChange={this.handleChange} name="color" id="">
                         <option value="Default">Please select color</option>
                         <option value="Blue">Blue</option>
                         <option value="Green">Green</option>
