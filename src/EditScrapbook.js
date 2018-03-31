@@ -21,8 +21,9 @@ class EditScrapbook extends React.Component {
     render() {
         return (
             <form>
-                <input onChange={this.handleChange} name="scrapbook_title" value={scrapbook.scrapbook_title} type="text" placeholder="Scrapbook Title"/>
-                <select onChange={this.handleChange} name="theme" id="">
+                <input onChange={this.handleChange} name="scrapbook_title" value={this.props.scrapbook_title} onChange={this.handleChange} name="theme" id="">
+                </input>
+                <select>
                     <option value="Default">Please select theme</option>
                     <option value="Travel">Travel</option>
                     <option value="New Year's Eve">New Year's Eve</option>
