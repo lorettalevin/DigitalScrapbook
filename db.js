@@ -64,9 +64,27 @@ function getScrapbooks(user_id) {
     });
 }
 
+function getScrapbook(user_id) {
+    return new Promise((resolve, reject) => {
+        const q = `
+        SELECT *
+        FROM scrapbooks
+        WHERE user_id = $1
+        `
+        const params = [user_id];
+        db.query(q, params).then(results => {
+            console.log("RESULTS ROWS pleaseeee", results.rows[0]);
+            resolve(results.rows[0]);
+        }).catch(err => {
+            reject(err);
+        });
+    });
+}
+
 module.exports = {
     insertUserInfo,
     checkCredentials,
     addScrapbook,
-    getScrapbooks
+    getScrapbooks,
+    getScrapbook
 };

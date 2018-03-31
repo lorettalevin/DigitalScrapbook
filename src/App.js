@@ -29,8 +29,8 @@ export default class App extends React.Component {
                     </nav>*/}
                     <Route exact path="/addscrapbook" component={AddScrapbook} />
                     <Route exact path="/myscrapbooks" component={MyScrapbooks} />
-                    <Route exact path="/editscrapbook" component={EditScrapbook} />
-                    <Route exact path="/scrapbook" component={Scrapbook} />
+                    <Route exact path="/editscrapbook/:id" component={EditScrapbook} />
+                    <Route exact path="/scrapbook/:id" component={Scrapbook} />
                 </div>
             </BrowserRouter>
         </div>
