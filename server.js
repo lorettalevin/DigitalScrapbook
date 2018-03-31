@@ -91,7 +91,7 @@ app.get('/', (req, res) => {
 
 app.get('*', function(req, res) {
     if (!req.session.id) {
-        res.redirect('/welcome');
+        return res.redirect('/welcome');
     }
 
     res.sendFile(__dirname + '/index.html');
