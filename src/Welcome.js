@@ -1,6 +1,5 @@
 import React from 'react';
-import Registration from './registration'
-import Login from './login'
+import Home from './Home'
 import {HashRouter, Route} from 'react-router-dom';
 
 export default function Welcome(props) {
@@ -8,8 +7,7 @@ export default function Welcome(props) {
         <div>
             <HashRouter>
                 <div>
-                    <Route exact path="/" component={Registration}/>
-                    <Route exact path="/login" component={Login} />
+                    <Route exact path="/" component={Home}/>
                 </div>
             </HashRouter>
         </div>
