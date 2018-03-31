@@ -1,7 +1,6 @@
 import axios from './axios';
 
 export function addScrapbook(data) {
-    console.log("running addScrapbook", data);
     return axios.post('/addscrapbook', data).then(resp => {
         const { scrapbook_title, theme, color, user_id } = resp.data;
         return {
@@ -13,3 +12,7 @@ export function addScrapbook(data) {
         };
     });
 }
+
+// export function getScrapbook(data) {
+//     return axios.get('getscrapbook', data)
+// }

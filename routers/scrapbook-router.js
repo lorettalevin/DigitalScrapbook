@@ -6,7 +6,6 @@ router.post('/addscrapbook', (req, res) => {
     const {theme, color, scrapbook_title} = req.body;
     db.addScrapbook(req.session.id, theme, color, scrapbook_title).then(
         results => {
-            console.log("RESUTLTS TS", results);
             res.json({
                 success: true,
                 scrapbook_id: results.id,
