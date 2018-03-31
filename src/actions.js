@@ -2,17 +2,23 @@ import axios from './axios';
 
 export function addScrapbook(data) {
     return axios.post('/addscrapbook', data).then(resp => {
-        const { scrapbook_title, theme, color, user_id } = resp.data;
+        const { scrapbook_title, theme, color, user_id, scrapbook_id } = resp.data;
         return {
             type: 'ADD_SCRAPBOOK_HANDLE_SUBMIT',
-            scrapbook_title,
+            user_id,
             theme,
             color,
-            user_id
+            scrapbook_title,
+            scrapbook_id
         };
     });
 }
 
-// export function getScrapbook(data) {
-//     return axios.get('getscrapbook', data)
-// }
+export function getScrapbooks() {
+    return axios.get('/getmyscrapbooks').then(resp => {
+        return {
+            type: 'GET_SCRAPBOOKS',
+            scrapbooks: resp.data.scrapbooks
+        };
+    });
+}

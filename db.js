@@ -35,7 +35,7 @@ function checkCredentials(email) {
 function addScrapbook(userID, theme, color, title) {
     return new Promise((resolve, reject) => {
         const q = `
-        INSERT INTO scrapbook (user_id, theme, color, scrapbook_title)
+        INSERT INTO scrapbooks (user_id, theme, color, scrapbook_title)
         VALUES ($1, $2, $3, $4)
         RETURNING id
         `;
@@ -48,8 +48,25 @@ function addScrapbook(userID, theme, color, title) {
     });
 }
 
+function getScrapbooks(user_id) {
+    return new Promise((resolve, reject) => {
+        const q = `
+        SELECT *
+        FROM scrapbooks
+        WHERE user_id = $1
+        `
+        const params = [user_id];
+        db.query(q, params).then(results => {
+            resolve(results.rows);
+        }).catch(err => {
+            reject(err);
+        });
+    });
+}
+
 module.exports = {
     insertUserInfo,
     checkCredentials,
-    addScrapbook
+    addScrapbook,
+    getScrapbooks
 };
