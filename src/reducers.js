@@ -1,6 +1,9 @@
 const INITIAL_STATE = {
-    scrapbook: {}
+    scrapbook: {},
+    scrapbooks: [],
+    pages: []
 };
+
 export default function reducer(state = INITIAL_STATE, action) {
 
     if (action.type === 'ADD_SCRAPBOOK_HANDLE_SUBMIT') {
@@ -31,6 +34,19 @@ export default function reducer(state = INITIAL_STATE, action) {
     if (action.type === 'EDIT_SCRAPBOOK') {
         state = Object.assign({}, state, {
             scrapbook: action.newData
+        });
+    }
+
+    if (action.type === 'ADD_PAGE') {
+        state = Object.assign({}, state, {
+            page: action.header
+        });
+    }
+
+
+    if (action.type === 'GET_PAGES') {
+        state = Object.assign({}, state, {
+            pages: action.pages
         });
     }
 
