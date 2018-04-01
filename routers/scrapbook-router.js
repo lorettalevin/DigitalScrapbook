@@ -43,4 +43,15 @@ router.post('/editonescrapbook/:id', (req, res) => {
     });
 });
 
+
+router.post('/addpage/:scrapbook_id', (req, res) => {
+    console.log("req.body", req.body, "header", req.body.header);
+    db.addPage(req.params.scrapbook_id, req.body.header).then(() => {
+        res.json({
+            success: true,
+            header: req.body.header
+        });
+    });
+});
+
 module.exports = router;

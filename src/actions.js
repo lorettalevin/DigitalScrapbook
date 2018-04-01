@@ -40,3 +40,13 @@ export function editScrapbook(scrapbook_id, newData) {
         };
     });
 }
+
+export function addPage(scrapbook_id, header) {
+    console.log("header", header);
+    return axios.post(`/addpage/${scrapbook_id}`, {header}).then(() => {
+        return {
+            type: 'ADD_PAGE',
+            header
+        };
+    });
+}

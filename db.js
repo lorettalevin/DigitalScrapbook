@@ -98,11 +98,29 @@ function editScrapbook(id, scrapbook_title, theme, color) {
     });
 }
 
+function addPage(scrapbook_id, header) {
+    return new Promise((resolve, reject) => {
+        const q = `
+        INSERT INTO pages (scrapbook_id, header)
+        VALUES ($1, $2)
+        RETURNING id
+        `;
+        const params = [scrapbook_id, header];
+        db.query(q, params).then(results => {
+            console.log("INSIDE DB", results.rows[0]);
+            resolve(results.rows[0]);
+        }).catch(err => {
+            reject(err);
+        });
+    });
+}
+
 module.exports = {
     insertUserInfo,
     checkCredentials,
     addScrapbook,
     getScrapbooks,
     getScrapbook,
-    editScrapbook
+    editScrapbook,
+    addPage
 };
