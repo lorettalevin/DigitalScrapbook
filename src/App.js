@@ -20,6 +20,7 @@ export default class App extends React.Component {
                 <div>
                     <nav>
                         <ul>
+
                           <li id="logo-menu"><Logo /></li>
                           <li><Link to="/">PROFILE</Link></li>
                           <li><Link to="/addscrapbook">ADD A NEW SCRAPBOOK</Link></li>
