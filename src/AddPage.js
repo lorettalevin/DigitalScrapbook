@@ -1,9 +1,34 @@
 import React from 'react';
 import axios from './axios';
+import {connect} from 'react-redux';
+import {addPage} from './actions';
 
-export default class AddPage extends React.Component {
-    constructor() {
-        super();
+
+const mapStateToProps = state => {
+    return {
+
+    }
+}
+
+class AddPage extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            header: ''
+        }
+        this.handleSubmit = this.handleSubmit.bind(this)
+        this.handleChange = this.handleChange.bind(this)
+    }
+
+    handleChange(e) {
+        this.setState({
+            [e.target.name]: e.target.value
+        })
+    }
+
+    handleSubmit(e) {
+        e.preventDefault();
+        this.props.dispatch(addPage(this.props.scrapbook_id, this.state.header))
     }
 
     render() {
@@ -14,3 +39,5 @@ export default class AddPage extends React.Component {
             </form>
         )}
 }
+
+export default connect(mapStateToProps)(AddPage)
