@@ -25,11 +25,18 @@ export function getScrapbooks() {
 
 export function getScrapbook() {
     return axios.get('/getsinglescrapbook').then(resp => {
-        console.log("pleaseee work", resp.data.scrapbooks);
         return {
             type: 'GET_SCRAPBOOK',
-            scrapbooks: resp.data.scrapbooks
+            scrapbook: resp.data.scrapbook
+        };
+    });
+}
 
+export function editScrapbook(scrapbook_id, newData) {
+    return axios.post(`/editonescrapbook/${scrapbook_id}`, newData).then(() => {
+        return {
+            type: 'EDIT_SCRAPBOOK',
+            newData
         };
     });
 }
