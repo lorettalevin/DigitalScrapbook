@@ -37,24 +37,24 @@ class AddScrapbook extends React.Component {
 
     render() {
         return (
-            <div>
+            <div className="addscrapbook-form-container">
                 <form>
                     <input onChange={this.handleChange} name="scrapbook_title" type="text" placeholder="Scrapbook Title"/>
-                    <select onChange={this.handleChange} name="theme" id="">
+                    <select onChange={this.handleChange} name="theme" id="theme">
                         <option value="Default">Please select theme</option>
                         <option value="Travel">Travel</option>
                         <option value="New Year's Eve">New Year's Eve</option>
                         <option value="Graduation">Graduation</option>
                         <option value="Baby's First Milestones">Baby's First Milestones</option>
                     </select>
-                    <select onChange={this.handleChange} name="color" id="">
+                    <select onChange={this.handleChange} name="color" id="color">
                         <option value="Default">Please select color</option>
                         <option value="Blue">Blue</option>
                         <option value="Green">Green</option>
                         <option value="Yellow">Yellow</option>
                         <option value="Pink">Pink</option>
                     </select>
-                    <button onClick={this.handleSubmit}>SUBMIT</button>
+                    <button className="addscrapbook-button" onClick={this.handleSubmit}>SUBMIT</button>
                 </form>
             </div>
         )}
