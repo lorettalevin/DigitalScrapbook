@@ -24,7 +24,7 @@ export default class App extends React.Component {
                           <li><Link to="/addscrapbook">Add a new Scrapbook</Link></li>
                           <li><Logo /></li>
                           <li><Link to="/myscrapbooks">My Scrapbooks</Link></li>
-                          <li><Link to={`/editscrapbook/${scrapbook.id}`}>Chat</Link></li>
+                          {/*<li><Link to={`/editscrapbook/${scrapbook.id}`}>Chat</Link></li>*/}
                           <li><a href="/logout">Log Out</a></li>
                         </ul>
                     </nav>
