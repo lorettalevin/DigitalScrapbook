@@ -2,11 +2,12 @@ import React from 'react';
 import axios from './axios';
 import {connect} from 'react-redux';
 import AddPage from './AddPage';
-import {getScrapbook, editScrapbook} from './actions';
+import {getScrapbook, editScrapbook, getPages} from './actions';
 
 const mapStateToProps = state => {
     return {
-        scrapbook: state.scrapbook
+        scrapbook: state.scrapbook,
+        pages: state.pages
     }
 }
 
@@ -19,10 +20,12 @@ class EditScrapbook extends React.Component {
         this.handleSubmit = this.handleSubmit.bind(this)
         this.handleChange = this.handleChange.bind(this)
         this.togglePageForm = this.togglePageForm.bind(this)
+        this.renderPages = this.renderPages.bind(this)
     }
 
     componentDidMount() {
         this.props.dispatch(getScrapbook())
+        this.props.dispatch(getPages(this.props.match.params.id))
     }
 
     handleChange(e) {
@@ -34,7 +37,7 @@ class EditScrapbook extends React.Component {
     handleSubmit(e) {
         e.preventDefault();
         const {scrapbook_title, theme, color} = this.state
-        this.props.dispatch(editScrapbook(this.props.match.params.scrapbook_id, this.state))
+        this.props.dispatch(editScrapbook(this.props.match.params.id, this.state))
     }
 
     togglePageForm() {
@@ -42,6 +45,25 @@ class EditScrapbook extends React.Component {
             showForm: !this.state.showForm
         })
     }
+
+    renderPages() {
+        if(!this.props.pages) {
+            return (
+                <div>Loading...</div>
+            )
+        }
+
+    return this.props.pages.map(page => {
+        return (
+            <div key={page.id}>
+                <p>{page.header}</p>
+                <div>
+                    {/*<Link to={`/deletepage/${page.id}`}><button>Delete</button></Link>*/}
+                </div>
+            </div>
+        )
+    })
+}
 
     render() {
         return (
@@ -72,12 +94,14 @@ class EditScrapbook extends React.Component {
                     <button onClick={this.handleSubmit}>SUBMIT</button>
                 </form>
             </div>
+
                 <button id="addnewpage-button" onClick={this.togglePageForm}>Add New Page</button>
 
                 { this.state.showForm &&
                     <AddPage scrapbook_id={this.props.match.params.id}
                     /> }
                 </div>
+                <div>{this.renderPages()}</div>
             </div>
         )
     }

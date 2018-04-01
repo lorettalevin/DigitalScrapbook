@@ -107,8 +107,24 @@ function addPage(scrapbook_id, header) {
         `;
         const params = [scrapbook_id, header];
         db.query(q, params).then(results => {
-            console.log("INSIDE DB", results.rows[0]);
             resolve(results.rows[0]);
+        }).catch(err => {
+            reject(err);
+        });
+    });
+}
+
+
+function getPages(scrapbook_id) {
+    return new Promise((resolve, reject) => {
+        const q = `
+        SELECT *
+        FROM pages
+        WHERE scrapbook_id = $1
+        `;
+        const params = [scrapbook_id];
+        db.query(q, params).then(results => {
+            resolve(results.rows);
         }).catch(err => {
             reject(err);
         });
@@ -122,5 +138,6 @@ module.exports = {
     getScrapbooks,
     getScrapbook,
     editScrapbook,
-    addPage
+    addPage,
+    getPages
 };

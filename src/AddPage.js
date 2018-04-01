@@ -6,7 +6,7 @@ import {addPage} from './actions';
 
 const mapStateToProps = state => {
     return {
-
+        page: state.header
     }
 }
 

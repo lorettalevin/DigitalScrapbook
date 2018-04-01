@@ -43,13 +43,20 @@ router.post('/editonescrapbook/:id', (req, res) => {
     });
 });
 
-
 router.post('/addpage/:scrapbook_id', (req, res) => {
-    console.log("req.body", req.body, "header", req.body.header);
     db.addPage(req.params.scrapbook_id, req.body.header).then(() => {
         res.json({
             success: true,
             header: req.body.header
+        });
+    });
+});
+
+router.get('/getpages/:scrapbook_id', (req, res) => {
+    db.getPages(req.params.scrapbook_id).then(pages => {
+        res.json({
+            success: true,
+            pages
         });
     });
 });
