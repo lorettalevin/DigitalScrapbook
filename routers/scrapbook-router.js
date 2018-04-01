@@ -26,10 +26,19 @@ router.get('/getmyscrapbooks', (req, res) => {
 });
 
 router.get('/getsinglescrapbook', (req, res) => {
-    db.getScrapbook(req.session.id).then(scrapbooks => {
+    db.getScrapbook(req.session.id).then(scrapbook => {
         res.json({
             success: true,
-            scrapbooks
+            scrapbook
+        });
+    });
+});
+
+router.post('/editonescrapbook/:id', (req, res) => {
+    const { scrapbook_title, theme, color } = req.body;
+    db.editScrapbook(req.session.id, scrapbook_title, theme, color).then(() => {
+        res.json({
+            success: true
         });
     });
 });

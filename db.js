@@ -32,14 +32,14 @@ function checkCredentials(email) {
     });
 }
 
-function addScrapbook(userID, theme, color, title) {
+function addScrapbook(user_id, theme, color, title) {
     return new Promise((resolve, reject) => {
         const q = `
         INSERT INTO scrapbooks (user_id, theme, color, scrapbook_title)
         VALUES ($1, $2, $3, $4)
         RETURNING id
         `;
-        const params = [userID, theme, color, title];
+        const params = [user_id, theme, color, title];
         db.query(q, params).then(results => {
             resolve(results.rows[0]);
         }).catch(err => {
@@ -54,7 +54,7 @@ function getScrapbooks(user_id) {
         SELECT *
         FROM scrapbooks
         WHERE user_id = $1
-        `
+        `;
         const params = [user_id];
         db.query(q, params).then(results => {
             resolve(results.rows);
@@ -70,10 +70,27 @@ function getScrapbook(user_id) {
         SELECT *
         FROM scrapbooks
         WHERE user_id = $1
-        `
+        `;
         const params = [user_id];
         db.query(q, params).then(results => {
-            console.log("RESULTS ROWS pleaseeee", results.rows[0]);
+            resolve(results.rows[0]);
+        }).catch(err => {
+            reject(err);
+        });
+    });
+}
+
+function editScrapbook(id, scrapbook_title, theme, color) {
+    return new Promise((resolve, reject) => {
+        const q = `
+        UPDATE scrapbooks
+        SET scrapbook_title = $1,
+        theme = $2,
+        color = $3
+        WHERE id = $4
+        `;
+        const params = [scrapbook_title, theme, color, id];
+        db.query(q, params).then(results => {
             resolve(results.rows[0]);
         }).catch(err => {
             reject(err);
@@ -86,5 +103,6 @@ module.exports = {
     checkCredentials,
     addScrapbook,
     getScrapbooks,
-    getScrapbook
+    getScrapbook,
+    editScrapbook
 };
