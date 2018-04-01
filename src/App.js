@@ -4,6 +4,7 @@ import AddScrapbook from './AddScrapbook';
 import MyScrapbooks from './MyScrapbooks';
 import EditScrapbook from './EditScrapbook';
 import Scrapbook from './Scrapbook';
+import Logo from './Logo';
 import {BrowserRouter, Route, Link} from 'react-router-dom'
 
 
@@ -15,18 +16,18 @@ export default class App extends React.Component {
     render() {
         return (
         <div>
-            <h1>APPPPP</h1>
             <BrowserRouter>
                 <div>
-                    {/*<nav>
+                    <nav>
                         <ul>
                           <li><Link to="/">Profile</Link></li>
-                          <li><Link to="/friends">Friends</Link></li>
-                          <li><Link to="/onlinefriends">Online Friends</Link></li>
-                          <li><Link to="/chat">Chat</Link></li>
+                          <li><Link to="/addscrapbook">Add a new Scrapbook</Link></li>
+                          <li><Logo /></li>
+                          <li><Link to="/myscrapbooks">My Scrapbooks</Link></li>
+                          <li><Link to={`/editscrapbook/${scrapbook.id}`}>Chat</Link></li>
                           <li><a href="/logout">Log Out</a></li>
                         </ul>
-                    </nav>*/}
+                    </nav>
                     <Route exact path="/addscrapbook" component={AddScrapbook} />
                     <Route exact path="/myscrapbooks" component={MyScrapbooks} />
                     <Route exact path="/editscrapbook/:id" component={EditScrapbook} />
