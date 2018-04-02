@@ -1,17 +1,30 @@
 import React from 'react';
-import axios from './axios';
+import { getFullScrapBook } from "./actions";
+import {connect} from 'react-redux';
 
-export default class Scrapbook extends React.Component {
+const mapStateToProps = state => {
+    return {
+        // scrapbook: state.scrapbook,
+        // pages: state.pages
+    }
+}
+
+class Scrapbook extends React.Component {
     constructor() {
         super();
 
     }
 
-    render() {
+    componentDidMount() {
+        this.props.dispatch(getFullScrapBook(this.props.match.params.id))
+    }
 
+    render() {
         return (
             <div>
-                SCRAPBOOK 
+                SCRAPBOOK
             </div>
     )}
 }
+
+export default connect(mapStateToProps)(Scrapbook)

@@ -80,6 +80,22 @@ function getScrapbook(user_id) {
     });
 }
 
+function getScrapbookNew(scrapbook_id) {
+    return new Promise((resolve, reject) => {
+        const q = `
+        SELECT *
+        FROM scrapbooks
+        WHERE id = $1
+        `;
+        const params = [scrapbook_id];
+        db.query(q, params).then(results => {
+            resolve(results.rows[0]);
+        }).catch(err => {
+            reject(err);
+        });
+    });
+}
+
 function editScrapbook(id, scrapbook_title, theme, color) {
     return new Promise((resolve, reject) => {
         const q = `
@@ -156,13 +172,23 @@ function getImages(page_id) {
         `;
         const params = [page_id];
         db.query(q, params).then(results => {
-            console.log("ANSWERS ROWS RES RES", results.rows);
             resolve(results.rows);
         }).catch(err => {
             reject(err);
         });
     });
 }
+
+function getFullScrapBook(scrapbook_id) {
+    return Promise.all ([
+        getScrapbookNew(scrapbook_id),
+        getPages(scrapbook_id)
+    ]).then(results => {
+        console.log("reeeesuls", results);
+    })
+
+}
+// getImages(page_id)
 
 module.exports = {
     insertUserInfo,
@@ -174,5 +200,7 @@ module.exports = {
     addPage,
     getPages,
     addImages,
-    getImages
+    getImages,
+    getFullScrapBook,
+    getScrapbookNew
 };
