@@ -18,14 +18,16 @@ export default class App extends React.Component {
             <BrowserRouter>
                 <div>
                     <nav>
+                        <div>
                         <ul>
-                          <li id="logo-menu"><Logo /></li>
-                          <li><Link to="/">PROFILE</Link></li>
-                          <li><Link to="/addscrapbook">ADD A NEW SCRAPBOOK</Link></li>
-                          <li><Link to="/myscrapbooks">MY SCRAPBOOK</Link></li>
-                          <li><a href="/logout">LOG OUT</a></li>
-                          {/*<li><Link to={`/editscrapbook/${scrapbook.id}`}>Chat</Link></li>*/}
+                            <li id="logo-menu"><Logo /></li>
+                          <li className="li"><Link to="/addscrapbook">ADD A NEW SCRAPBOOK</Link></li>
+                          <li className="li"><Link to="/myscrapbooks">MY SCRAPBOOKS</Link></li>
+                          <li className="li"><Link to="/">EDIT SCRAPBOOK</Link></li>
+                          {/*<li><Link to="/">EDIT SCRAPBOOK</Link></li>*/}
+                          <li className="li"><a href="/logout">LOG OUT</a></li>
                         </ul>
+                    </div>
                     </nav>
                     <Route exact path="/addscrapbook" component={AddScrapbook} />
                     <Route exact path="/myscrapbooks" component={MyScrapbooks} />

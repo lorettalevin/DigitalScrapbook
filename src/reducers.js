@@ -62,5 +62,11 @@ export default function reducer(state = INITIAL_STATE, action) {
         });
     }
 
+    if (action.type === 'GET_IMAGES') {
+        state = Object.assign({}, state, {
+            images: action.images
+        });
+    }
+
     return state;
 }

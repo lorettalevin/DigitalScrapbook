@@ -44,7 +44,7 @@ nav li a {
 }
 
 nav li a:hover {
-    background-color: #b34bc3;
+    background-color: #95957B;
     transition: background-color 0.5s ease;
 }
 
@@ -67,7 +67,7 @@ nav li a:hover {
 }
 
 #logo-container {
-    border: 5px pink solid;
+/*     border: 5px pink solid; */
     background-color: black;
     border-bottom: 5px #E6FF07 dashed;
     height: 140px;
@@ -76,6 +76,22 @@ nav li a:hover {
     justify-content: center;
 }
 
+#greeting-message {
+/*     border: 2px red solid; */
+/*     font-family: 'Indie Flower', cursive; */
+/* font-family: 'Fontdiner Swanky', cursive; */
+/* font-family: 'Cherry Cream Soda', cursive; */
+font-family: 'Neucha';
+    font-size: 30px;
+    color: black;
+    width: 100%;
+    text-align: center;
+/*     margin-left: 3%; */
+    margin-top: 4%;
+    margin-bottom: 5%;
+    padding-left: %;
+/*     padding-right: 3%; */
+}
 
 #home-container {
 /*     border: 2px blue solid; */
@@ -86,16 +102,24 @@ nav li a:hover {
 /* ------------Registration------------------------ */
 
 #registration-form {
-    border: 2px red solid;
+/*     border: 2px red solid; */
     display: flex;
     flex-direction: column;
     align-items: center;
 
+
+}
+
+p {
+font-family: 'Fontdiner Swanky', cursive;
+font-family: 'Cherry Cream Soda', cursive;
+text-align: center;
 }
 
 .field {
+   border: 2px #a2a2a2 solid;
     background-color: #eaeaea;
-    color: white;
+    color: black;
     height: 30px;
     width: 200px;
     margin: 4%;
@@ -107,8 +131,26 @@ nav li a:hover {
     background-color: black;
     color: white;
     height: 35px;
-    width: 200px;
+    width: 210px;
+    margin-top: 2%;
 }
+
+
+/* ------------------Login------------------------ */
+
+#login-form {
+/*     border: 2px red solid; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input {
+    height: 20px;
+    width: 150px;
+/*     margin: 0.5%; */
+}
+
 
 /* ------------AddScrapbook------------------------ */
 

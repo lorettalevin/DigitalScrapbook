@@ -18,7 +18,11 @@ export default class Home extends React.Component {
                     <img id="scissors" src="./images/scissors.png" alt="scissors"/>
                 {/*</div>*/}
 
-
+            <div id="greeting-message">
+                Looking for a quick and easy way to preserve your memories? Memory Stitch is a digital scrapbook maker suited for variously themed life events.
+                Register below and your scrapbook awaits you!
+            </div>
+            
                 <div id="home-container">
                     <div>
                         <p>SIGN UP</p>

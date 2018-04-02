@@ -72,17 +72,21 @@ export function addImages(page_id, formData) {
     });
 }
 
-
 export function getImages(page_id) {
     return axios.get(`/getimages/${page_id}`).then(resp => {
-console.log("RESPOTATO", resp);
-const { file, description, image_title } = resp.data
         return {
             type: "GET_IMAGES",
-            file,
-            description,
-            image_title
+            images: resp.data.images
 
+        };
+    });
+}
+
+export function getFullScrapBook(scrapbook_id) {
+    return axios.get(`/getfullscrapbook/${scrapbook_id}`).then(resp => {
+        return {
+            type: 'GET_FULL_SCRAPBOOK',
+            scrapbook: resp.data.scrapbook
         };
     });
 }
