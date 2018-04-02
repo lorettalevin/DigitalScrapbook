@@ -50,12 +50,30 @@ nav li a:hover {
 
 /* --------------------Home------------------------ */
 
+#scissors-container {
+    border: 3px solid blue;
+    order: -1;
+    display: flex;
+    margin-top: 9%;
+
+}
+
+#scissors {
+    height: 60px;
+    width: 60px;
+    margin-top: -2.5%;
+    margin-left: 3%;
+    z-index: 100;
+}
+
 #logo-container {
-/*     border: 5px pink solid; */
+    border: 5px pink solid;
     background-color: black;
-    border-bottom: 5px #fff700 dashed;
-    height: 130px;
+    border-bottom: 5px #E6FF07 dashed;
+    height: 140px;
     border-image: 2px dashed antiquewhite;
+    display: flex;
+    justify-content: center;
 }
 
 
@@ -124,8 +142,8 @@ input {
     border: 5px yellow solid;
     display: flex;
     justify-content: center;
-
 }
+
 #chosen {
     border: 3px red solid;
     order: 1;
@@ -135,19 +153,12 @@ input {
     border: 3px green solid;
     display: flex;
     width: 200px;
-
-
-
-
 }
+
 #edit-scrapbook-form {
     border: 3px blue solid;
     display: flex;
     flex-direction: column;
-
-
-
-
 }
 
 .edit-field {

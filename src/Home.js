@@ -1,7 +1,8 @@
 import React from 'react';
 import Registration from './Registration';
 import Login from "./Login";
-import Logo from "./Logo";
+import {HomeLogo} from './Logo';
+
 
 export default class Home extends React.Component {
     constructor() {
@@ -11,18 +12,20 @@ export default class Home extends React.Component {
         return (
             <div>
                 <div id="logo-container">
-                    <Logo/>
-                    <img id="scissors" src="./images/pinksci.png" alt="scissors"/>
+                    <HomeLogo />
                 </div>
+                {/*<div id="scissors-container">*/}
+                    <img id="scissors" src="./images/scissors.png" alt="scissors"/>
+                {/*</div>*/}
 
 
                 <div id="home-container">
                     <div>
-                        <p>Sign Up</p>
+                        <p>SIGN UP</p>
                         <Registration />
                     </div>
                     <div>
-                        <p>Sign In</p>
+                        <p>SIGN IN</p>
                         <Login />
                     </div>
                 </div>
