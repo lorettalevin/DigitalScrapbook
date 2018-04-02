@@ -60,7 +60,6 @@ export function getPages(scrapbook_id) {
 }
 
 export function addImages(page_id, formData) {
-    console.log("add img action");
     return axios.post(`/addimages/${page_id}`, formData).then(resp => {
         const { description, file, image_title, page_id } = resp.data;
         return {
@@ -69,6 +68,21 @@ export function addImages(page_id, formData) {
             file,
             image_title,
             page_id
+        };
+    });
+}
+
+
+export function getImages(page_id) {
+    return axios.get(`/getimages/${page_id}`).then(resp => {
+console.log("RESPOTATO", resp);
+const { file, description, image_title } = resp.data
+        return {
+            type: "GET_IMAGES",
+            file,
+            description,
+            image_title
+
         };
     });
 }

@@ -146,6 +146,24 @@ function addImages(page_id, file, description, image_title) {
     });
 }
 
+
+function getImages(page_id) {
+    return new Promise((resolve, reject) => {
+        const q = `
+        SELECT *
+        FROM images
+        WHERE page_id = $1
+        `;
+        const params = [page_id];
+        db.query(q, params).then(results => {
+            console.log("ANSWERS ROWS RES RES", results.rows);
+            resolve(results.rows);
+        }).catch(err => {
+            reject(err);
+        });
+    });
+}
+
 module.exports = {
     insertUserInfo,
     checkCredentials,
@@ -155,5 +173,6 @@ module.exports = {
     editScrapbook,
     addPage,
     getPages,
-    addImages
+    addImages,
+    getImages
 };
