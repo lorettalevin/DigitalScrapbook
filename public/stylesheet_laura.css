@@ -48,6 +48,23 @@ nav li a:hover {
     transition: background-color 0.5s ease;
 }
 
+/* --------------------Home------------------------ */
+
+#logo-container {
+/*     border: 5px pink solid; */
+    background-color: black;
+    border-bottom: 5px #fff700 dashed;
+    height: 130px;
+    border-image: 2px dashed antiquewhite;
+}
+
+
+#home-container {
+/*     border: 2px blue solid; */
+    display: flex;
+    justify-content:space-evenly
+}
+
 /* ------------Registration------------------------ */
 
 #registration-form {
@@ -55,17 +72,24 @@ nav li a:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
+
 }
 
-input {
-    height: 20px;
-    width: 150px;
-    margin: 0.5%;
+.field {
+    background-color: #eaeaea;
+    color: white;
+    height: 30px;
+    width: 200px;
+    margin: 4%;
 }
 
-#registration-button {
-    border: 2px blue solid;
-    border-radius: 100px;
+#registration-button, #login-button {
+    border: 2px #12bbee solid;
+    font-size: 15px;
+    background-color: black;
+    color: white;
+    height: 35px;
+    width: 200px;
 }
 
 /* ------------AddScrapbook------------------------ */
