@@ -15,7 +15,7 @@ CREATE TABLE users (
 CREATE TABLE images (
         id SERIAL PRIMARY KEY,
         page_id INTEGER NOT NULL,
-        url VARCHAR (255) NOT NULL,
+        file VARCHAR (255) NOT NULL,
         description VARCHAR (255) NOT NULL,
         image_title VARCHAR (255) NOT NULL,
         created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
