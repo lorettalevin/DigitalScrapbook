@@ -33,10 +33,12 @@ class AddPage extends React.Component {
 
     render() {
         return (
-            <form>
-                <input onChange={this.handleChange} name="header" type="text" placeholder="Page Title"/>
-                <button onClick={this.handleSubmit}>SUBMIT</button>
-            </form>
+            <div>
+                <form>
+                    <input onChange={this.handleChange} name="header" type="text" placeholder="Page Title"/>
+                    <button onClick={this.handleSubmit}>SUBMIT</button>
+                </form>
+            </div>
         )}
 }
 

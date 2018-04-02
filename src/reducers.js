@@ -1,7 +1,8 @@
 const INITIAL_STATE = {
     scrapbook: {},
     scrapbooks: [],
-    pages: []
+    pages: [],
+    files: []
 };
 
 export default function reducer(state = INITIAL_STATE, action) {
@@ -43,10 +44,21 @@ export default function reducer(state = INITIAL_STATE, action) {
         });
     }
 
-
     if (action.type === 'GET_PAGES') {
         state = Object.assign({}, state, {
             pages: action.pages
+        });
+    }
+
+    if (action.type === 'ADD_IMAGES') {
+        const { description, file, image_title, page_id } = action;
+        state = Object.assign({}, state, {
+            files: {
+                description,
+                file,
+                image_title,
+                page_id
+            }
         });
     }
 

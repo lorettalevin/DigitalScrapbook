@@ -4,11 +4,6 @@ const compression = require('compression');
 const bodyParser = require('body-parser');
 const csrf = require('csurf');
 const cookieSession = require("cookie-session");
-const multer = require('multer');
-const uidSafe = require('uid-safe');
-const path = require('path');
-const s3 = require('./config/s3.js');
-const {s3Url} = require("./config/config.json");
 const server = require('http').Server(app);
 
 app.use(compression());
@@ -46,24 +41,6 @@ app.use(csrf());
 app.use(function(req, res, next) {
     res.cookie('mytoken', req.csrfToken());
     next();
-});
-
-var diskStorage = multer.diskStorage({
-    destination: function(req, file, callback) {
-        callback(null, __dirname + '/uploads');
-    },
-    filename: function(req, file, callback) {
-        uidSafe(24).then(function(uid) {
-            callback(null, uid + path.extname(file.originalname));
-        });
-    }
-});
-
-const uploader = multer({
-    storage: diskStorage,
-    limits: {
-        fileSize: 2097152
-    }
 });
 
 //////////////////////////////////////////////////////////////////////////////

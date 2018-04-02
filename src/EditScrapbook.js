@@ -1,7 +1,7 @@
 import React from 'react';
-import axios from './axios';
 import {connect} from 'react-redux';
 import AddPage from './AddPage';
+import EditPage from './EditPage';
 import {getScrapbook, editScrapbook, getPages} from './actions';
 
 const mapStateToProps = state => {
@@ -20,7 +20,7 @@ class EditScrapbook extends React.Component {
         this.handleSubmit = this.handleSubmit.bind(this)
         this.handleChange = this.handleChange.bind(this)
         this.togglePageForm = this.togglePageForm.bind(this)
-        this.renderPages = this.renderPages.bind(this)
+        this.renderEditPages = this.renderEditPages.bind(this)
     }
 
     componentDidMount() {
@@ -46,24 +46,23 @@ class EditScrapbook extends React.Component {
         })
     }
 
-    renderPages() {
+    renderEditPages() {
         if(!this.props.pages) {
             return (
                 <div>Loading...</div>
             )
         }
 
-    return this.props.pages.map(page => {
-        return (
-            <div key={page.id}>
-                <p>{page.header}</p>
-                <div>
-                    {/*<Link to={`/deletepage/${page.id}`}><button>Delete</button></Link>*/}
+        return this.props.pages.map(page => {
+            return (
+                <div key={page.id}>
+                    <EditPage
+                        page={page}
+                        />
                 </div>
-            </div>
-        )
-    })
-}
+            )
+        })
+    }
 
     render() {
         return (
@@ -98,10 +97,11 @@ class EditScrapbook extends React.Component {
                 <button id="addnewpage-button" onClick={this.togglePageForm}>Add New Page</button>
 
                 { this.state.showForm &&
-                    <AddPage scrapbook_id={this.props.match.params.id}
+                    <AddPage
+                        scrapbook_id={this.props.match.params.id}
                     /> }
                 </div>
-                <div>{this.renderPages()}</div>
+                <div>{this.renderEditPages()}</div>
             </div>
         )
     }

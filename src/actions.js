@@ -58,3 +58,17 @@ export function getPages(scrapbook_id) {
         };
     });
 }
+
+export function addImages(page_id, formData) {
+    console.log("add img action");
+    return axios.post(`/addimages/${page_id}`, formData).then(resp => {
+        const { description, file, image_title, page_id } = resp.data;
+        return {
+            type: "ADD_IMAGES",
+            description,
+            file,
+            image_title,
+            page_id
+        };
+    });
+}

@@ -1,6 +1,29 @@
 const express = require('express');
 const router = express.Router();
 const db = require('../db');
+const multer = require('multer');
+const uidSafe = require('uid-safe');
+const path = require('path');
+const s3 = require('../config/s3.js');
+const {s3Url} = require("../config/config.json");
+
+var diskStorage = multer.diskStorage({
+    destination: function(req, file, callback) {
+        callback(null, path.resolve(__dirname, '..', 'uploads'));
+    },
+    filename: function(req, file, callback) {
+        uidSafe(24).then(function(uid) {
+            callback(null, uid + path.extname(file.originalname));
+        });
+    }
+});
+
+const uploader = multer({
+    storage: diskStorage,
+    limits: {
+        fileSize: 2097152
+    }
+});
 
 router.post('/addscrapbook', (req, res) => {
     const {theme, color, scrapbook_title} = req.body;
@@ -57,6 +80,20 @@ router.get('/getpages/:scrapbook_id', (req, res) => {
         res.json({
             success: true,
             pages
+        });
+    });
+});
+
+router.post('/addimages/:page_id', uploader.single('file'), s3.upload, (req, res) => {
+    db.addImages(req.params.page_id, req.file.filename, req.body.image_title, req.body.description).then(results => {
+        const file = s3Url + req.file.filename;
+        const {image_title, description} = req.body;
+        res.json({
+            success: true,
+            page_id: req.params.page_id,
+            file: req.file.filename,
+            image_title,
+            description
         });
     });
 });
