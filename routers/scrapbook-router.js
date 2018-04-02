@@ -98,4 +98,16 @@ router.post('/addimages/:page_id', uploader.single('file'), s3.upload, (req, res
     });
 });
 
+router.get('/getimages/:page_id', (req, res) => {
+    db.getImages(req.params.page_id).then(results => {
+        console.log("RESULTS RESULTS", results);
+        const { file, description, image_title } = results
+        res.json({
+            success: true,
+            file,
+            description,
+            image_title
+        })
+    })
+})
 module.exports = router;
