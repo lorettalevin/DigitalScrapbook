@@ -38,6 +38,9 @@ class EditScrapbook extends React.Component {
         e.preventDefault();
         const {scrapbook_title, theme, color} = this.state
         this.props.dispatch(editScrapbook(this.props.match.params.id, this.state))
+        document.querySelector('input[name="scrapbook_title"]').value = '';
+        document.querySelector('select[name="theme"]').value = '';
+        document.querySelector('select[name="color"]').value = '';
     }
 
     togglePageForm() {
@@ -83,7 +86,7 @@ class EditScrapbook extends React.Component {
                         <option value="Graduation">Graduation</option>
                         <option value="Baby's First Milestones">Baby's First Milestones</option>
                     </select>
-                    <select className="edit-field" onChange={this.handleChange} name="color" id="">
+                    <select className="edit-field" onChange={this.handleChange}name="color" id="">
                         <option value="Default">Please select color</option>
                         <option value="Blue">Blue</option>
                         <option value="Green">Green</option>

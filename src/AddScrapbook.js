@@ -21,12 +21,18 @@ class AddScrapbook extends React.Component {
 
     handleSubmit(e) {
         const { scrapbook_title, theme, color } = this.state;
-        e.preventDefault();
-        this.props.dispatch(addScrapbook({
-            scrapbook_title,
-            theme,
-            color
-        }))
+        if (scrapbook_title, theme, color) {
+            e.preventDefault();
+            document.querySelector('input[name="scrapbook_title"]').value = '';
+            document.querySelector('select[name="theme"]').value = '';
+            document.querySelector('select[name="color"]').value = '';
+            this.props.dispatch(addScrapbook({
+                scrapbook_title,
+                theme,
+                color
+            }))
+            location.replace('/myscrapbooks');
+        }
     }
 
     handleChange(e) {
@@ -38,6 +44,7 @@ class AddScrapbook extends React.Component {
     render() {
         return (
             <div className="addscrapbook-form-container">
+                {this.state.error && <div>{this.state.errorMessage}</div>}
                 <form>
                     <div id="inside-add-container">
                     <input id="sb-title" onChange={this.handleChange} name="scrapbook_title" type="text" placeholder="Scrapbook Title"/>

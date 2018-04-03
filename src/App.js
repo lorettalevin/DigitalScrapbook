@@ -19,15 +19,13 @@ export default class App extends React.Component {
                 <div>
                     <nav>
                         <div>
-                        <ul>
-                            <li id="logo-menu"><Logo /></li>
-                          <li className="li"><Link to="/addscrapbook">ADD A NEW SCRAPBOOK</Link></li>
-                          <li className="li"><Link to="/myscrapbooks">MY SCRAPBOOKS</Link></li>
-                          <li className="li"><Link to="/">EDIT SCRAPBOOK</Link></li>
-                          {/*<li><Link to="/">EDIT SCRAPBOOK</Link></li>*/}
-                          <li className="li"><a href="/logout">LOG OUT</a></li>
-                        </ul>
-                    </div>
+                            <ul>
+                                <li id="logo-menu"><Logo /></li>
+                                <li className="li"><Link to="/addscrapbook">ADD A NEW SCRAPBOOK</Link></li>
+                                <li className="li"><Link to="/myscrapbooks">MY SCRAPBOOKS</Link></li>
+                                <li className="li"><a href="/logout">LOG OUT</a></li>
+                            </ul>
+                        </div>
                     </nav>
                     <Route exact path="/addscrapbook" component={AddScrapbook} />
                     <Route exact path="/myscrapbooks" component={MyScrapbooks} />

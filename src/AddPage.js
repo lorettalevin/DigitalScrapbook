@@ -28,6 +28,7 @@ class AddPage extends React.Component {
     handleSubmit(e) {
         e.preventDefault();
         this.props.dispatch(addPage(this.props.scrapbook_id, this.state.header))
+        document.querySelector('input[name="header"]').value = '';
     }
 
     render() {

@@ -27,16 +27,21 @@ const uploader = multer({
 
 router.post('/addscrapbook', (req, res) => {
     const {theme, color, scrapbook_title} = req.body;
-    db.addScrapbook(req.session.id, theme, color, scrapbook_title).then(results => {
+    if (!req.body.theme || !req.body.color || !req.body.scrapbook_title) {
         res.json({
-            success: true,
-            scrapbook_id: results.id,
-            user_id: req.session.id,
-            theme,
-            color,
-            scrapbook_title
+            success: false, errorMessage: "Please fill out ALL fields"});
+    } else {
+        db.addScrapbook(req.session.id, theme, color, scrapbook_title).then(results => {
+            res.json({
+                success: true,
+                scrapbook_id: results.id,
+                user_id: req.session.id,
+                theme,
+                color,
+                scrapbook_title
+            });
         });
-    });
+    }
 });
 
 router.get('/getmyscrapbooks', (req, res) => {
