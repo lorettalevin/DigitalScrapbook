@@ -1,6 +1,7 @@
 const spicedPg = require('spiced-pg');
 const {dbUser, dbPass} = require('./config/secrets.json');
 const db = spicedPg(`postgres:${dbUser}:${dbPass}@localhost:5432/finalproject`);
+const {s3Url} = require("./config/config.json");
 
 function insertUserInfo(first, last, email, password) {
     return new Promise((resolve, reject) => {
@@ -172,6 +173,9 @@ function getImages(page_id) {
         `;
         const params = [page_id];
         db.query(q, params).then(results => {
+            results.rows.forEach(image => {
+                image.file = s3Url + image.file;
+            })
             resolve(results.rows);
         }).catch(err => {
             reject(err);
@@ -196,7 +200,10 @@ function getFullScrapbook(scrapbook_id) {
                         pages[i].images = [];
                     }
                 }
-                resolve(pages);
+                resolve({
+                    scrapbook,
+                    pages
+                });
             });
         }).catch(err => {
             reject(err);
