@@ -5,7 +5,7 @@ import {getImages} from './actions';
 
 const mapStateToProps = state => {
     return {
-        // pages: state.pages
+        images: state.images
     }
 }
 
@@ -15,7 +15,6 @@ class EditPage extends React.Component {
     }
 
 componentDidMount() {
-    console.log("this.props,dispatch", this.props.page.id);
         this.props.dispatch(getImages(this.props.page.id))
 }
 
@@ -31,6 +30,5 @@ componentDidMount() {
         )
     }
 }
-
 
 export default connect(mapStateToProps)(EditPage)

@@ -82,11 +82,12 @@ export function getImages(page_id) {
     });
 }
 
-export function getFullScrapBook(scrapbook_id) {
+export function getFullScrapbook(scrapbook_id) {
     return axios.get(`/getfullscrapbook/${scrapbook_id}`).then(resp => {
         return {
             type: 'GET_FULL_SCRAPBOOK',
-            scrapbook: resp.data.scrapbook
+            scrapbook: resp.data.scrapbook,
+            pages: resp.data.scrapbook[0]
         };
     });
 }

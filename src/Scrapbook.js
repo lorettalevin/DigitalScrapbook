@@ -1,11 +1,11 @@
 import React from 'react';
-import { getFullScrapBook } from "./actions";
+import { getFullScrapbook } from "./actions";
 import {connect} from 'react-redux';
 
 const mapStateToProps = state => {
     return {
-        // scrapbook: state.scrapbook,
-        // pages: state.pages
+        scrapbook: state.scrapbook,
+        pages: state.pages
     }
 }
 
@@ -16,7 +16,7 @@ class Scrapbook extends React.Component {
     }
 
     componentDidMount() {
-        this.props.dispatch(getFullScrapBook(this.props.match.params.id))
+        this.props.dispatch(getFullScrapbook(this.props.match.params.id))
     }
 
     render() {
