@@ -108,11 +108,10 @@ router.get('/getimages/:page_id', (req, res) => {
 });
 
 router.get('/getfullscrapbook/:scrapbook_id', (req, res) => {
-    db.getFullScrapbook(req.params.scrapbook_id).then((scrapbook, pages) => {
+    db.getFullScrapbook(req.params.scrapbook_id).then((scrapbookInfo) => {
         res.json({
             success: true,
-            scrapbook,
-            pages
+            scrapbookInfo
         });
     });
 });

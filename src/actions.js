@@ -84,10 +84,10 @@ export function getImages(page_id) {
 
 export function getFullScrapbook(scrapbook_id) {
     return axios.get(`/getfullscrapbook/${scrapbook_id}`).then(resp => {
+console.log("looking for results from full SB", resp.data);
         return {
             type: 'GET_FULL_SCRAPBOOK',
-            scrapbook: resp.data.scrapbook,
-            pages: resp.data.scrapbook[0]
+            scrapbookInfo: resp.data.scrapbookInfo
         };
     });
 }
