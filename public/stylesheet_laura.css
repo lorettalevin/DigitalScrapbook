@@ -32,6 +32,10 @@ nav li {
     float: left;
 }
 
+.li {
+    margin-left: 42px;
+}
+
 nav li a {
     display: block;
     color: white;
@@ -39,12 +43,12 @@ nav li a {
     padding: 15px 65px;
     text-decoration: none;
     font-family: "Josefin Sans", sans-serif;
-    font-size: 15px;
+    font-size: 14px;
     line-height: 25px;
 }
 
 nav li a:hover {
-    background-color: #95957B;
+    background-color: #9e9997;
     transition: background-color 0.5s ease;
 }
 
@@ -64,7 +68,23 @@ nav li a:hover {
     margin-top: -2.5%;
     margin-left: 3%;
     z-index: 100;
+    animation: slide-right 15s;
+
 }
+
+
+@keyframes slide-right {
+  from {
+    margin-left: 0%;
+/*     width: 20%;  */
+  }
+
+  to {
+    margin-left: 100%;
+/*     width: 100%; */
+  }
+}
+
 
 #logo-container {
 /*     border: 5px pink solid; */
@@ -78,11 +98,8 @@ nav li a:hover {
 
 #greeting-message {
 /*     border: 2px red solid; */
-/*     font-family: 'Indie Flower', cursive; */
-/* font-family: 'Fontdiner Swanky', cursive; */
-/* font-family: 'Cherry Cream Soda', cursive; */
-font-family: 'Neucha';
-    font-size: 30px;
+font-family: 'Open Sans';
+    font-size: 25px;
     color: black;
     width: 100%;
     text-align: center;
@@ -94,7 +111,7 @@ font-family: 'Neucha';
 }
 
 #home-logo {
-    height: 200px;
+    height: 140px;
 }
 #home-container {
 /*     border: 2px blue solid; */
@@ -114,8 +131,9 @@ font-family: 'Neucha';
 }
 
 p {
-font-family: 'Fontdiner Swanky', cursive;
-font-family: 'Cherry Cream Soda', cursive;
+font-family: 'Open Sans';
+font-size: 30px;
+font-weight: bold;
 text-align: center;
 }
 
@@ -128,7 +146,7 @@ text-align: center;
     margin: 4%;
 }
 
-#registration-button, #login-button {
+#registration-button, #login-button, .addscrapbook-button {
     border: 2px #12bbee solid;
     font-size: 15px;
     background-color: black;
@@ -160,17 +178,45 @@ input {
 .addscrapbook-form-container {
     border: 2px yellow solid;
     padding: 2%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
+#inside-add-container {
+    border: 2px blue dashed;
+/*     width: 1300px; */
+    diplay: flex;
 
+}
 input {
     border-radius: 4px;
 }
 
+#sb-title {
+    height: 30px;
+    width: 300px;
+}
+
+.dropdown-menu {
+    height: 35px;
+    width: 250px;
+}
 #theme {
     margin: 3%;
 }
 
-.addscrapbook-button {
+#color {
+margin-right: 3%;}
+
+#travel-container {
+    border: 2px green solid;
+}
+
+#travel {
+/*     border: 2px red solid; */
+}
+/* .addscrapbook-button {
     font-family: Georgia, "Times New Roman", Times, serif;
     font-size: 14px;
     line-height: 17px;
@@ -179,7 +225,7 @@ input {
     padding: 5px;
     border: 3px #dddddd double;
     margin: 3%;
-}
+} */
 
 /* ------------Edit Scrapbook------------------------ */
 
@@ -214,5 +260,7 @@ input {
     display: flex;
     order: 2;
     height: 40px;
+      border: 3px #dddddd double;
+}
       border: 3px #dddddd double;
 }
