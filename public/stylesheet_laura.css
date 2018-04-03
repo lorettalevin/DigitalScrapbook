@@ -33,14 +33,14 @@ nav li {
 }
 
 .li {
-    margin-left: 42px;
+float: right;
 }
 
 nav li a {
     display: block;
     color: white;
     /*     text-align: center; */
-    padding: 15px 65px;
+    padding: 15px 25px;
     text-decoration: none;
     font-family: "Josefin Sans", sans-serif;
     font-size: 14px;
@@ -276,4 +276,72 @@ margin-right: 3%;}
     height: 40px;
       border: 3px #dddddd double;
 }
-      
+
+/* --------------------My Scrapbook------------------------ */
+
+#scrapbook-tile {
+/*     border: 2px blue solid; */
+    height: 350px;
+    width: 350px;
+    background-image: url(./images/tile.jpg);
+    background-size: contain;
+
+
+}
+
+.tile-container {
+/*     border:3px orange dotted; */
+    display: flex;
+
+
+}
+/* #choice-tile {
+    border: 3px #bb00eb solid;
+} */
+
+#button-tile-container {
+/*     border: 3px green solid; */
+    display:flex;
+    justify-content: center;
+/*     margin-top: 25%; */
+
+
+}
+.tile-button {
+    font-size: 15px;
+    background-color: black;
+    color: white;
+    height: 35px;
+    width: 90px;
+    margin-top: 2%;
+    margin: 2px;
+}
+
+.left-font {
+/*     border: 2px red solid; */
+    font-size: 30px;
+    font-family: "Montserrat";
+    text-transform: Uppercase;
+    padding-left: 5%;
+}
+
+.right-font {
+/*     border: 2px red solid; */
+    font-size: 15px;
+    padding-top: 5%;
+    font-size: 22px;
+    font-family: "Montserrat";
+    font-weight: bold;
+    text-transform: Uppercase;
+    padding-left: 10%;
+}
+
+#test {
+/*      border: 2px red solid; */
+     display: inline-block;
+     padding: 2%;
+     margin-left: 3%;
+
+
+
+}

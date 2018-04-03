@@ -29,16 +29,26 @@ class MyScrapbooks extends React.Component {
 
         return this.props.scrapbooks.map(scrapbook => {
             return (
-                <div key={scrapbook.id}>
-                    <p>{ scrapbook.scrapbook_title }</p>
-                    <p>{ scrapbook.color }</p>
-                    <p>{ scrapbook.theme }</p>
-                    <div>
-                        <Link to={`/scrapbook/${scrapbook.id}`}><button>View</button></Link>
-                        <Link to={`/editscrapbook/${scrapbook.id}`}><button>Edit</button></Link>
-                        <Link to={`/deletescrapbook/${scrapbook.id}`}><button>Delete</button></Link>
+                <div id="test">
+                <div id="scrapbook-tile" key={scrapbook.id}>
+                    <div id="choice-tile">
+                        <div className="tile-container">
+                            <p className="left-font">Title:</p><p className="right-font">{ scrapbook.scrapbook_title }</p>
+                        </div>
+                        <div className="tile-container">
+                        <p className="left-font">Color:</p><p className="right-font">{ scrapbook.color }</p>
+                        </div>
+                        <div className="tile-container">
+                        <p className="left-font">Theme:</p><p className="right-font">{ scrapbook.theme }</p>
+                        </div>
+                    </div>
+                    <div id="button-tile-container">
+                        <Link to={`/scrapbook/${scrapbook.id}`}><button className="tile-button">VIEW</button></Link>
+                        <Link to={`/editscrapbook/${scrapbook.id}`}><button className="tile-button">EDIT</button></Link>
+                        <Link to={`/deletescrapbook/${scrapbook.id}`}><button className="tile-button">DELETE</button></Link>
                     </div>
                 </div>
+            </div>
             )
         })
     }
