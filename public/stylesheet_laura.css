@@ -93,6 +93,9 @@ font-family: 'Neucha';
 /*     padding-right: 3%; */
 }
 
+#home-logo {
+    height: 200px;
+}
 #home-container {
 /*     border: 2px blue solid; */
     display: flex;

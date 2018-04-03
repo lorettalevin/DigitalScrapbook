@@ -8,6 +8,6 @@ export default function Logo(props) {
 
 export function HomeLogo(props) {
     return (<div>
-        <img id="home-logo" src="./images/home-logo.png" alt="home-logo"/>
+        <img id="home-logo" src="./images/home-logo2.png" alt="home-logo"/>
     </div>)
 }
