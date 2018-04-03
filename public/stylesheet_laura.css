@@ -184,9 +184,21 @@ input {
     align-items: center;
 }
 #inside-add-container {
-    border: 2px blue dashed;
-/*     width: 1300px; */
+/*     border: 2px blue dashed; */
+    width: 1300px;
     diplay: flex;
+        background-color: #e9e8e8;
+}
+
+::placeholder {
+    font-size: 14px;
+    text-align: center;
+    color: black;
+}
+
+select {
+    font-size: 14px;
+    text-align-last: center;
 
 }
 input {
@@ -196,6 +208,8 @@ input {
 #sb-title {
     height: 30px;
     width: 300px;
+    margin-left: 5%;
+
 }
 
 .dropdown-menu {
@@ -262,5 +276,4 @@ margin-right: 3%;}
     height: 40px;
       border: 3px #dddddd double;
 }
-      border: 3px #dddddd double;
-}
+      
