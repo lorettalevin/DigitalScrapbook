@@ -21,9 +21,9 @@ export default class App extends React.Component {
                         <div>
                             <ul>
                                 <li id="logo-menu"><Logo /></li>
+                                <li className="li"><a href="/logout">LOG OUT</a></li>
                                 <li className="li"><Link to="/addscrapbook">ADD A NEW SCRAPBOOK</Link></li>
                                 <li className="li"><Link to="/myscrapbooks">MY SCRAPBOOKS</Link></li>
-                                <li className="li"><a href="/logout">LOG OUT</a></li>
                             </ul>
                         </div>
                     </nav>
