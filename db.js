@@ -179,16 +179,31 @@ function getImages(page_id) {
     });
 }
 
-function getFullScrapBook(scrapbook_id) {
-    return Promise.all ([
-        getScrapbookNew(scrapbook_id),
-        getPages(scrapbook_id)
-    ]).then(results => {
-        console.log("reeeesuls", results);
-    })
-
+function getFullScrapbook(scrapbook_id) {
+    return new Promise(function(resolve, reject) {
+        return Promise.all([getScrapbookNew(scrapbook_id), getPages(scrapbook_id)]).then(([scrapbook, pages]) => {
+            const promises = [];
+            pages.forEach(page => {
+                promises.push(getImages(page.id));
+            });
+            Promise.all(promises).then(images => {
+                for (let i = 0; i < images.length; i++) {
+                    if (images[i][0] && images[i][0].page_id) {
+                        if (pages[i].id === images[i][0].page_id) {
+                            pages[i].images = images[i];
+                        }
+                    } else {
+                        pages[i].images = [];
+                    }
+                }
+                resolve(pages);
+            });
+        }).catch(err => {
+            reject(err);
+        });
+    });
 }
-// getImages(page_id)
+
 
 module.exports = {
     insertUserInfo,
@@ -201,6 +216,6 @@ module.exports = {
     getPages,
     addImages,
     getImages,
-    getFullScrapBook,
+    getFullScrapbook,
     getScrapbookNew
 };

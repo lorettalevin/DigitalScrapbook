@@ -68,5 +68,12 @@ export default function reducer(state = INITIAL_STATE, action) {
         });
     }
 
+    if (action.type === 'GET_FULL_SCRAPBOOK') {
+        state = Object.assign({}, state, {
+            scrapbook: action.scrapbook,
+            pages: action.pages
+        });
+    }
+
     return state;
 }

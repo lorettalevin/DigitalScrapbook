@@ -100,24 +100,21 @@ router.post('/addimages/:page_id', uploader.single('file'), s3.upload, (req, res
 
 router.get('/getimages/:page_id', (req, res) => {
     db.getImages(req.params.page_id).then(images => {
-        console.log("RESULTS RESULTS", images);
         res.json({
             success: true,
             images
-        })
-    })
-})
+        });
+    });
+});
 
 router.get('/getfullscrapbook/:scrapbook_id', (req, res) => {
-    db.getFullScrapBook(req.params.scrapbook_id).then(scrapbook => {
-        console.log("RESULTS RESULTS", scrapbook);
+    db.getFullScrapbook(req.params.scrapbook_id).then((scrapbook, pages) => {
         res.json({
             success: true,
-            scrapbook
-        })
-    })
-})
-
-
+            scrapbook,
+            pages
+        });
+    });
+});
 
 module.exports = router;
