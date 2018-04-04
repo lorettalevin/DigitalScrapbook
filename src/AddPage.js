@@ -24,15 +24,6 @@ class AddPage extends React.Component {
             [e.target.name]: e.target.value
         })
         this.props.dispatch(changeColor(document.querySelector('select[name="color"]').value))
-        if (document.querySelector('select[name="color"]').value = 'blue') {
-            // render blue page
-        } else if (document.querySelector('select[name="color"]').value = 'green') {
-            // render green page
-        } else if (document.querySelector('select[name="color"]').value = 'pink') {
-            // render pink page
-        } else if (document.querySelector('select[name="color"]').value = 'yellow') {
-            // render yellow page
-        }
     }
 
     handleSubmit(e) {
