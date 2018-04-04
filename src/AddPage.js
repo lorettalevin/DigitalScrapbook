@@ -1,6 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import {addPage} from './actions';
+import {addPage, changeColor} from './actions';
 
 
 const mapStateToProps = state => {
@@ -23,6 +23,16 @@ class AddPage extends React.Component {
         this.setState({
             [e.target.name]: e.target.value
         })
+        this.props.dispatch(changeColor(document.querySelector('select[name="color"]').value))
+        if (document.querySelector('select[name="color"]').value = 'blue') {
+            // render blue page
+        } else if (document.querySelector('select[name="color"]').value = 'green') {
+            // render green page
+        } else if (document.querySelector('select[name="color"]').value = 'pink') {
+            // render pink page
+        } else if (document.querySelector('select[name="color"]').value = 'yellow') {
+            // render yellow page
+        }
     }
 
     handleSubmit(e) {

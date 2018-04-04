@@ -84,10 +84,17 @@ export function getImages(page_id) {
 
 export function getFullScrapbook(scrapbook_id) {
     return axios.get(`/getfullscrapbook/${scrapbook_id}`).then(resp => {
-console.log("looking for results from full SB", resp.data);
         return {
             type: 'GET_FULL_SCRAPBOOK',
             scrapbookInfo: resp.data.scrapbookInfo
         };
     });
+}
+
+export function changeColor(selectedColor){
+    console.log("colorful logs", selectedColor);
+    return {
+        type: 'CHANGE_COLOR',
+        selectedColor
+    };
 }

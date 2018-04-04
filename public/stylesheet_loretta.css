@@ -37,10 +37,22 @@
     height: 650px;
     width: 1300px;
     /*     border: 2px red solid; */
+}
+
+.Blue {
     background: linear-gradient(to bottom right, #4EA2C3, #f5fdff);
-    /*     background: linear-gradient(to bottom right, #c34ead, #e8e8e8);     */
-    /*     background: linear-gradient(to bottom right, #4ec38f, #f5fdff); */
-    /*     background: linear-gradient(to bottom right, #e6ff07, #ffffff); */
+}
+
+.Pink {
+    background: linear-gradient(to bottom right, #c34ead, #e8e8e8);
+}
+
+.Green {
+    background: linear-gradient(to bottom right, #4ec38f, #f5fdff);
+}
+
+.Yellow {
+    background: linear-gradient(to bottom right, #e6ff07, #ffffff);
 }
 
 #editpage-planetail {
