@@ -1075,6 +1075,7 @@ margin-right: 3%;}
     padding-left: 10%;
 }
 
+/* --------------------Scrapbook------------------------ */
 #test {
 /*      border: 2px red solid; */
      display: inline-block;
@@ -1082,13 +1083,7 @@ margin-right: 3%;}
      margin-left: 3%;
 }
 
-#main-container {
-/*     display: flex;
-    justify-content: center; */
-/*     border: 2px pink solid; */
-    display: flex÷;
 
-}
 #scrapbook-cover-container {
 /*     border: 5px yellow solid; */
     display: flex;
@@ -1104,14 +1099,15 @@ margin-right: 3%;}
     justify-content: center;
 }
 
+
 #cover-title {
 /*     border: 2px red solid; */
     width: 267px;
-    height: 46px;
-    z-index: 200;
+    height: 55px;
+/*     z-index: 200; */
     position : absolute;
-    top: 222px;
-    left: 625px;
+    top: 210px;
+    left: 658px;
     background-color: #EDEDED;
     font-family: 'Petit Formal Script';
     font-weight: bold;
@@ -1119,6 +1115,7 @@ margin-right: 3%;}
     text-align: center;
     color: #777070;
 }
+
 
 #scrapbook-page-container{
     2px blue solid;
@@ -1140,6 +1137,7 @@ margin-right: 3%;}
 #planetail {
     height: 250px;
     width: 450px;
+    margin-top: 1%;
 /*     border: 2px pink solid; */
 }
 
@@ -1166,4 +1164,56 @@ margin-right: 3%;}
     justify-content: space-between;
     margin-top: 2%;
     padding: 2%;
+}
+
+#bike {
+    height: 200px;
+    width: 200px;
+    transform: scaleX(-1) rotate(20deg);
+    position: absolute;
+    left: 550px;
+    top: 900px;
+}
+
+#map {
+    transform: rotate(-16deg);
+    position: absolute;
+    margin-top: 25px;
+    margin-left: 400px;
+}
+
+#sunglasses {
+      position: absolute;
+      height: 60px;
+      width: 60px;
+ transform: rotate(-10deg);
+top: 1200px;
+left: 980px;
+
+}
+
+#suitcase {
+    height: 220px;
+    width: 180px;
+    position: absolute;
+    top: 1175px;
+    left: 320px;
+    transform: rotate(2deg);
+}
+
+#passport {
+    height: 170px;
+    width: 220px;
+    transfor:rotate(20deg);
+    position: absolute;
+    top: 1200px;
+    left: 820px;
+}
+
+#sign {
+    height: 170px;
+    width: 220px;
+    position: absolute;
+    top: 950px;
+    left: 1100px;
 }

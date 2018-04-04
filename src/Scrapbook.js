@@ -52,10 +52,12 @@ class Scrapbook extends React.Component {
                 <div id="scrapbook-page-container">
                     <div id="scrapbook-page">
                         <img id="planetail" src="../images/planetail.png"></img>
-                        <img id="camera" src="../images/camera.png"></img>
+                        <img id="suitcase" src="../images/suitcase1.png"></img>
                         <img id="bike" src="../images/bike2.png"></img>
                         <img id="sunglasses" src="../images/sunglasses.png"></img>
                         <img id="map" src="../images/map.png"></img>
+                        <img id="passport" src="../images/passport.png"></img>
+                        <img id="sign" src="../images/sign.png"></img>
 
 
 
