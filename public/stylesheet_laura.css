@@ -26,7 +26,6 @@ nav ul {
     padding: 0;
     overflow: hidden;
     background-color: black;
-
 }
 
 nav li {
@@ -34,7 +33,7 @@ nav li {
 }
 
 .li {
-float: right;
+    float: right;
 }
 
 nav li a {
@@ -59,7 +58,6 @@ nav li a:hover {
     order: -1;
     display: flex;
     margin-top: 9%;
-
 }
 
 #scissors {
@@ -69,23 +67,19 @@ nav li a:hover {
     margin-left: 3%;
     z-index: 100;
     animation: slide-right 15s;
-
 }
-
 
 @keyframes slide-right {
-  from {
-    margin-left: 0%;
-  }
-
-  to {
-    margin-left: 100%;
-  }
+    from {
+        margin-left: 0%;
+    }
+    to {
+        margin-left: 100%;
+    }
 }
 
-
 #logo-container {
-/*     border: 5px pink solid; */
+    /*     border: 5px pink solid; */
     background-color: black;
     border-bottom: 5px #E6FF07 dashed;
     height: 140px;
@@ -95,8 +89,8 @@ nav li a:hover {
 }
 
 #greeting-message {
-/*     border: 2px red solid; */
-font-family: 'Open Sans';
+    /*     border: 2px red solid; */
+    font-family: 'Open Sans';
     font-size: 25px;
     color: black;
     width: 100%;
@@ -109,32 +103,31 @@ font-family: 'Open Sans';
 #home-logo {
     height: 140px;
 }
+
 #home-container {
-/*     border: 2px blue solid; */
+    /*     border: 2px blue solid; */
     display: flex;
-    justify-content:space-evenly;
+    justify-content: space-evenly;
 }
 
 /* ------------Registration------------------------ */
 
 #registration-form {
-/*     border: 2px red solid; */
+    /*     border: 2px red solid; */
     display: flex;
     flex-direction: column;
     align-items: center;
-
-
 }
 
 p {
-font-family: 'Open Sans';
-font-size: 30px;
-font-weight: bold;
-text-align: center;
+    font-family: 'Open Sans';
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
 }
 
 .field {
-   border: 2px #a2a2a2 solid;
+    border: 2px #a2a2a2 solid;
     background-color: #eaeaea;
     color: black;
     height: 30px;
@@ -152,11 +145,10 @@ text-align: center;
     margin-top: 2%;
 }
 
-
 /* ------------------Login------------------------ */
 
 #login-form {
-/*     border: 2px red solid; */
+    /*     border: 2px red solid; */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -165,9 +157,8 @@ text-align: center;
 input {
     height: 20px;
     width: 150px;
-/*     margin: 0.5%; */
+    /*     margin: 0.5%; */
 }
-
 
 /* ------------AddScrapbook------------------------ */
 
@@ -179,11 +170,12 @@ input {
     justify-content: center;
     align-items: center;
 }
+
 #inside-add-container {
-/*     border: 2px blue dashed; */
+    /*     border: 2px blue dashed; */
     width: 1300px;
     diplay: flex;
-        background-color: #e9e8e8;
+    background-color: #e9e8e8;
 }
 
 ::placeholder {
@@ -195,8 +187,8 @@ input {
 select {
     font-size: 14px;
     text-align-last: center;
-
 }
+
 input {
     border-radius: 4px;
 }
@@ -205,26 +197,27 @@ input {
     height: 30px;
     width: 300px;
     margin-left: 5%;
-
 }
 
 .dropdown-menu {
     height: 35px;
     width: 250px;
 }
+
 #theme {
     margin: 3%;
 }
 
 #color {
-margin-right: 3%;}
+    margin-right: 3%;
+}
 
 #travel-container {
     border: 2px green solid;
 }
 
 #travel {
-/*     border: 2px red solid; */
+    /*     border: 2px red solid; */
 }
 
 /* ------------Edit Scrapbook------------------------ */
@@ -260,31 +253,27 @@ margin-right: 3%;}
     display: flex;
     order: 2;
     height: 40px;
-      border: 3px #dddddd double;
+    border: 3px #dddddd double;
 }
 
 /* --------------------My Scrapbook------------------------ */
 
 #scrapbook-tile {
-/*     border: 2px blue solid; */
+    /*     border: 2px blue solid; */
     height: 350px;
     width: 350px;
     background-image: url(./images/tile.jpg);
     background-size: contain;
-
-
 }
 
 .tile-container {
-/*     border:3px orange dotted; */
+    /*     border:3px orange dotted; */
     display: flex;
-
-
 }
 
 #button-tile-container {
-/*     border: 3px green solid; */
-    display:flex;
+    /*     border: 3px green solid; */
+    display: flex;
     justify-content: center;
 }
 
@@ -299,7 +288,7 @@ margin-right: 3%;}
 }
 
 .left-font {
-/*     border: 2px red solid; */
+    /*     border: 2px red solid; */
     font-size: 30px;
     font-family: "Montserrat";
     text-transform: Uppercase;
@@ -307,7 +296,7 @@ margin-right: 3%;}
 }
 
 .right-font {
-/*     border: 2px red solid; */
+    /*     border: 2px red solid; */
     font-size: 15px;
     padding-top: 5%;
     font-size: 22px;
@@ -318,21 +307,21 @@ margin-right: 3%;}
 }
 
 #test {
-/*      border: 2px red solid; */
-     display: inline-block;
-     padding: 2%;
-     margin-left: 3%;
+    /*      border: 2px red solid; */
+    display: inline-block;
+    padding: 2%;
+    margin-left: 3%;
 }
 
 #main-container {
-/*     display: flex;
+    /*     display: flex;
     justify-content: center; */
-/*     border: 2px pink solid; */
+    /*     border: 2px pink solid; */
     display: flex÷;
-
 }
+
 #scrapbook-cover-container {
-/*     border: 5px yellow solid; */
+    /*     border: 5px yellow solid; */
     display: flex;
     justify-content: center;
     background-color: #4EA2C3;
@@ -347,11 +336,11 @@ margin-right: 3%;}
 }
 
 #cover-title {
-/*     border: 2px red solid; */
+    /*     border: 2px red solid; */
     width: 267px;
     height: 46px;
     z-index: 200;
-    position : absolute;
+    position: absolute;
     top: 222px;
     left: 625px;
     background-color: #EDEDED;
@@ -362,21 +351,22 @@ margin-right: 3%;}
     color: #777070;
 }
 
-#scrapbook-page-container{
+#scrapbook-page-container {
     2px blue solid;
     display: flex;
     justify-content: center;
-
 }
+
 #scrapbook-page {
     height: 600px;
     width: 1300px;
-/*     border: 2px red solid; */
+    /*     border: 2px red solid; */
     background: linear-gradient(to bottom right, #4EA2C3, #f5fdff);
-/*     background: linear-gradient(to bottom right, #c34ead, #e8e8e8);     */
-/*     background: linear-gradient(to bottom right, #4ec38f, #f5fdff); */
-/*     background: linear-gradient(to bottom right, #e6ff07, #ffffff); */
+    /*     background: linear-gradient(to bottom right, #c34ead, #e8e8e8);     */
+    /*     background: linear-gradient(to bottom right, #4ec38f, #f5fdff); */
+    /*     background: linear-gradient(to bottom right, #e6ff07, #ffffff); */
 }
+
 body {
     margin: 0;
     /*     border: 3px red solid; */
@@ -405,7 +395,6 @@ nav ul {
     padding: 0;
     overflow: hidden;
     background-color: black;
-
 }
 
 nav li {
@@ -413,7 +402,7 @@ nav li {
 }
 
 .li {
-float: right;
+    float: right;
 }
 
 nav li a {
@@ -438,7 +427,6 @@ nav li a:hover {
     order: -1;
     display: flex;
     margin-top: 9%;
-
 }
 
 #scissors {
@@ -448,23 +436,19 @@ nav li a:hover {
     margin-left: 3%;
     z-index: 100;
     animation: slide-right 15s;
-
 }
-
 
 @keyframes slide-right {
-  from {
-    margin-left: 0%;
-  }
-
-  to {
-    margin-left: 100%;
-  }
+    from {
+        margin-left: 0%;
+    }
+    to {
+        margin-left: 100%;
+    }
 }
 
-
 #logo-container {
-/*     border: 5px pink solid; */
+    /*     border: 5px pink solid; */
     background-color: black;
     border-bottom: 5px #E6FF07 dashed;
     height: 140px;
@@ -474,8 +458,8 @@ nav li a:hover {
 }
 
 #greeting-message {
-/*     border: 2px red solid; */
-font-family: 'Open Sans';
+    /*     border: 2px red solid; */
+    font-family: 'Open Sans';
     font-size: 25px;
     color: black;
     width: 100%;
@@ -488,32 +472,31 @@ font-family: 'Open Sans';
 #home-logo {
     height: 140px;
 }
+
 #home-container {
-/*     border: 2px blue solid; */
+    /*     border: 2px blue solid; */
     display: flex;
-    justify-content:space-evenly;
+    justify-content: space-evenly;
 }
 
 /* ------------Registration------------------------ */
 
 #registration-form {
-/*     border: 2px red solid; */
+    /*     border: 2px red solid; */
     display: flex;
     flex-direction: column;
     align-items: center;
-
-
 }
 
 p {
-font-family: 'Open Sans';
-font-size: 30px;
-font-weight: bold;
-text-align: center;
+    font-family: 'Open Sans';
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
 }
 
 .field {
-   border: 2px #a2a2a2 solid;
+    border: 2px #a2a2a2 solid;
     background-color: #eaeaea;
     color: black;
     height: 30px;
@@ -531,11 +514,10 @@ text-align: center;
     margin-top: 2%;
 }
 
-
 /* ------------------Login------------------------ */
 
 #login-form {
-/*     border: 2px red solid; */
+    /*     border: 2px red solid; */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -544,9 +526,8 @@ text-align: center;
 input {
     height: 20px;
     width: 150px;
-/*     margin: 0.5%; */
+    /*     margin: 0.5%; */
 }
-
 
 /* ------------AddScrapbook------------------------ */
 
@@ -558,11 +539,12 @@ input {
     justify-content: center;
     align-items: center;
 }
+
 #inside-add-container {
-/*     border: 2px blue dashed; */
+    /*     border: 2px blue dashed; */
     width: 1300px;
     diplay: flex;
-        background-color: #e9e8e8;
+    background-color: #e9e8e8;
 }
 
 ::placeholder {
@@ -574,8 +556,8 @@ input {
 select {
     font-size: 14px;
     text-align-last: center;
-
 }
+
 input {
     border-radius: 4px;
 }
@@ -584,26 +566,27 @@ input {
     height: 30px;
     width: 300px;
     margin-left: 5%;
-
 }
 
 .dropdown-menu {
     height: 35px;
     width: 250px;
 }
+
 #theme {
     margin: 3%;
 }
 
 #color {
-margin-right: 3%;}
+    margin-right: 3%;
+}
 
 #travel-container {
     border: 2px green solid;
 }
 
 #travel {
-/*     border: 2px red solid; */
+    /*     border: 2px red solid; */
 }
 
 /* ------------Edit Scrapbook------------------------ */
@@ -639,31 +622,27 @@ margin-right: 3%;}
     display: flex;
     order: 2;
     height: 40px;
-      border: 3px #dddddd double;
+    border: 3px #dddddd double;
 }
 
 /* --------------------My Scrapbook------------------------ */
 
 #scrapbook-tile {
-/*     border: 2px blue solid; */
+    /*     border: 2px blue solid; */
     height: 350px;
     width: 350px;
     background-image: url(./images/tile.jpg);
     background-size: contain;
-
-
 }
 
 .tile-container {
-/*     border:3px orange dotted; */
+    /*     border:3px orange dotted; */
     display: flex;
-
-
 }
 
 #button-tile-container {
-/*     border: 3px green solid; */
-    display:flex;
+    /*     border: 3px green solid; */
+    display: flex;
     justify-content: center;
 }
 
@@ -678,7 +657,7 @@ margin-right: 3%;}
 }
 
 .left-font {
-/*     border: 2px red solid; */
+    /*     border: 2px red solid; */
     font-size: 30px;
     font-family: "Montserrat";
     text-transform: Uppercase;
@@ -686,7 +665,7 @@ margin-right: 3%;}
 }
 
 .right-font {
-/*     border: 2px red solid; */
+    /*     border: 2px red solid; */
     font-size: 15px;
     padding-top: 5%;
     font-size: 22px;
@@ -697,21 +676,21 @@ margin-right: 3%;}
 }
 
 #test {
-/*      border: 2px red solid; */
-     display: inline-block;
-     padding: 2%;
-     margin-left: 3%;
+    /*      border: 2px red solid; */
+    display: inline-block;
+    padding: 2%;
+    margin-left: 3%;
 }
 
 #main-container {
-/*     display: flex;
+    /*     display: flex;
     justify-content: center; */
-/*     border: 2px pink solid; */
+    /*     border: 2px pink solid; */
     display: flex÷;
-
 }
+
 #scrapbook-cover-container {
-/*     border: 5px yellow solid; */
+    /*     border: 5px yellow solid; */
     display: flex;
     justify-content: center;
     background-color: #4EA2C3;
@@ -726,11 +705,11 @@ margin-right: 3%;}
 }
 
 #cover-title {
-/*     border: 2px red solid; */
+    /*     border: 2px red solid; */
     width: 267px;
     height: 46px;
     z-index: 200;
-    position : absolute;
+    position: absolute;
     top: 222px;
     left: 625px;
     background-color: #EDEDED;
@@ -741,21 +720,22 @@ margin-right: 3%;}
     color: #777070;
 }
 
-#scrapbook-page-container{
+#scrapbook-page-container {
     2px blue solid;
     display: flex;
     justify-content: center;
-
 }
+
 #scrapbook-page {
     height: 600px;
     width: 1300px;
-/*     border: 2px red solid; */
+    /*     border: 2px red solid; */
     background: linear-gradient(to bottom right, #4EA2C3, #f5fdff);
-/*     background: linear-gradient(to bottom right, #c34ead, #e8e8e8);     */
-/*     background: linear-gradient(to bottom right, #4ec38f, #f5fdff); */
-/*     background: linear-gradient(to bottom right, #e6ff07, #ffffff); */
+    /*     background: linear-gradient(to bottom right, #c34ead, #e8e8e8);     */
+    /*     background: linear-gradient(to bottom right, #4ec38f, #f5fdff); */
+    /*     background: linear-gradient(to bottom right, #e6ff07, #ffffff); */
 }
+
 body {
     margin: 0;
     /*     border: 3px red solid; */
@@ -784,7 +764,6 @@ nav ul {
     padding: 0;
     overflow: hidden;
     background-color: black;
-
 }
 
 nav li {
@@ -792,7 +771,7 @@ nav li {
 }
 
 .li {
-float: right;
+    float: right;
 }
 
 nav li a {
@@ -817,7 +796,6 @@ nav li a:hover {
     order: -1;
     display: flex;
     margin-top: 9%;
-
 }
 
 #scissors {
@@ -827,23 +805,19 @@ nav li a:hover {
     margin-left: 3%;
     z-index: 100;
     animation: slide-right 15s;
-
 }
-
 
 @keyframes slide-right {
-  from {
-    margin-left: 0%;
-  }
-
-  to {
-    margin-left: 100%;
-  }
+    from {
+        margin-left: 0%;
+    }
+    to {
+        margin-left: 100%;
+    }
 }
 
-
 #logo-container {
-/*     border: 5px pink solid; */
+    /*     border: 5px pink solid; */
     background-color: black;
     border-bottom: 5px #E6FF07 dashed;
     height: 140px;
@@ -853,8 +827,8 @@ nav li a:hover {
 }
 
 #greeting-message {
-/*     border: 2px red solid; */
-font-family: 'Open Sans';
+    /*     border: 2px red solid; */
+    font-family: 'Open Sans';
     font-size: 25px;
     color: black;
     width: 100%;
@@ -867,32 +841,31 @@ font-family: 'Open Sans';
 #home-logo {
     height: 140px;
 }
+
 #home-container {
-/*     border: 2px blue solid; */
+    /*     border: 2px blue solid; */
     display: flex;
-    justify-content:space-evenly;
+    justify-content: space-evenly;
 }
 
 /* ------------Registration------------------------ */
 
 #registration-form {
-/*     border: 2px red solid; */
+    /*     border: 2px red solid; */
     display: flex;
     flex-direction: column;
     align-items: center;
-
-
 }
 
 p {
-font-family: 'Open Sans';
-font-size: 30px;
-font-weight: bold;
-text-align: center;
+    font-family: 'Open Sans';
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
 }
 
 .field {
-   border: 2px #a2a2a2 solid;
+    border: 2px #a2a2a2 solid;
     background-color: #eaeaea;
     color: black;
     height: 30px;
@@ -910,11 +883,10 @@ text-align: center;
     margin-top: 2%;
 }
 
-
 /* ------------------Login------------------------ */
 
 #login-form {
-/*     border: 2px red solid; */
+    /*     border: 2px red solid; */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -923,9 +895,8 @@ text-align: center;
 input {
     height: 20px;
     width: 150px;
-/*     margin: 0.5%; */
+    /*     margin: 0.5%; */
 }
-
 
 /* ------------AddScrapbook------------------------ */
 
@@ -937,11 +908,12 @@ input {
     justify-content: center;
     align-items: center;
 }
+
 #inside-add-container {
-/*     border: 2px blue dashed; */
+    /*     border: 2px blue dashed; */
     width: 1300px;
     diplay: flex;
-        background-color: #e9e8e8;
+    background-color: #e9e8e8;
 }
 
 ::placeholder {
@@ -953,8 +925,8 @@ input {
 select {
     font-size: 14px;
     text-align-last: center;
-
 }
+
 input {
     border-radius: 4px;
 }
@@ -963,26 +935,27 @@ input {
     height: 30px;
     width: 300px;
     margin-left: 5%;
-
 }
 
 .dropdown-menu {
     height: 35px;
     width: 250px;
 }
+
 #theme {
     margin: 3%;
 }
 
 #color {
-margin-right: 3%;}
+    margin-right: 3%;
+}
 
 #travel-container {
     border: 2px green solid;
 }
 
 #travel {
-/*     border: 2px red solid; */
+    /*     border: 2px red solid; */
 }
 
 /* ------------Edit Scrapbook------------------------ */
@@ -1012,37 +985,38 @@ margin-right: 3%;}
 
 .edit-field {
     margin: 4%;
+    height: 35px;
+    width: 250px;
 }
 
-#addnewpage-button {
-    display: flex;
-    order: 2;
-    height: 40px;
-      border: 3px #dddddd double;
+#addnewpage-button, #edit-scrapbook-button, #add-page-button {
+    border: 2px #12bbee solid;
+    font-size: 15px;
+    background-color: black;
+    color: white;
+    height: 35px;
+    width: 210px;
+    margin-top: 2%;
 }
 
 /* --------------------My Scrapbook------------------------ */
 
 #scrapbook-tile {
-/*     border: 2px blue solid; */
+    /*     border: 2px blue solid; */
     height: 350px;
     width: 350px;
     background-image: url(./images/tile.jpg);
     background-size: contain;
-
-
 }
 
 .tile-container {
-/*     border:3px orange dotted; */
+    /*     border:3px orange dotted; */
     display: flex;
-
-
 }
 
 #button-tile-container {
-/*     border: 3px green solid; */
-    display:flex;
+    /*     border: 3px green solid; */
+    display: flex;
     justify-content: center;
 }
 
@@ -1057,7 +1031,7 @@ margin-right: 3%;}
 }
 
 .left-font {
-/*     border: 2px red solid; */
+    /*     border: 2px red solid; */
     font-size: 30px;
     font-family: "Montserrat";
     text-transform: Uppercase;
@@ -1065,7 +1039,7 @@ margin-right: 3%;}
 }
 
 .right-font {
-/*     border: 2px red solid; */
+    /*     border: 2px red solid; */
     font-size: 15px;
     padding-top: 5%;
     font-size: 22px;
@@ -1076,16 +1050,16 @@ margin-right: 3%;}
 }
 
 /* --------------------Scrapbook------------------------ */
+
 #test {
-/*      border: 2px red solid; */
-     display: inline-block;
-     padding: 2%;
-     margin-left: 3%;
+    /*      border: 2px red solid; */
+    display: inline-block;
+    padding: 2%;
+    margin-left: 3%;
 }
 
-
 #scrapbook-cover-container {
-/*     border: 5px yellow solid; */
+    /*     border: 5px yellow solid; */
     display: flex;
     justify-content: center;
     background-color: #4EA2C3;
@@ -1099,13 +1073,12 @@ margin-right: 3%;}
     justify-content: center;
 }
 
-
 #cover-title {
-/*     border: 2px red solid; */
+    /*     border: 2px red solid; */
     width: 267px;
     height: 55px;
-/*     z-index: 200; */
-    position : absolute;
+    /*     z-index: 200; */
+    position: absolute;
     top: 210px;
     left: 658px;
     background-color: #EDEDED;
@@ -1116,50 +1089,45 @@ margin-right: 3%;}
     color: #777070;
 }
 
-
-#scrapbook-page-container{
+#scrapbook-page-container {
     2px blue solid;
     display: flex;
     justify-content: center;
-
 }
+
 #scrapbook-page {
     height: 650px;
     width: 1300px;
-/*     border: 2px red solid; */
+    /*     border: 2px red solid; */
     background: linear-gradient(to bottom right, #4EA2C3, #f5fdff);
-/*     background: linear-gradient(to bottom right, #c34ead, #e8e8e8);     */
-/*     background: linear-gradient(to bottom right, #4ec38f, #f5fdff); */
-/*     background: linear-gradient(to bottom right, #e6ff07, #ffffff); */
+    /*     background: linear-gradient(to bottom right, #c34ead, #e8e8e8);     */
+    /*     background: linear-gradient(to bottom right, #4ec38f, #f5fdff); */
+    /*     background: linear-gradient(to bottom right, #e6ff07, #ffffff); */
 }
-
 
 #planetail {
     height: 250px;
     width: 450px;
     margin-top: 1%;
-/*     border: 2px pink solid; */
+    /*     border: 2px pink solid; */
 }
 
 .pic {
     height: 225px;
     width: 225px;
     border: 2px #81ff7f solid;
-
-
 }
 
 #top-pic-container {
-/*     border: 2px red solid; */
+    /*     border: 2px red solid; */
     display: flex;
     justify-content: space-evenly;
     height: 200px;
     margin-top: -9%;
-
 }
 
 #bottom-pic-container {
-/*     border: 2px red solid; */
+    /*     border: 2px red solid; */
     display: flex;
     justify-content: space-between;
     margin-top: 2%;
@@ -1183,13 +1151,12 @@ margin-right: 3%;}
 }
 
 #sunglasses {
-      position: absolute;
-      height: 60px;
-      width: 60px;
- transform: rotate(-10deg);
-top: 1200px;
-left: 980px;
-
+    position: absolute;
+    height: 60px;
+    width: 60px;
+    transform: rotate(-10deg);
+    top: 1200px;
+    left: 980px;
 }
 
 #suitcase {
@@ -1204,7 +1171,7 @@ left: 980px;
 #passport {
     height: 170px;
     width: 220px;
-    transfor:rotate(20deg);
+    transfor: rotate(20deg);
     position: absolute;
     top: 1200px;
     left: 820px;

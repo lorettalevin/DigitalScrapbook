@@ -98,3 +98,12 @@ export function changeColor(selectedColor){
         selectedColor
     };
 }
+
+export function editTitle(newTitle) {
+    //axios.post
+    //db. update on the other side server
+    return {
+        type: 'EDIT_TITLE',
+        newTitle
+    }
+}

@@ -53,7 +53,7 @@ class AddPage extends React.Component {
                             <option value="Yellow">Yellow</option>
                             <option value="Pink">Pink</option>
                         </select>
-                    <button onClick={this.handleSubmit}>SUBMIT</button>
+                    <button id="add-page-button" onClick={this.handleSubmit}>SUBMIT</button>
                 </form>
             </div>
         )}
