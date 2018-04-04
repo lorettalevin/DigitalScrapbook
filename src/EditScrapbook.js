@@ -7,7 +7,8 @@ import {getScrapbook, editScrapbook, getPages} from './actions';
 const mapStateToProps = state => {
     return {
         scrapbook: state.scrapbook,
-        pages: state.pages
+        pages: state.pages,
+        selectedColor: state.selectedColor
     }
 }
 
@@ -44,15 +45,7 @@ class EditScrapbook extends React.Component {
     }
 
 
-// if (document.querySelector('select[name="color"]').value = 'blue') {
-//     render blue page
-// } else if (document.querySelector('select[name="color"]').value = 'green') {
-//     render green page
-// } else if (document.querySelector('select[name="color"]').value = 'pink') {
-//     render pink page
-// } else if (document.querySelector('select[name="color"]').value = 'yellow') {
-//     render yellow page
-// }
+
 
 
     togglePageForm() {
@@ -112,7 +105,7 @@ class EditScrapbook extends React.Component {
                 <div>{this.renderEditPages()}</div>
 
                         <div id="scrapbook-page-container">
-                            <div id="editpage-scrapbook-page">
+                            <div id="editpage-scrapbook-page" className={this.props.selectedColor}>
                             <img id="editpage-planetail" src="../images/planetail.png"></img>
                             {/*<img id="editpage-camera" src="../images/camera.png"></img>*/}
                             <img id="editpage-bike" src="../images/bike2.png"></img>

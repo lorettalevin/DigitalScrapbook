@@ -74,5 +74,11 @@ export default function reducer(state = INITIAL_STATE, action) {
         });
     }
 
+    if (action.type === 'CHANGE_COLOR') {
+        state = Object.assign({}, state, {
+            selectedColor: action.selectedColor
+        });
+    }
+
     return state;
 }
