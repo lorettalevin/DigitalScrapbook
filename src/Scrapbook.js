@@ -43,8 +43,40 @@ class Scrapbook extends React.Component {
 
         return (
             <div>
+                <div id="main-container">
+                <div id="scrapbook-cover-container">
+                    <div id="cover-title">    {this.props.scrapbookInfo.scrapbook.scrapbook_title}</div>
+                    <img id="coverpic" src="../images/scrapbook_cover_no_blue.png"></img>
+                </div>
+            </div>
+                <div id="scrapbook-page-container">
+                    <div id="scrapbook-page">
+                        <img id="planetail" src="../images/planetail.png"></img>
+                        <img id="camera" src="../images/camera.png"></img>
+                        <img id="bike" src="../images/bike2.png"></img>
+                        <img id="sunglasses" src="../images/sunglasses.png"></img>
+                        <img id="map" src="../images/map.png"></img>
+
+
+
+                        <div id="top-pic-container">
+                            <div className="pic" id="pic1">
+
+                            </div>
+                            <div className="pic" id="pic2"></div>
+                        </div>
+                        <div id="bottom-pic-container">
+                        <div className="pic" id="pic3"></div>
+                        <div className="pic" id="pic4"></div>
+                        <div className="pic" id="pic5"></div>
+                        </div>
+                    </div>
+
+
+
+                </div>
                 {this.props.scrapbookInfo.scrapbook.color}
-                {this.props.scrapbookInfo.scrapbook.scrapbook_title}
+
                 {this.props.scrapbookInfo.scrapbook.theme}
                 {renderedPages}
             </div>
