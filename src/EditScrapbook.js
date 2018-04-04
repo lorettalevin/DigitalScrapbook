@@ -2,7 +2,7 @@ import React from 'react';
 import {connect} from 'react-redux';
 import AddPage from './AddPage';
 import EditPage from './EditPage';
-import {getScrapbook, editScrapbook, getPages} from './actions';
+import {getScrapbook, editScrapbook, getPages, editTitle} from './actions';
 
 const mapStateToProps = state => {
     return {
@@ -39,9 +39,11 @@ class EditScrapbook extends React.Component {
         e.preventDefault();
         const {scrapbook_title, theme, color} = this.state
         this.props.dispatch(editScrapbook(this.props.match.params.id, this.state))
-        document.querySelector('input[name="scrapbook_title"]').value = '';
-        document.querySelector('select[name="theme"]').value = '';
-        document.querySelector('select[name="color"]').value = '';
+        // document.querySelector('input[name="scrapbook_title"]').value = '';
+        // document.querySelector('select[name="theme"]').value = '';
+        // document.querySelector('select[name="color"]').value = '';
+        console.log("GIVE IT TO US", document.querySelector('input[name="scrapbook_title"]').value);
+        this.props.dispatch(editTitle(document.querySelector('input[name="scrapbook_title"]').value))
     }
 
 
@@ -91,18 +93,19 @@ class EditScrapbook extends React.Component {
                         <option value="Graduation">Graduation</option>
                         <option value="Baby's First Milestones">Baby's First Milestones</option>
                     </select>
-                    <button onClick={this.handleSubmit}>SUBMIT</button>
+                    <button id="edit-scrapbook-button" onClick={this.handleSubmit}>SUBMIT</button>
                 </form>
             </div>
 
                 <button id="addnewpage-button" onClick={this.togglePageForm}>Add New Page</button>
-
+                <div id="toggle-page">
                 { this.state.showForm &&
                     <AddPage
                         scrapbook_id={this.props.match.params.id}
                     /> }
                 </div>
-                <div>{this.renderEditPages()}</div>
+                </div>
+                <div id="edit-pages">{this.renderEditPages()}</div>
 
                         <div id="scrapbook-page-container">
                             <div id="editpage-scrapbook-page" className={this.props.selectedColor}>

@@ -21,37 +21,27 @@ export default function reducer(state = INITIAL_STATE, action) {
     }
 
     if (action.type === 'GET_SCRAPBOOKS') {
-        state = Object.assign({}, state, {
-            scrapbooks: action.scrapbooks
-        });
+        state = Object.assign({}, state, {scrapbooks: action.scrapbooks});
     }
 
     if (action.type === 'GET_SCRAPBOOK') {
-        state = Object.assign({}, state, {
-            scrapbook: action.scrapbook
-        });
+        state = Object.assign({}, state, {scrapbook: action.scrapbook});
     }
 
     if (action.type === 'EDIT_SCRAPBOOK') {
-        state = Object.assign({}, state, {
-            scrapbook: action.newData
-        });
+        state = Object.assign({}, state, {scrapbook: action.newData});
     }
 
     if (action.type === 'ADD_PAGE') {
-        state = Object.assign({}, state, {
-            page: action.header
-        });
+        state = Object.assign({}, state, {page: action.header});
     }
 
     if (action.type === 'GET_PAGES') {
-        state = Object.assign({}, state, {
-            pages: action.pages
-        });
+        state = Object.assign({}, state, {pages: action.pages});
     }
 
     if (action.type === 'ADD_IMAGES') {
-        const { description, file, image_title, page_id } = action;
+        const {description, file, image_title, page_id} = action;
         state = Object.assign({}, state, {
             files: {
                 description,
@@ -63,22 +53,18 @@ export default function reducer(state = INITIAL_STATE, action) {
     }
 
     if (action.type === 'GET_IMAGES') {
-        state = Object.assign({}, state, {
-            images: action.images
-        });
+        state = Object.assign({}, state, {images: action.images});
     }
 
     if (action.type === 'GET_FULL_SCRAPBOOK') {
-        state = Object.assign({}, state, {
-            scrapbookInfo: action.scrapbookInfo
-        });
+        state = Object.assign({}, state, {scrapbookInfo: action.scrapbookInfo});
     }
 
     if (action.type === 'CHANGE_COLOR') {
-        state = Object.assign({}, state, {
-            selectedColor: action.selectedColor
-        });
+        state = Object.assign({}, state, {selectedColor: action.selectedColor});
     }
-
+    if (action.type === 'EDIT_TITLE') {
+        return Object.assign({}, state, {scrapbook: Object.assign({}, state.scrapbook, {scrapbook_title: action.newTitle})})
+    }
     return state;
 }
