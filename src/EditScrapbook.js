@@ -43,6 +43,18 @@ class EditScrapbook extends React.Component {
         document.querySelector('select[name="color"]').value = '';
     }
 
+
+// if (document.querySelector('select[name="color"]').value = 'blue') {
+//     render blue page
+// } else if (document.querySelector('select[name="color"]').value = 'green') {
+//     render green page
+// } else if (document.querySelector('select[name="color"]').value = 'pink') {
+//     render pink page
+// } else if (document.querySelector('select[name="color"]').value = 'yellow') {
+//     render yellow page
+// }
+
+
     togglePageForm() {
         this.setState({
             showForm: !this.state.showForm
@@ -86,13 +98,6 @@ class EditScrapbook extends React.Component {
                         <option value="Graduation">Graduation</option>
                         <option value="Baby's First Milestones">Baby's First Milestones</option>
                     </select>
-                    <select className="edit-field" onChange={this.handleChange}name="color" id="">
-                        <option value="Default">Please select color</option>
-                        <option value="Blue">Blue</option>
-                        <option value="Green">Green</option>
-                        <option value="Yellow">Yellow</option>
-                        <option value="Pink">Pink</option>
-                    </select>
                     <button onClick={this.handleSubmit}>SUBMIT</button>
                 </form>
             </div>
@@ -105,6 +110,26 @@ class EditScrapbook extends React.Component {
                     /> }
                 </div>
                 <div>{this.renderEditPages()}</div>
+
+                        <div id="scrapbook-page-container">
+                            <div id="editpage-scrapbook-page">
+                            <img id="editpage-planetail" src="../images/planetail.png"></img>
+                            {/*<img id="editpage-camera" src="../images/camera.png"></img>*/}
+                            <img id="editpage-bike" src="../images/bike2.png"></img>
+                            <img id="editpage-sunglasses" src="../images/sunglasses.png"></img>
+                            <img id="editpage-map" src="../images/map.png"></img>
+                            <div id="editpage-top-pic-container">
+                                <div className="pic" id="pic1"></div>
+                                <div className="pic" id="pic2"></div>
+                            </div>
+                            <div id="editpage-bottom-pic-container">
+                                <div className="pic" id="pic3"></div>
+                                <div className="pic" id="pic4"></div>
+                                <div className="pic" id="pic5"></div>
+                            </div>
+                        </div>
+                    </div>
+
             </div>
         )
     }

@@ -36,6 +36,13 @@ class AddPage extends React.Component {
             <div>
                 <form>
                     <input onChange={this.handleChange} name="header" type="text" placeholder="Page Title"/>
+                        <select className="edit-field" onChange={this.handleChange}name="color" id="">
+                            <option value="Default">Please select color</option>
+                            <option value="Blue">Blue</option>
+                            <option value="Green">Green</option>
+                            <option value="Yellow">Yellow</option>
+                            <option value="Pink">Pink</option>
+                        </select>
                     <button onClick={this.handleSubmit}>SUBMIT</button>
                 </form>
             </div>
