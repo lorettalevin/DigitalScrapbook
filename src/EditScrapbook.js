@@ -75,38 +75,38 @@ class EditScrapbook extends React.Component {
             <div>
                 <div id="chosen-and-edit-form-container">
                 <div id="chosen">
-                    <div>CURRENT CHOICE:</div>
-                    <div>{this.props.scrapbook.scrapbook_title}</div>
-                    <div>{this.props.scrapbook.theme}</div>
-                    <div>{this.props.scrapbook.color}</div>
+                    <div id="current-choice">Currently Selected:</div>
+                    <div className ="current">{this.props.scrapbook.scrapbook_title}</div>
+                    <div className ="current">{this.props.scrapbook.theme}</div>
+                    <div className ="current">{this.props.scrapbook.color}</div>
                 </div>
             <div id="edit-form-container">
-                <form id="edit-scrabook-form">
+                <form id="edit-scrapbook-form">
                     <input className="edit-field" onChange={this.handleChange} name="scrapbook_title" placeholder="Scrapbook Title" id="" />
                     <select className="edit-field" onChange={this.handleChange} name="theme" id="">
-                        <option value="Default">Please select theme</option>
+                        <option value="Default">Select Theme</option>
                         <option value="Travel">Travel</option>
                         <option value="New Year's Eve">New Year's Eve</option>
                         <option value="Graduation">Graduation</option>
                         <option value="Baby's First Milestones">Baby's First Milestones</option>
                     </select>
                     <select className="edit-field" onChange={this.handleChange}name="color" id="">
-                        <option value="Default">Please select color</option>
+                        <option value="Default">Select Color</option>
                         <option value="Blue">Blue</option>
                         <option value="Green">Green</option>
                         <option value="Yellow">Yellow</option>
                         <option value="Pink">Pink</option>
                     </select>
-                    <button id="edit-scrapbook-button" onClick={this.handleSubmit}>SUBMIT</button>
+                    <button id="edit-button" className="edit-scrapbook-button" onClick={this.handleSubmit}>SUBMIT</button>
                 </form>
             </div>
 
-                <button id="addnewpage-button" onClick={this.togglePageForm}>Add New Page</button>
                 <div id="toggle-page">
                 { this.state.showForm &&
                     <AddPage
                         scrapbook_id={this.props.match.params.id}
                     /> }
+                    <button id="addnewpage-button" onClick={this.togglePageForm}>Add New Page</button>
                 </div>
                 </div>
                 <div id="edit-pages">{this.renderEditPages()}</div>

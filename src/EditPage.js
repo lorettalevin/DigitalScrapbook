@@ -23,9 +23,10 @@ componentDidMount() {
             <div>
                 <p>This is a page</p>
                 <p>{this.props.page.header}</p>
-                <AddImages
+                <div id="image-uploader"><AddImages
                     page_id={this.props.page.id}
                     />
+                </div>
             </div>
         )
     }
