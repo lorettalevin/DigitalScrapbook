@@ -11,7 +11,6 @@ const mapStateToProps = state => {
 class Scrapbook extends React.Component {
     constructor() {
         super();
-
     }
 
     componentDidMount() {
@@ -31,7 +30,6 @@ class Scrapbook extends React.Component {
                         return (
                             <div key={image.id}>
                                 <div>{image.description}</div>
-
                                 <img src={image.file}></img>
                             </div>
                         )
@@ -45,7 +43,7 @@ class Scrapbook extends React.Component {
             <div>
                 <div id="main-container">
                 <div id="scrapbook-cover-container">
-                    <div id="cover-title">    {this.props.scrapbookInfo.scrapbook.scrapbook_title}</div>
+                    <div id="cover-title">{this.props.scrapbookInfo.scrapbook.scrapbook_title}</div>
                     <img id="coverpic" src="../images/scrapbook_cover_no_blue.png"></img>
                 </div>
             </div>
@@ -59,11 +57,9 @@ class Scrapbook extends React.Component {
                         <img id="passport" src="../images/passport.png"></img>
                         <img id="sign" src="../images/sign.png"></img>
 
-
-
                         <div id="top-pic-container">
                             <div className="pic" id="pic1">
-<img src={this.props.scrapbookInfo.pages[0].images[0].file}></img>
+                                {/*<img src={this.props.scrapbookInfo.pages[0].images[0].file}></img>*/}
                             </div>
                             <div className="pic" id="pic2"></div>
                         </div>
@@ -77,10 +73,9 @@ class Scrapbook extends React.Component {
 
 
                 </div>
-                {this.props.scrapbookInfo.scrapbook.color}
-
-                {this.props.scrapbookInfo.scrapbook.theme}
-                {renderedPages}
+                {/*{this.props.scrapbookInfo.scrapbook.color}
+                {this.props.scrapbookInfo.scrapbook.theme}*/}
+                {/*{renderedPages}*/}
             </div>
     )}
 }

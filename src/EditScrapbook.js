@@ -2,7 +2,7 @@ import React from 'react';
 import {connect} from 'react-redux';
 import AddPage from './AddPage';
 import EditPage from './EditPage';
-import {getScrapbook, editScrapbook, getPages, editTitle} from './actions';
+import {getScrapbook, editScrapbook, getPages, editTitle, changeColor} from './actions';
 
 const mapStateToProps = state => {
     return {
@@ -33,6 +33,7 @@ class EditScrapbook extends React.Component {
         this.setState({
             [e.target.name]: e.target.value
         })
+        this.props.dispatch(changeColor(document.querySelector('select[name="color"]').value))
     }
 
     handleSubmit(e) {
@@ -42,13 +43,8 @@ class EditScrapbook extends React.Component {
         // document.querySelector('input[name="scrapbook_title"]').value = '';
         // document.querySelector('select[name="theme"]').value = '';
         // document.querySelector('select[name="color"]').value = '';
-        console.log("GIVE IT TO US", document.querySelector('input[name="scrapbook_title"]').value);
         this.props.dispatch(editTitle(document.querySelector('input[name="scrapbook_title"]').value))
     }
-
-
-
-
 
     togglePageForm() {
         this.setState({
@@ -79,9 +75,10 @@ class EditScrapbook extends React.Component {
             <div>
                 <div id="chosen-and-edit-form-container">
                 <div id="chosen">
-                    <p>You have chosen: {this.props.scrapbook.scrapbook_title}</p>
-                    <p>You have chosen: {this.props.scrapbook.theme}</p>
-                    <p>You have chosen: {this.props.scrapbook.color}</p>
+                    <div>CURRENT CHOICE:</div>
+                    <div>{this.props.scrapbook.scrapbook_title}</div>
+                    <div>{this.props.scrapbook.theme}</div>
+                    <div>{this.props.scrapbook.color}</div>
                 </div>
             <div id="edit-form-container">
                 <form id="edit-scrabook-form">
@@ -92,6 +89,13 @@ class EditScrapbook extends React.Component {
                         <option value="New Year's Eve">New Year's Eve</option>
                         <option value="Graduation">Graduation</option>
                         <option value="Baby's First Milestones">Baby's First Milestones</option>
+                    </select>
+                    <select className="edit-field" onChange={this.handleChange}name="color" id="">
+                        <option value="Default">Please select color</option>
+                        <option value="Blue">Blue</option>
+                        <option value="Green">Green</option>
+                        <option value="Yellow">Yellow</option>
+                        <option value="Pink">Pink</option>
                     </select>
                     <button id="edit-scrapbook-button" onClick={this.handleSubmit}>SUBMIT</button>
                 </form>
@@ -107,21 +111,26 @@ class EditScrapbook extends React.Component {
                 </div>
                 <div id="edit-pages">{this.renderEditPages()}</div>
 
-                        <div id="scrapbook-page-container">
-                            <div id="editpage-scrapbook-page" className={this.props.selectedColor}>
+                    <div id="editpage-scrapbook-page-container">
+                        <div id="editpage-scrapbook-page">
                             <img id="editpage-planetail" src="../images/planetail.png"></img>
-                            {/*<img id="editpage-camera" src="../images/camera.png"></img>*/}
+                            <img id="editpage-suitcase" src="../images/suitcase1.png"></img>
                             <img id="editpage-bike" src="../images/bike2.png"></img>
                             <img id="editpage-sunglasses" src="../images/sunglasses.png"></img>
                             <img id="editpage-map" src="../images/map.png"></img>
+                            <img id="editpage-passport" src="../images/passport.png"></img>
+                            <img id="editpage-sign" src="../images/sign.png"></img>
+
                             <div id="editpage-top-pic-container">
-                                <div className="pic" id="pic1"></div>
-                                <div className="pic" id="pic2"></div>
+                                {/*<div className="pic" id="editpage-pic1">
+                                    <img src={this.props.scrapbookInfo.pages[0].images[0].file}></img>
+                                </div>*/}
+                                <div className="pic" id="editpage-pic2"></div>
                             </div>
                             <div id="editpage-bottom-pic-container">
-                                <div className="pic" id="pic3"></div>
-                                <div className="pic" id="pic4"></div>
-                                <div className="pic" id="pic5"></div>
+                            <div className="pic" id="editpage-pic3"></div>
+                            <div className="pic" id="editpage-pic4"></div>
+                            <div className="pic" id="editpage-pic5"></div>
                             </div>
                         </div>
                     </div>
