@@ -1,7 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import {addPage, changeColor} from './actions';
-
+import {addPage} from './actions';
 
 const mapStateToProps = state => {
     return {
@@ -23,7 +22,6 @@ class AddPage extends React.Component {
         this.setState({
             [e.target.name]: e.target.value
         })
-        this.props.dispatch(changeColor(document.querySelector('select[name="color"]').value))
     }
 
     handleSubmit(e) {
@@ -37,13 +35,6 @@ class AddPage extends React.Component {
             <div>
                 <form>
                     <input onChange={this.handleChange} name="header" type="text" placeholder="Page Title"/>
-                        <select className="edit-field" onChange={this.handleChange}name="color" id="">
-                            <option value="Default">Please select color</option>
-                            <option value="Blue">Blue</option>
-                            <option value="Green">Green</option>
-                            <option value="Yellow">Yellow</option>
-                            <option value="Pink">Pink</option>
-                        </select>
                     <button id="add-page-button" onClick={this.handleSubmit}>SUBMIT</button>
                 </form>
             </div>
