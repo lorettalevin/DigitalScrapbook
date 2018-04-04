@@ -65,8 +65,9 @@ class AddScrapbook extends React.Component {
                     <button className="addscrapbook-button" onClick={this.handleSubmit}>SUBMIT</button>
                     </div>
                 </form>
-                <div id="travel-container">
-                    <img id="travel" src="./images/travel-theme.png" alt="travel-picture"/>
+                <div id="addpage-scrapbook-cover-container">
+                    <div id="addpage-cover-title">Scrapbook Title</div>
+                    <img id="coverpic" src="../images/scrapbook_cover_no_blue.png"></img>
                 </div>
             </div>
         )}
