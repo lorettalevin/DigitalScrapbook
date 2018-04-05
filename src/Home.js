@@ -3,7 +3,6 @@ import Registration from './Registration';
 import Login from "./Login";
 import {HomeLogo} from './Logo';
 
-
 export default class Home extends React.Component {
     constructor() {
         super();
@@ -22,7 +21,7 @@ export default class Home extends React.Component {
                 Looking for a quick and easy way to preserve your memories? Memory Stitch is a digital scrapbook maker suited for variously themed life events.
                 Register below and your scrapbook awaits you!
             </div>
-            
+
                 <div id="home-container">
                     <div>
                         <p>SIGN UP</p>
