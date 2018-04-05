@@ -72,7 +72,8 @@ class EditScrapbook extends React.Component {
 
     render() {
         return (
-            <div>
+            <div id="edit-scrapbook-page">
+                <h1>Edit Your Scrapbook</h1>
                 <div id="chosen-and-edit-form-container">
                     <div id="chosen">
                         <div id="current-choice">Currently Selected:</div>
@@ -107,20 +108,17 @@ class EditScrapbook extends React.Component {
                 <div className="edit-page-wrapper">
                     <div id="edit-pages">
                         <div id="toggle-page">
+                            <button id="addnewpage-button" onClick={this.togglePageForm}>Add New Page</button>
                             { this.state.showForm &&
                                 <AddPage
                                     scrapbook_id={this.props.match.params.id}
                                     />
                             }
-                            <button id="addnewpage-button" onClick={this.togglePageForm}>Add New Page</button>
                         </div>
-                        {this.renderEditPages()}
-                    </div>
-
-                    <div id="editpage-scrapbook-page-container">
-
                     </div>
                 </div>
+
+                {this.renderEditPages()}
 
             </div>
         )

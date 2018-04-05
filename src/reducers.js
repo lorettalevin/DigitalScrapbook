@@ -2,7 +2,7 @@ const INITIAL_STATE = {
     scrapbook: {},
     scrapbooks: [],
     pages: [],
-    files: []
+    images: []
 };
 
 export default function reducer(state = INITIAL_STATE, action) {
@@ -33,7 +33,14 @@ export default function reducer(state = INITIAL_STATE, action) {
     }
 
     if (action.type === 'ADD_PAGE') {
-        state = Object.assign({}, state, {page: action.header});
+        const pages = state.pages.slice()
+        pages.push(action.page)
+
+        state = Object.assign({}, state, {
+            pages
+
+        });
+        console.log("ADDED page to the STATE", state);
     }
 
     if (action.type === 'GET_PAGES') {
@@ -41,14 +48,11 @@ export default function reducer(state = INITIAL_STATE, action) {
     }
 
     if (action.type === 'ADD_IMAGES') {
-        const {description, file, image_title, page_id} = action;
+        const images = state.images.slice()
+        images.push(action.image)
+
         state = Object.assign({}, state, {
-            files: {
-                description,
-                file,
-                image_title,
-                page_id
-            }
+            images
         });
     }
 

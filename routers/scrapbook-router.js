@@ -72,10 +72,14 @@ router.post('/editonescrapbook/:id', (req, res) => {
 });
 
 router.post('/addpage/:scrapbook_id', (req, res) => {
-    db.addPage(req.params.scrapbook_id, req.body.header).then(() => {
+    db.addPage(req.params.scrapbook_id, req.body.header).then(id => {
         res.json({
             success: true,
-            header: req.body.header
+            page: {
+                header: req.body.header,
+                id,
+                scrapbook_id: req.params.scrapbook_id
+            }
         });
     });
 });
@@ -90,15 +94,19 @@ router.get('/getpages/:scrapbook_id', (req, res) => {
 });
 
 router.post('/addimages/:page_id', uploader.single('file'), s3.upload, (req, res) => {
-    db.addImages(req.params.page_id, req.file.filename, req.body.image_title, req.body.description).then(results => {
+    db.addImages(req.params.page_id, req.file.filename, req.body.image_title, req.body.description).then(images => {
+        //when we add multiple images we will need to REDO the logic in this route
         const file = s3Url + req.file.filename;
-        const {image_title, description} = req.body;
         res.json({
             success: true,
-            page_id: req.params.page_id,
-            file: req.file.filename,
-            image_title,
-            description
+            image: {
+                ...images[0],
+                file
+            }
+            // page_id: req.params.page_id,
+            // file: req.file.filename,
+            // image_title,
+            // description
         });
     });
 });

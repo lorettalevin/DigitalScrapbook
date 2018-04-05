@@ -42,10 +42,10 @@ export function editScrapbook(scrapbook_id, newData) {
 }
 
 export function addPage(scrapbook_id, header) {
-    return axios.post(`/addpage/${scrapbook_id}`, {header}).then(() => {
+    return axios.post(`/addpage/${scrapbook_id}`, {header}).then((resp) => {
         return {
             type: 'ADD_PAGE',
-            header
+            page: resp.data.page
         };
     });
 }
@@ -61,13 +61,10 @@ export function getPages(scrapbook_id) {
 
 export function addImages(page_id, formData) {
     return axios.post(`/addimages/${page_id}`, formData).then(resp => {
-        const { description, file, image_title, page_id } = resp.data;
         return {
             type: "ADD_IMAGES",
-            description,
-            file,
-            image_title,
-            page_id
+            //WHEN WE HANDLE MULTIPLE IMAGES WE NEED TO CHANGE THIS!!
+            image: resp.data.image
         };
     });
 }
@@ -77,7 +74,6 @@ export function getImages(page_id) {
         return {
             type: "GET_IMAGES",
             images: resp.data.images
-
         };
     });
 }

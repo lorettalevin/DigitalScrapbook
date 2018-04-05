@@ -152,7 +152,7 @@ function addImages(page_id, file, description, image_title) {
         const q = `
         INSERT INTO images (page_id, file, description, image_title)
         VALUES ($1, $2, $3, $4)
-        RETURNING id
+        RETURNING *
         `;
         const params = [page_id, file, description, image_title];
         db.query(q, params).then(results => {

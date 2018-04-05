@@ -32,10 +32,11 @@ class AddPage extends React.Component {
 
     render() {
         return (
-            <div>
+            <div className="add-page">
+                <p>Add a new page.</p>
                 <form>
-                    <input onChange={this.handleChange} name="header" type="text" placeholder="Page Title"/>
-                    <button id="add-page-button" onClick={this.handleSubmit}>SUBMIT</button>
+                    <input className="full-width" onChange={this.handleChange} name="header" type="text" placeholder="Page Title"/>
+                    <button id="add-page-button" className="full-width add-page-button" onClick={this.handleSubmit}>SUBMIT</button>
                 </form>
             </div>
         )}
