@@ -44,32 +44,32 @@ class Scrapbook extends React.Component {
     }
 
     renderCoverBasedOnTheme(){
-        const {theme, scrapbook} = this.props.scrapbookInfo
+        const {theme, scrapbook_title} = this.props.scrapbookInfo.scrapbook
         if (theme == 'travel') {
             return (
                 <div id="scrapbook-cover-container">
-                    <div className="cover-title">{scrapbook.scrapbook_title}</div>
+                    <div className="cover-title">{scrapbook_title}</div>
                     <img className="coverpic" src="/images/scrapbook_cover_no_blue.png"/>
                 </div>
             )
         } else if (theme == "new_years_eve") {
             return (
                 <div id="scrapbook-cover-container">
-                    <div className="cover-title">{scrapbook.scrapbook_title}</div>
+                    <div className="cover-title">{scrapbook_title}</div>
                     <img className="coverpic" src="/images/nyecover.jpg"/>
                 </div>
             )
         } else if (theme == "graduation") {
             return (
                 <div id="scrapbook-cover-container">
-                    <div className="cover-title">{scrapbook.scrapbook_title}</div>
+                    <div className="cover-title">{scrapbook_title}</div>
                     <img className="coverpic" src="/images/graduationcover.jpg"/>
                 </div>
             )
         } else if (theme == "babys_first_milestones") {
             return (
                 <div id="scrapbook-cover-container">
-                    <div className="cover-title">{scrapbook.scrapbook_title}</div>
+                    <div className="cover-title">{scrapbook_title}</div>
                     <img className="coverpic" src="/images/babycover.jpg"/>
                 </div>
             )
