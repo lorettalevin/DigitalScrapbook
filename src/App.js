@@ -15,9 +15,9 @@ export default class App extends React.Component {
 
     render() {
         return (
-        <div>
+        <div id="app">
             <BrowserRouter>
-                <div>
+                <div id="browser-router">
                     <nav>
                         <ul>
                             <li id="logo-menu"><Link to="/myscrapbooks"><Logo /></Link></li>
