@@ -33,7 +33,7 @@ export default class App extends React.Component {
                     <Route exact path='/' component={Intro} />
                 </div>
             </BrowserRouter>
-            <footer className="footer">&copy; 2018 Databerries GmbH</footer>
+            {/*<footer className="footer">&copy; 2018 Databerries GmbH</footer>*/}
         </div>
         )
     }
