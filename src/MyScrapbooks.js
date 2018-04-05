@@ -29,8 +29,8 @@ class MyScrapbooks extends React.Component {
 
         return this.props.scrapbooks.map(scrapbook => {
             return (
-                <div id="test">
-                <div id="scrapbook-tile" key={scrapbook.id}>
+                <div id="test"key={scrapbook.id}>
+                <div id="scrapbook-tile" >
                     <div id="choice-tile">
                         <div className="tile-container">
                             <p className="left-font">Title:</p><p className="right-font">{ scrapbook.scrapbook_title }</p>
@@ -45,7 +45,7 @@ class MyScrapbooks extends React.Component {
                     <div id="button-tile-container">
                         <Link to={`/scrapbook/${scrapbook.id}`}><button className="tile-button">VIEW</button></Link>
                         <Link to={`/editscrapbook/${scrapbook.id}`}><button className="tile-button">EDIT</button></Link>
-                        <Link to={`/deletescrapbook/${scrapbook.id}`}><button className="tile-button">DELETE</button></Link>
+                        <Link to={`/deletescrapbook/${scrapbook.id}`}><button id="delete-button" className="tile-button">DELETE</button></Link>
                     </div>
                 </div>
             </div>

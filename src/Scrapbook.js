@@ -60,16 +60,22 @@ class Scrapbook extends React.Component {
                         <div id="top-pic-container">
                             <div className="pic" id="pic1">
 
-                                <img src={this.props.scrapbookInfo.pages[0].images[0].file}></img>
-
+                                {/*<img id="travel1" src={this.props.scrapbookInfo.pages[0].images[0].file}></img>*/}
                             </div>
                             <div className="pic" id="pic2">
-                            <img src={this.props.scrapbookInfo.pages[0].images[0].file}></img></div>
+                                {/*<img id="travel2" src={this.props.scrapbookInfo.pages[0].images[1].file}></img>*/}
+                            </div>
                         </div>
                         <div id="bottom-pic-container">
-                        <div className="pic" id="pic3"></div>
-                        <div className="pic" id="pic4"></div>
-                        <div className="pic" id="pic5"></div>
+                        <div className="pic" id="pic3">
+                                {/*<img id="travel3" src={this.props.scrapbookInfo.pages[0].images[2].file}></img>*/}
+                        </div>
+                        <div className="pic" id="pic4">
+                                {/*<img id="travel4" src={this.props.scrapbookInfo.pages[0].images[3].file}></img>*/}
+                        </div>
+                        <div className="pic" id="pic5">
+                                {/*<img id="travel5" src={this.props.scrapbookInfo.pages[0].images[4].file}></img>*/}
+                        </div>
                         </div>
                     </div>
 

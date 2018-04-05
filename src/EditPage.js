@@ -21,8 +21,7 @@ componentDidMount() {
     render() {
         return (
             <div>
-                <p>This is a page</p>
-                <p>{this.props.page.header}</p>
+                <p id="page-header">{this.props.page.header}</p>
                 <div id="image-uploader"><AddImages
                     page_id={this.props.page.id}
                     />

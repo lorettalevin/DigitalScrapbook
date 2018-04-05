@@ -51,7 +51,7 @@
 #editpage-scrapbook-page {
     height: 650px;
     width: 1300px;
-    /*     border: 2px red solid; */
+        border: 2px #bdaaaa solid;
     /* background: linear-gradient(to bottom right, #4EA2C3, #f5fdff); */
     /*     background: linear-gradient(to bottom right, #c34ead, #e8e8e8);     */
     /*     background: linear-gradient(to bottom right, #4ec38f, #f5fdff); */
@@ -68,7 +68,7 @@
 .pic {
     height: 225px;
     width: 225px;
-    border: 2px #81ff7f solid;
+/*     border: 2px #81ff7f solid; */
 }
 
 #editpage-top-pic-container {
