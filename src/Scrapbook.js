@@ -13,6 +13,7 @@ class Scrapbook extends React.Component {
     constructor(props) {
         super(props);
         this.renderPages=this.renderPages.bind(this);
+        this.renderCoverBasedOnTheme=this.renderCoverBasedOnTheme.bind(this);
     }
 
     componentDidMount() {
@@ -32,6 +33,39 @@ class Scrapbook extends React.Component {
                     page={page}
                 />
             ))
+        }
+    }
+
+    renderCoverBasedOnTheme(){
+        const {theme, scrapbook} = this.props.scrapbookInfo
+        if (theme == 'travel') {
+            return (
+                <div id="scrapbook-cover-container">
+                    <div className="cover-title">{scrapbook.scrapbook_title}</div>
+                    <img className="coverpic" src="/images/scrapbook_cover_no_blue.png"/>
+                </div>
+            )
+        } else if (theme == "new_years_eve") {
+            return (
+                <div id="scrapbook-cover-container">
+                    <div className="cover-title">{scrapbook.scrapbook_title}</div>
+                    <img className="coverpic" src="/images/nyecover.jpg"/>
+                </div>
+            )
+        } else if (theme == "graduation") {
+            return (
+                <div id="scrapbook-cover-container">
+                    <div className="cover-title">{scrapbook.scrapbook_title}</div>
+                    <img className="coverpic" src="/images/graduationcover.jpg"/>
+                </div>
+            )
+        } else if (theme == "babys_first_milestones") {
+            return (
+                <div id="scrapbook-cover-container">
+                    <div className="cover-title">{scrapbook.scrapbook_title}</div>
+                    <img className="coverpic" src="/images/babycover.jpg"/>
+                </div>
+            )
         }
     }
 
@@ -59,11 +93,8 @@ class Scrapbook extends React.Component {
         return (
             <div>
                 <div id="main-container">
-                <div id="scrapbook-cover-container">
-                    <div id="cover-title">{this.props.scrapbookInfo.scrapbook.scrapbook_title}</div>
-                    <img id="coverpic" src="../images/scrapbook_cover_no_blue.png"></img>
+                    {this.renderCoverBasedOnTheme()}
                 </div>
-            </div>
                 {this.renderPages()}
             </div>
     )}
