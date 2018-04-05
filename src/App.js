@@ -5,6 +5,7 @@ import MyScrapbooks from './MyScrapbooks';
 import EditScrapbook from './EditScrapbook';
 import Scrapbook from './Scrapbook';
 import Logo from './Logo';
+import Intro from './Intro';
 import {BrowserRouter, Route, Link} from 'react-router-dom'
 
 export default class App extends React.Component {
@@ -29,6 +30,7 @@ export default class App extends React.Component {
                     <Route exact path="/myscrapbooks" component={MyScrapbooks} />
                     <Route exact path="/editscrapbook/:id" component={EditScrapbook} />
                     <Route exact path="/scrapbook/:id" component={Scrapbook} />
+                    <Route exact path='/' component={Intro} />
                 </div>
             </BrowserRouter>
             <footer className="footer">&copy; 2018 Databerries GmbH</footer>
