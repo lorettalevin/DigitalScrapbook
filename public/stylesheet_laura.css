@@ -469,7 +469,7 @@ input {
     justify-content: center;
 }
 
-#cover-title {
+.cover-title {
     /*     border: 2px red solid; */
     width: 267px;
     height: 55px;
@@ -529,57 +529,6 @@ input {
     justify-content: space-between;
     margin-top: 2%;
     padding: 2%;
-}
-
-#bike {
-    height: 200px;
-    width: 200px;
-    transform: scaleX(-1) rotate(20deg);
-    position: absolute;
-    left: 585px;
-    top: 900px;
-}
-
-#map {
-    transform: rotate(-16deg);
-    position: absolute;
-    margin-top: 25px;
-    margin-left: 400px;
-}
-
-#sunglasses {
-    position: absolute;
-    height: 60px;
-    width: 60px;
-    transform: rotate(-10deg);
-    top: 1200px;
-    left: 998px;
-}
-
-#suitcase {
-    height: 220px;
-    width: 180px;
-    position: absolute;
-    top: 1199px;
-    left: 371px;
-    transform: rotate(2deg);
-}
-
-#passport {
-    height: 170px;
-    width: 220px;
-    transfor: rotate(20deg);
-    position: absolute;
-    top: 1252px;
-    left: 848px;
-}
-
-#sign {
-    height: 170px;
-    width: 220px;
-    position: absolute;
-    top: 950px;
-    left: 1100px;
 }
 
 #travel1 {
