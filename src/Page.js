@@ -4,14 +4,13 @@ const placeholder = 'http://via.placeholder.com/550x450';
 class Page extends React.Component {
     constructor(props) {
         super(props);
-
     }
 
     render() {
         if (!this.props.page || this.props.page.images.length == 0) {
-            console.log(this.props);
             return (<div>You don't have enough images to render this page.</div>)
         }
+        console.log(this.props);
         return (
             <div id="scrapbook-page-container">
                 <div id="scrapbook-page">
