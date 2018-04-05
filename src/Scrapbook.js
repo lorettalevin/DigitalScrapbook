@@ -100,4 +100,6 @@ class Scrapbook extends React.Component {
     )}
 }
 
+
+
 export default connect(mapStateToProps)(Scrapbook)
