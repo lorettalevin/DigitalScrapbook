@@ -2,6 +2,7 @@ import React from 'react';
 import {connect} from 'react-redux';
 import AddImages from './AddImages';
 import {getImages} from './actions';
+import { GridLoader } from 'react-spinners';
 
 const mapStateToProps = (state, props) => {
     return {
@@ -22,7 +23,11 @@ class EditPage extends React.Component {
     renderImages() {
         if(!this.props.images) {
             return (
-                <div>Loading...</div>
+                <div className='sweet-loading'>
+                    <GridLoader
+                        color={'#123abc'}
+                    />
+                </div>
             )
         }
 

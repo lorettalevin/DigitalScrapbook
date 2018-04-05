@@ -50,7 +50,7 @@ class AddScrapbook extends React.Component {
                     <input id="sb-title" onChange={this.handleChange} name="scrapbook_title" type="text" placeholder="Scrapbook Title"/>
                     <select className="dropdown-menu" onChange={this.handleChange} name="theme" id="theme">
                         <option value="default" selected disabled>Please select theme</option>
-                        <option value="travel">travel</option>
+                        <option value="travel">Travel</option>
                         <option value="new_years_eve">New Year's Eve</option>
                         <option value="graduation">Graduation</option>
                         <option value="babys_first_milestones">Baby's First Milestones</option>

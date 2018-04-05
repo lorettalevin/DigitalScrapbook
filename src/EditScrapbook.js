@@ -1,5 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux';
+import { GridLoader } from 'react-spinners';
 import AddPage from './AddPage';
 import EditPage from './EditPage';
 import {getScrapbook, editScrapbook, getPages, editTitle, changeColor} from './actions';
@@ -56,7 +57,11 @@ class EditScrapbook extends React.Component {
     renderEditPages() {
         if(!this.props.pages) {
             return (
-                <div>Loading...</div>
+                <div className='sweet-loading'>
+                    <GridLoader
+                        color={'#123abc'}
+                    />
+                </div>
             )
         }
 
