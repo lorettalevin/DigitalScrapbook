@@ -1,3 +1,8 @@
+#app {
+    position: relative;
+    height: 100vh;
+}
+
 #addpage-scrapbook-cover-container {
     display: flex;
     justify-content: center;
@@ -136,4 +141,16 @@
     position: absolute;
     top: 950px;
     left: 1100px;
+}
+
+#intro-container {
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+    margin: 75px;
+    background-color: lightgray;
+}
+
+#intro {
+    font-size: 25px;
 }
