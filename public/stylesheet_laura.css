@@ -31,7 +31,8 @@ nav li {
 
 .li {
     float: right;
-    padding-top: 1%;
+    padding: 18px 0;
+    display: inline-block;
 }
 
 nav li a {
@@ -49,16 +50,14 @@ nav li a {
     transition: background-color 0.5s ease;
 }
 
-.footer {
-    position: relative;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    height: 30px;
-    background-color: black;
-    color: white;
-    text-align: center;
-    font-family: "Josefin Sans", sans-serif;
+footer {
+   position: absolute;
+   right: 0;
+   bottom: 0;
+   left: 0;
+   padding: 1rem;
+   background-color: #efefef;
+   text-align: center;
 }
 
 /* --------------------Home------------------------ */
@@ -269,6 +268,19 @@ input {
 }
 
 .add-images-container{
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+
+}
+
+.edit-page-single {
+    margin: 2%;
+    background-color: #bebebe;
+    padding: 20px;
+}
+
+#edit-scrapbook-page h1 {
     text-align: center;
 }
 
@@ -278,6 +290,12 @@ input {
     font-size: 20px;
 }
 
+
+.add-page {
+    background-color: white;
+    height: 150px;
+    padding: 20px;
+}
 .current {
     font-size: 18px;
     padding: 4%;
@@ -294,6 +312,10 @@ input {
     /*     border: 1px blue solid; */
     display: flex;
     flex-direction: column;
+}
+
+#header {
+    text-align: center;
 }
 
 .edit-field {
@@ -315,7 +337,11 @@ input {
 .image-field {
     height: 35px;
     width: 230px;
-    margin-top: 5%;
+    box-sizing: border-box;
+}
+
+.render-images {
+    height: 150px;
 }
 
 #addnewpage-button, .edit-scrapbook-button, #add-page-button, #image-button {
@@ -335,6 +361,12 @@ input {
 
 #scrapbook-template {
     width: 100%;
+}
+
+.add-page-button {
+    margin-top: 15px;
+    width: 100% !important;
+    box-sizing: border-box;
 }
 
 #page-header {
@@ -488,7 +520,7 @@ input {
     display: flex;
     justify-content: space-evenly;
     height: 200px;
-    margin-top: -9%;
+    margin-top: 7%;
 }
 
 #bottom-pic-container {
@@ -573,4 +605,11 @@ input {
 #travel5 {
     height: 225px;
     width: 225px;
+}
+
+/* -------------------------Helper Classes------------------ */
+.full-width {
+    width: 100%;
+    box-sizing: border-box;
+
 }
