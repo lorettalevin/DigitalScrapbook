@@ -31,6 +31,7 @@ nav li {
 
 .li {
     float: right;
+    padding-top: 1%;
 }
 
 nav li a {
@@ -43,9 +44,21 @@ nav li a {
     line-height: 25px;
 }
 
-nav li a:hover {
+.li:hover {
     background-color: #9e9997;
     transition: background-color 0.5s ease;
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 30px;
+    background-color: black;
+    color: white;
+    text-align: center;
+    font-family: "Josefin Sans", sans-serif;
 }
 
 /* --------------------Home------------------------ */
@@ -171,7 +184,6 @@ input {
 #inside-add-container {
     /*     border: 2px blue dashed; */
     width: 1300px;
-    diplay: flex;
     background-color: #e9e8e8;
 }
 
@@ -220,24 +232,27 @@ input {
 /* ------------Edit Scrapbook------------------------ */
 
 #chosen-and-edit-form-container {
-    border: 5px yellow solid;
+/*     border: 5px yellow solid; */
     display: flex;
     justify-content: space-around;
+    margin-top: 2%;
 }
 
 
 #edit-form-container {
-    border: 5px brown solid;
+/*     border: 5px brown solid; */
     display: flex;
     width: 250px;
-/*     order:1; */
+    order:-1;
+    margin-top: 2%;
 
 
 }
 
 #toggle-page {
-    border: 3px blue solid;
+/*     border: 3px blue solid; */
     order: 1;
+    margin-top: 2%;
 }
 
 #current-choice {
@@ -246,7 +261,7 @@ input {
     text-align: center;
 }
 #chosen {
-    border: 3px red solid;
+/*     border: 3px red solid; */
     font-family: 'Merriweather Sans';
     font-size: 20px;
 }
@@ -263,7 +278,7 @@ input {
     background-color: #F8F8F8;
 }
 #edit-scrapbook-form {
-    border: 1px blue solid;
+/*     border: 1px blue solid; */
     display: flex;
     flex-direction: column;
 }
@@ -275,15 +290,23 @@ input {
 }
 
 #image-uploader {
-    border: 2px red solid;
+/*     border: 2px red solid; */
     display: flex;
-/*     flex-direction: colum n; */
+/*     flex-direction: column; */
     height: 200px;
-    width: 200px;
+    width: 250px;
     text-align: center;
+    margin-left: 8%;
 
 }
-#addnewpage-button, .edit-scrapbook-button, #add-page-button {
+
+.image-field {
+    height: 35px;
+    width: 230px;
+    margin-top:5%;
+}
+
+#addnewpage-button, .edit-scrapbook-button, #add-page-button, #image-button {
     border: 2px #12bbee solid;
     font-size: 15px;
     background-color: black;
@@ -298,18 +321,31 @@ input {
 /*     width: 216px; */
 
 }
+
+#scrapbook-template {
+    width: 100%;
+}
+
+#page-header {
+    position: absolute;
+    top: 550px;
+/*     border: 3px red solid; */
+    left: 670px;
+     font-family: 'Merriweather Sans';
+}
 /* --------------------My Scrapbook------------------------ */
 
 #scrapbook-tile {
-    /*     border: 2px blue solid; */
+        /* border: 2px blue solid; */
     height: 350px;
-    width: 350px;
-    background-image: url(./images/tile.jpg);
+    width: 375px;
+    background-image: url(./images/tile-bk.jpg);
     background-size: contain;
+
 }
 
 .tile-container {
-    /*     border:3px orange dotted; */
+/*         border:3px orange dotted; */
     display: flex;
 }
 
@@ -317,6 +353,7 @@ input {
 /*         border: 3px green solid; */
     display: flex;
     justify-content: center;
+
 }
 
 .tile-button {
@@ -329,12 +366,22 @@ input {
     margin: 2px;
 }
 
+.tile-button:hover {
+    background-color: #9e9997;
+    transition: background-color 0.5s ease;
+}
+
+#delete-button:hover {
+    background-color: #ff4d08;
+    transition: background-color 0.5s ease;
+}
 .left-font {
     /*     border: 2px red solid; */
-    font-size: 30px;
+    font-size: 28px;
     font-family: "Montserrat";
     text-transform: Uppercase;
     padding-left: 5%;
+    color: white;
 }
 
 .right-font {
@@ -346,16 +393,18 @@ input {
     font-weight: bold;
     text-transform: Uppercase;
     padding-left: 10%;
+    color: white;
 }
-
-/* --------------------Scrapbook------------------------ */
 
 #test {
     /*      border: 2px red solid; */
     display: inline-block;
     padding: 2%;
     margin-left: 3%;
+    margin-top: 3%;
 }
+/* --------------------Scrapbook------------------------ */
+
 
 #scrapbook-cover-container {
     /*     border: 5px yellow solid; */
@@ -378,7 +427,7 @@ input {
     height: 55px;
     /*     z-index: 200; */
     position: absolute;
-    top: 210px;
+    top: 242px;
     left: 658px;
     background-color: #EDEDED;
     font-family: 'Petit Formal Script';
@@ -392,6 +441,7 @@ input {
     2px blue solid;
     display: flex;
     justify-content: center;
+    margin-bottom: 5%;
 }
 
 #scrapbook-page {
@@ -414,7 +464,7 @@ input {
 .pic {
     height: 225px;
     width: 225px;
-    border: 2px #81ff7f solid;
+/*     border: 2px #7b7d7b solid; */
 }
 
 #top-pic-container {
@@ -438,7 +488,7 @@ input {
     width: 200px;
     transform: scaleX(-1) rotate(20deg);
     position: absolute;
-    left: 550px;
+    left: 585px;
     top: 900px;
 }
 
@@ -455,15 +505,15 @@ input {
     width: 60px;
     transform: rotate(-10deg);
     top: 1200px;
-    left: 980px;
+    left: 998px;
 }
 
 #suitcase {
     height: 220px;
     width: 180px;
     position: absolute;
-    top: 1175px;
-    left: 320px;
+    top: 1199px;
+    left: 371px;
     transform: rotate(2deg);
 }
 
@@ -472,8 +522,8 @@ input {
     width: 220px;
     transfor: rotate(20deg);
     position: absolute;
-    top: 1200px;
-    left: 820px;
+    top: 1252px;
+    left: 848px;
 }
 
 #sign {
@@ -482,4 +532,25 @@ input {
     position: absolute;
     top: 950px;
     left: 1100px;
+}
+
+#travel1 {
+    height: 225px;
+    width: 225px;
+}
+#travel2 {
+    height: 225px;
+    width: 225px;
+}
+#travel3 {
+    height: 225px;
+    width: 225px;
+}
+#travel4 {
+    height: 225px;
+    width: 225px;
+}
+#travel5 {
+    height: 225px;
+    width: 225px;
 }

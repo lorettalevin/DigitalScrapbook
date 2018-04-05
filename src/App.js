@@ -20,12 +20,13 @@ export default class App extends React.Component {
                     <nav>
                         <div>
                             <ul>
-                                <li id="logo-menu"><Logo /></li>
+                                <li id="logo-menu"><Link to="/myscrapbooks"><Logo /></Link></li>
                                 <li className="li"><a href="/logout">LOG OUT</a></li>
-                                <li className="li"><Link to="/addscrapbook">ADD A NEW SCRAPBOOK</Link></li>
+                                <li className="li"><Link to="/addscrapbook">ADD SCRAPBOOK</Link></li>
                                 <li className="li"><Link to="/myscrapbooks">MY SCRAPBOOKS</Link></li>
                             </ul>
                         </div>
+                        <div className="footer">&copy; 2018 Databerries GmbH</div>
                     </nav>
                     <Route exact path="/addscrapbook" component={AddScrapbook} />
                     <Route exact path="/myscrapbooks" component={MyScrapbooks} />

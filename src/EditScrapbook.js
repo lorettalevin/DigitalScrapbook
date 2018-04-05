@@ -12,6 +12,7 @@ const mapStateToProps = state => {
     }
 }
 
+
 class EditScrapbook extends React.Component {
     constructor(props) {
         super(props);
@@ -113,24 +114,24 @@ class EditScrapbook extends React.Component {
 
                     <div id="editpage-scrapbook-page-container">
                         <div className={this.props.selectedColor} id="editpage-scrapbook-page">
-                            <img id="editpage-planetail" src="../images/planetail.png"></img>
+                            {/*<img id="editpage-planetail" src="../images/planetail.png"></img>
                             <img id="editpage-suitcase" src="../images/suitcase1.png"></img>
                             <img id="editpage-bike" src="../images/bike2.png"></img>
                             <img id="editpage-sunglasses" src="../images/sunglasses.png"></img>
                             <img id="editpage-map" src="../images/map.png"></img>
                             <img id="editpage-passport" src="../images/passport.png"></img>
-                            <img id="editpage-sign" src="../images/sign.png"></img>
-
+                            <img id="editpage-sign" src="../images/sign.png"></img>*/}
+                            <img id="scrapbook-template" src="../images/scrapbook-template.png"></img>
                             <div id="editpage-top-pic-container">
                                 {/*<div className="pic" id="editpage-pic1">
                                     <img src={this.props.scrapbookInfo.pages[0].images[0].file}></img>
                                 </div>*/}
-                                <div className="pic" id="editpage-pic2"></div>
+                                {/*<div className="pic" id="editpage-pic2"></div>*/}
                             </div>
                             <div id="editpage-bottom-pic-container">
-                            <div className="pic" id="editpage-pic3"></div>
+                            {/*<div className="pic" id="editpage-pic3"></div>
                             <div className="pic" id="editpage-pic4"></div>
-                            <div className="pic" id="editpage-pic5"></div>
+                            <div className="pic" id="editpage-pic5"></div>*/}
                             </div>
                         </div>
                     </div>
