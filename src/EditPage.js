@@ -20,15 +20,24 @@ componentDidMount() {
 
     render() {
         return (
-            <div>
-                <p id="page-header">{this.props.page.header}</p>
-                <div id="image-uploader"><AddImages
-                    page_id={this.props.page.id}
-                    />
-                </div>
-            </div>
+            <AddImages
+                page_id={this.props.page.id}
+            />
         )
     }
 }
 
 export default connect(mapStateToProps)(EditPage)
+
+
+
+
+
+// <div className="edit-page-component-wrapper">
+//     <p id="page-header">{this.props.page.header}</p>
+//     <div id="image-uploader">
+//         <AddImages
+//             page_id={this.props.page.id}
+//         />
+//     </div>
+// </div>
