@@ -1,3 +1,8 @@
+#app {
+    position: relative;
+    height: 100vh;
+}
+
 #addpage-scrapbook-cover-container {
     display: flex;
     justify-content: center;
