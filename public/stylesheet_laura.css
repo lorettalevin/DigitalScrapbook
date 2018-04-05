@@ -1,12 +1,10 @@
 body {
     margin: 0;
-    /*     border: 3px red solid; */
 }
 
 /* ----------------------Logo------------------- */
 
 .logo-container {
-    /*         border: 2px blue solid; */
     display: flex;
     justify-content: center;
 }
@@ -15,7 +13,6 @@ body {
     height: 60px;
     width: 250px;
     z-index: 100;
-    /* border: 2px red solid; */
 }
 
 /* ----------------------Nav Bar------------------- */
@@ -225,37 +222,82 @@ input {
 #chosen-and-edit-form-container {
     border: 5px yellow solid;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
 }
 
-#chosen {
-    border: 3px red solid;
+
+#edit-form-container {
+    border: 5px brown solid;
+    display: flex;
+    width: 250px;
+/*     order:1; */
+
+
+}
+
+#toggle-page {
+    border: 3px blue solid;
     order: 1;
 }
 
-#edit-form-container {
-    border: 3px green solid;
-    display: flex;
-    width: 200px;
+#current-choice {
+    font-weight: bold;
+    margin-bottom: 4%;
+    text-align: center;
+}
+#chosen {
+    border: 3px red solid;
+    font-family: 'Merriweather Sans';
+    font-size: 20px;
 }
 
+.current {
+    font-size: 18px;
+    padding: 4%;
+    text-align: center;
+    border: 1px #9A9A9A solid;
+     height: 15px;
+    width: 230px;
+    border-radius: 3px;
+    margin-bottom: 6%;
+    background-color: #F8F8F8;
+}
 #edit-scrapbook-form {
-    border: 3px blue solid;
+    border: 1px blue solid;
     display: flex;
     flex-direction: column;
 }
 
 .edit-field {
     margin: 4%;
+    height: 35px;
+    width: 230px;
 }
 
-#addnewpage-button {
+#image-uploader {
+    border: 2px red solid;
     display: flex;
-    order: 2;
-    height: 40px;
-    border: 3px #dddddd double;
+/*     flex-direction: colum n; */
+    height: 200px;
+    width: 200px;
+    text-align: center;
+
+}
+#addnewpage-button, .edit-scrapbook-button, #add-page-button {
+    border: 2px #12bbee solid;
+    font-size: 15px;
+    background-color: black;
+    color: white;
+    height: 35px;
+    width: 210px;
+    margin-top: 2%;
 }
 
+#edit-button {
+    margin-left: 7%;
+/*     width: 216px; */
+
+}
 /* --------------------My Scrapbook------------------------ */
 
 #scrapbook-tile {
@@ -272,750 +314,7 @@ input {
 }
 
 #button-tile-container {
-    /*     border: 3px green solid; */
-    display: flex;
-    justify-content: center;
-}
-
-.tile-button {
-    font-size: 15px;
-    background-color: black;
-    color: white;
-    height: 35px;
-    width: 90px;
-    margin-top: 2%;
-    margin: 2px;
-}
-
-.left-font {
-    /*     border: 2px red solid; */
-    font-size: 30px;
-    font-family: "Montserrat";
-    text-transform: Uppercase;
-    padding-left: 5%;
-}
-
-.right-font {
-    /*     border: 2px red solid; */
-    font-size: 15px;
-    padding-top: 5%;
-    font-size: 22px;
-    font-family: "Montserrat";
-    font-weight: bold;
-    text-transform: Uppercase;
-    padding-left: 10%;
-}
-
-#test {
-    /*      border: 2px red solid; */
-    display: inline-block;
-    padding: 2%;
-    margin-left: 3%;
-}
-
-#main-container {
-    /*     display: flex;
-    justify-content: center; */
-    /*     border: 2px pink solid; */
-    display: flex÷;
-}
-
-#scrapbook-cover-container {
-    /*     border: 5px yellow solid; */
-    display: flex;
-    justify-content: center;
-    background-color: #4EA2C3;
-    margin: 2%;
-    height: 600px;
-    width: 1300px;
-}
-
-#main-container {
-    display: flex;
-    justify-content: center;
-}
-
-#cover-title {
-    /*     border: 2px red solid; */
-    width: 267px;
-    height: 46px;
-    z-index: 200;
-    position: absolute;
-    top: 222px;
-    left: 625px;
-    background-color: #EDEDED;
-    font-family: 'Petit Formal Script';
-    font-weight: bold;
-    font-size: 25px;
-    text-align: center;
-    color: #777070;
-}
-
-#scrapbook-page-container {
-    2px blue solid;
-    display: flex;
-    justify-content: center;
-}
-
-#scrapbook-page {
-    height: 600px;
-    width: 1300px;
-    /*     border: 2px red solid; */
-    background: linear-gradient(to bottom right, #4EA2C3, #f5fdff);
-    /*     background: linear-gradient(to bottom right, #c34ead, #e8e8e8);     */
-    /*     background: linear-gradient(to bottom right, #4ec38f, #f5fdff); */
-    /*     background: linear-gradient(to bottom right, #e6ff07, #ffffff); */
-}
-
-body {
-    margin: 0;
-    /*     border: 3px red solid; */
-}
-
-/* ----------------------Logo------------------- */
-
-.logo-container {
-    /*         border: 2px blue solid; */
-    display: flex;
-    justify-content: center;
-}
-
-#logo {
-    height: 60px;
-    width: 250px;
-    z-index: 100;
-    /* border: 2px red solid; */
-}
-
-/* ----------------------Nav Bar------------------- */
-
-nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: black;
-}
-
-nav li {
-    float: left;
-}
-
-.li {
-    float: right;
-}
-
-nav li a {
-    display: block;
-    color: white;
-    padding: 15px 25px;
-    text-decoration: none;
-    font-family: "Josefin Sans", sans-serif;
-    font-size: 14px;
-    line-height: 25px;
-}
-
-nav li a:hover {
-    background-color: #9e9997;
-    transition: background-color 0.5s ease;
-}
-
-/* --------------------Home------------------------ */
-
-#scissors-container {
-    border: 3px solid blue;
-    order: -1;
-    display: flex;
-    margin-top: 9%;
-}
-
-#scissors {
-    height: 60px;
-    width: 60px;
-    margin-top: -2.5%;
-    margin-left: 3%;
-    z-index: 100;
-    animation: slide-right 15s;
-}
-
-@keyframes slide-right {
-    from {
-        margin-left: 0%;
-    }
-    to {
-        margin-left: 100%;
-    }
-}
-
-#logo-container {
-    /*     border: 5px pink solid; */
-    background-color: black;
-    border-bottom: 5px #E6FF07 dashed;
-    height: 140px;
-    border-image: 2px dashed antiquewhite;
-    display: flex;
-    justify-content: center;
-}
-
-#greeting-message {
-    /*     border: 2px red solid; */
-    font-family: 'Open Sans';
-    font-size: 25px;
-    color: black;
-    width: 100%;
-    text-align: center;
-    margin-top: 4%;
-    margin-bottom: 5%;
-    padding-left: %;
-}
-
-#home-logo {
-    height: 140px;
-}
-
-#home-container {
-    /*     border: 2px blue solid; */
-    display: flex;
-    justify-content: space-evenly;
-}
-
-/* ------------Registration------------------------ */
-
-#registration-form {
-    /*     border: 2px red solid; */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-p {
-    font-family: 'Open Sans';
-    font-size: 30px;
-    font-weight: bold;
-    text-align: center;
-}
-
-.field {
-    border: 2px #a2a2a2 solid;
-    background-color: #eaeaea;
-    color: black;
-    height: 30px;
-    width: 200px;
-    margin: 4%;
-}
-
-#registration-button, #login-button, .addscrapbook-button {
-    border: 2px #12bbee solid;
-    font-size: 15px;
-    background-color: black;
-    color: white;
-    height: 35px;
-    width: 210px;
-    margin-top: 2%;
-}
-
-/* ------------------Login------------------------ */
-
-#login-form {
-    /*     border: 2px red solid; */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-input {
-    height: 20px;
-    width: 150px;
-    /*     margin: 0.5%; */
-}
-
-/* ------------AddScrapbook------------------------ */
-
-.addscrapbook-form-container {
-    border: 2px yellow solid;
-    padding: 2%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-#inside-add-container {
-    /*     border: 2px blue dashed; */
-    width: 1300px;
-    diplay: flex;
-    background-color: #e9e8e8;
-}
-
-::placeholder {
-    font-size: 14px;
-    text-align: center;
-    color: black;
-}
-
-select {
-    font-size: 14px;
-    text-align-last: center;
-}
-
-input {
-    border-radius: 4px;
-}
-
-#sb-title {
-    height: 30px;
-    width: 300px;
-    margin-left: 5%;
-}
-
-.dropdown-menu {
-    height: 35px;
-    width: 250px;
-}
-
-#theme {
-    margin: 3%;
-}
-
-#color {
-    margin-right: 3%;
-}
-
-#travel-container {
-    border: 2px green solid;
-}
-
-#travel {
-    /*     border: 2px red solid; */
-}
-
-/* ------------Edit Scrapbook------------------------ */
-
-#chosen-and-edit-form-container {
-    border: 5px yellow solid;
-    display: flex;
-    justify-content: center;
-}
-
-#chosen {
-    border: 3px red solid;
-    order: 1;
-}
-
-#edit-form-container {
-    border: 3px green solid;
-    display: flex;
-    width: 200px;
-}
-
-#edit-scrapbook-form {
-    border: 3px blue solid;
-    display: flex;
-    flex-direction: column;
-}
-
-.edit-field {
-    margin: 4%;
-}
-
-#addnewpage-button {
-    display: flex;
-    order: 2;
-    height: 40px;
-    border: 3px #dddddd double;
-}
-
-/* --------------------My Scrapbook------------------------ */
-
-#scrapbook-tile {
-    /*     border: 2px blue solid; */
-    height: 350px;
-    width: 350px;
-    background-image: url(./images/tile.jpg);
-    background-size: contain;
-}
-
-.tile-container {
-    /*     border:3px orange dotted; */
-    display: flex;
-}
-
-#button-tile-container {
-    /*     border: 3px green solid; */
-    display: flex;
-    justify-content: center;
-}
-
-.tile-button {
-    font-size: 15px;
-    background-color: black;
-    color: white;
-    height: 35px;
-    width: 90px;
-    margin-top: 2%;
-    margin: 2px;
-}
-
-.left-font {
-    /*     border: 2px red solid; */
-    font-size: 30px;
-    font-family: "Montserrat";
-    text-transform: Uppercase;
-    padding-left: 5%;
-}
-
-.right-font {
-    /*     border: 2px red solid; */
-    font-size: 15px;
-    padding-top: 5%;
-    font-size: 22px;
-    font-family: "Montserrat";
-    font-weight: bold;
-    text-transform: Uppercase;
-    padding-left: 10%;
-}
-
-#test {
-    /*      border: 2px red solid; */
-    display: inline-block;
-    padding: 2%;
-    margin-left: 3%;
-}
-
-#main-container {
-    /*     display: flex;
-    justify-content: center; */
-    /*     border: 2px pink solid; */
-    display: flex÷;
-}
-
-#scrapbook-cover-container {
-    /*     border: 5px yellow solid; */
-    display: flex;
-    justify-content: center;
-    background-color: #4EA2C3;
-    margin: 2%;
-    height: 600px;
-    width: 1300px;
-}
-
-#main-container {
-    display: flex;
-    justify-content: center;
-}
-
-#cover-title {
-    /*     border: 2px red solid; */
-    width: 267px;
-    height: 46px;
-    z-index: 200;
-    position: absolute;
-    top: 222px;
-    left: 625px;
-    background-color: #EDEDED;
-    font-family: 'Petit Formal Script';
-    font-weight: bold;
-    font-size: 25px;
-    text-align: center;
-    color: #777070;
-}
-
-#scrapbook-page-container {
-    2px blue solid;
-    display: flex;
-    justify-content: center;
-}
-
-#scrapbook-page {
-    height: 600px;
-    width: 1300px;
-    /*     border: 2px red solid; */
-    background: linear-gradient(to bottom right, #4EA2C3, #f5fdff);
-    /*     background: linear-gradient(to bottom right, #c34ead, #e8e8e8);     */
-    /*     background: linear-gradient(to bottom right, #4ec38f, #f5fdff); */
-    /*     background: linear-gradient(to bottom right, #e6ff07, #ffffff); */
-}
-
-body {
-    margin: 0;
-    /*     border: 3px red solid; */
-}
-
-/* ----------------------Logo------------------- */
-
-.logo-container {
-    /*         border: 2px blue solid; */
-    display: flex;
-    justify-content: center;
-}
-
-#logo {
-    height: 60px;
-    width: 250px;
-    z-index: 100;
-    /* border: 2px red solid; */
-}
-
-/* ----------------------Nav Bar------------------- */
-
-nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: black;
-}
-
-nav li {
-    float: left;
-}
-
-.li {
-    float: right;
-}
-
-nav li a {
-    display: block;
-    color: white;
-    padding: 15px 25px;
-    text-decoration: none;
-    font-family: "Josefin Sans", sans-serif;
-    font-size: 14px;
-    line-height: 25px;
-}
-
-nav li a:hover {
-    background-color: #9e9997;
-    transition: background-color 0.5s ease;
-}
-
-/* --------------------Home------------------------ */
-
-#scissors-container {
-    border: 3px solid blue;
-    order: -1;
-    display: flex;
-    margin-top: 9%;
-}
-
-#scissors {
-    height: 60px;
-    width: 60px;
-    margin-top: -2.5%;
-    margin-left: 3%;
-    z-index: 100;
-    animation: slide-right 15s;
-}
-
-@keyframes slide-right {
-    from {
-        margin-left: 0%;
-    }
-    to {
-        margin-left: 100%;
-    }
-}
-
-#logo-container {
-    /*     border: 5px pink solid; */
-    background-color: black;
-    border-bottom: 5px #E6FF07 dashed;
-    height: 140px;
-    border-image: 2px dashed antiquewhite;
-    display: flex;
-    justify-content: center;
-}
-
-#greeting-message {
-    /*     border: 2px red solid; */
-    font-family: 'Open Sans';
-    font-size: 25px;
-    color: black;
-    width: 100%;
-    text-align: center;
-    margin-top: 4%;
-    margin-bottom: 5%;
-    padding-left: %;
-}
-
-#home-logo {
-    height: 140px;
-}
-
-#home-container {
-    /*     border: 2px blue solid; */
-    display: flex;
-    justify-content: space-evenly;
-}
-
-/* ------------Registration------------------------ */
-
-#registration-form {
-    /*     border: 2px red solid; */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-p {
-    font-family: 'Open Sans';
-    font-size: 30px;
-    font-weight: bold;
-    text-align: center;
-}
-
-.field {
-    border: 2px #a2a2a2 solid;
-    background-color: #eaeaea;
-    color: black;
-    height: 30px;
-    width: 200px;
-    margin: 4%;
-}
-
-#registration-button, #login-button, .addscrapbook-button {
-    border: 2px #12bbee solid;
-    font-size: 15px;
-    background-color: black;
-    color: white;
-    height: 35px;
-    width: 210px;
-    margin-top: 2%;
-}
-
-/* ------------------Login------------------------ */
-
-#login-form {
-    /*     border: 2px red solid; */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-input {
-    height: 20px;
-    width: 150px;
-    /*     margin: 0.5%; */
-}
-
-/* ------------AddScrapbook------------------------ */
-
-.addscrapbook-form-container {
-    border: 2px yellow solid;
-    padding: 2%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-#inside-add-container {
-    /*     border: 2px blue dashed; */
-    width: 1300px;
-    diplay: flex;
-    background-color: #e9e8e8;
-}
-
-::placeholder {
-    font-size: 14px;
-    text-align: center;
-    color: black;
-}
-
-select {
-    font-size: 14px;
-    text-align-last: center;
-}
-
-input {
-    border-radius: 4px;
-}
-
-#sb-title {
-    height: 30px;
-    width: 300px;
-    margin-left: 5%;
-}
-
-.dropdown-menu {
-    height: 35px;
-    width: 250px;
-}
-
-#theme {
-    margin: 3%;
-}
-
-#color {
-    margin-right: 3%;
-}
-
-#travel-container {
-    border: 2px green solid;
-}
-
-#travel {
-    /*     border: 2px red solid; */
-}
-
-/* ------------Edit Scrapbook------------------------ */
-
-#chosen-and-edit-form-container {
-    border: 5px yellow solid;
-    display: flex;
-    justify-content: center;
-}
-
-#chosen {
-    border: 3px red solid;
-    order: 1;
-}
-
-#edit-form-container {
-    border: 3px green solid;
-    display: flex;
-    width: 200px;
-}
-
-#edit-scrapbook-form {
-    border: 3px blue solid;
-    display: flex;
-    flex-direction: column;
-}
-
-.edit-field {
-    margin: 4%;
-    height: 35px;
-    width: 250px;
-}
-
-#addnewpage-button, #edit-scrapbook-button, #add-page-button {
-    border: 2px #12bbee solid;
-    font-size: 15px;
-    background-color: black;
-    color: white;
-    height: 35px;
-    width: 210px;
-    margin-top: 2%;
-}
-
-/* --------------------My Scrapbook------------------------ */
-
-#scrapbook-tile {
-    /*     border: 2px blue solid; */
-    height: 350px;
-    width: 350px;
-    background-image: url(./images/tile.jpg);
-    background-size: contain;
-}
-
-.tile-container {
-    /*     border:3px orange dotted; */
-    display: flex;
-}
-
-#button-tile-container {
-    /*     border: 3px green solid; */
+/*         border: 3px green solid; */
     display: flex;
     justify-content: center;
 }

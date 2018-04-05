@@ -27,18 +27,6 @@
     color: #777070;
 }
 
-#editpage-scrapbook-page-container {
-    2px blue solid;
-    display: flex;
-    justify-content: center;
-}
-
-#editpage-scrapbook-page {
-    height: 650px;
-    width: 1300px;
-    /*     border: 2px red solid; */
-}
-
 .Blue {
     background: linear-gradient(to bottom right, #4EA2C3, #f5fdff);
 }
@@ -53,6 +41,21 @@
 
 .Yellow {
     background: linear-gradient(to bottom right, #e6ff07, #ffffff);
+}
+
+#editpage-scrapbook-page-container {
+    display: flex;
+    justify-content: center;
+}
+
+#editpage-scrapbook-page {
+    height: 650px;
+    width: 1300px;
+    /*     border: 2px red solid; */
+    /* background: linear-gradient(to bottom right, #4EA2C3, #f5fdff); */
+    /*     background: linear-gradient(to bottom right, #c34ead, #e8e8e8);     */
+    /*     background: linear-gradient(to bottom right, #4ec38f, #f5fdff); */
+    /*     background: linear-gradient(to bottom right, #e6ff07, #ffffff); */
 }
 
 #editpage-planetail {
@@ -88,6 +91,9 @@
     height: 200px;
     width: 200px;
     transform: scaleX(-1) rotate(20deg);
+    position: absolute;
+    left: 550px;
+    top: 900px;
 }
 
 #editpage-map {
@@ -102,6 +108,32 @@
     height: 60px;
     width: 60px;
     transform: rotate(-10deg);
-    margin-top: 200px;
-    margin-left: 400px;
+    top: 1200px;
+    left: 980px;
+}
+
+#editpage-suitcase {
+    height: 220px;
+    width: 180px;
+    position: absolute;
+    top: 1175px;
+    left: 320px;
+    transform: rotate(2deg);
+}
+
+#editpage-passport {
+    height: 170px;
+    width: 220px;
+    transfor: rotate(20deg);
+    position: absolute;
+    top: 1200px;
+    left: 820px;
+}
+
+#editpage-sign {
+    height: 170px;
+    width: 220px;
+    position: absolute;
+    top: 950px;
+    left: 1100px;
 }
