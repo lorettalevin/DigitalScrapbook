@@ -112,7 +112,7 @@ class EditScrapbook extends React.Component {
                 <div id="edit-pages">{this.renderEditPages()}</div>
 
                     <div id="editpage-scrapbook-page-container">
-                        <div id="editpage-scrapbook-page">
+                        <div className={this.props.selectedColor} id="editpage-scrapbook-page">
                             <img id="editpage-planetail" src="../images/planetail.png"></img>
                             <img id="editpage-suitcase" src="../images/suitcase1.png"></img>
                             <img id="editpage-bike" src="../images/bike2.png"></img>
