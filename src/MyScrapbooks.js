@@ -3,6 +3,7 @@ import axios from './axios';
 import {connect} from 'react-redux';
 import {getScrapbooks} from './actions';
 import {Link} from 'react-router-dom';
+import { GridLoader } from 'react-spinners';
 
 const mapStateToProps = state => {
     return {
@@ -23,7 +24,11 @@ class MyScrapbooks extends React.Component {
     renderScrapbooks() {
         if(!this.props.scrapbooks) {
             return (
-                <div>Loading...</div>
+                <div className='sweet-loading'>
+                    <GridLoader
+                        color={'#123abc'}
+                    />
+                </div>
             )
         }
 
