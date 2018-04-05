@@ -18,15 +18,12 @@ export default class App extends React.Component {
             <BrowserRouter>
                 <div>
                     <nav>
-                        <div>
-                            <ul>
-                                <li id="logo-menu"><Link to="/myscrapbooks"><Logo /></Link></li>
-                                <li className="li"><a href="/logout">LOG OUT</a></li>
-                                <li className="li"><Link to="/addscrapbook">ADD SCRAPBOOK</Link></li>
-                                <li className="li"><Link to="/myscrapbooks">MY SCRAPBOOKS</Link></li>
-                            </ul>
-                        </div>
-                        <div className="footer">&copy; 2018 Databerries GmbH</div>
+                        <ul>
+                            <li id="logo-menu"><Link to="/myscrapbooks"><Logo /></Link></li>
+                            <li className="li"><a href="/logout">LOG OUT</a></li>
+                            <li className="li"><Link to="/addscrapbook">ADD SCRAPBOOK</Link></li>
+                            <li className="li"><Link to="/myscrapbooks">MY SCRAPBOOKS</Link></li>
+                        </ul>
                     </nav>
                     <Route exact path="/addscrapbook" component={AddScrapbook} />
                     <Route exact path="/myscrapbooks" component={MyScrapbooks} />
@@ -34,6 +31,7 @@ export default class App extends React.Component {
                     <Route exact path="/scrapbook/:id" component={Scrapbook} />
                 </div>
             </BrowserRouter>
+            <footer className="footer">&copy; 2018 Databerries GmbH</footer>
         </div>
         )
     }

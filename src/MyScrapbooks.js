@@ -29,7 +29,7 @@ class MyScrapbooks extends React.Component {
 
         return this.props.scrapbooks.map(scrapbook => {
             return (
-                <div id="test"key={scrapbook.id}>
+                <div className="myscrapbooks-single-wrapper" key={scrapbook.id}>
                 <div id="scrapbook-tile" >
                     <div id="choice-tile">
                         <div className="tile-container">
@@ -55,7 +55,7 @@ class MyScrapbooks extends React.Component {
 
     render() {
         return (
-            <div>{this.renderScrapbooks()}</div>
+            <div id="myscrapbooks-container">{this.renderScrapbooks()}</div>
         )
     }
 }

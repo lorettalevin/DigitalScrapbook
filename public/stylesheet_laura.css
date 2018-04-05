@@ -50,7 +50,7 @@ nav li a {
 }
 
 .footer {
-    position: fixed;
+    position: relative;
     left: 0;
     bottom: 0;
     width: 100%;
@@ -232,36 +232,48 @@ input {
 /* ------------Edit Scrapbook------------------------ */
 
 #chosen-and-edit-form-container {
-/*     border: 5px yellow solid; */
+    /*     border: 5px yellow solid; */
     display: flex;
     justify-content: space-around;
-    margin-top: 2%;
+    margin: 2%;
+    padding: 20px 10px;
+    background-color: lightgrey;
 }
 
-
 #edit-form-container {
-/*     border: 5px brown solid; */
+    /*     border: 5px brown solid; */
     display: flex;
     width: 250px;
-    order:-1;
-    margin-top: 2%;
-
-
+    order: -1;
 }
 
 #toggle-page {
-/*     border: 3px blue solid; */
+    /*     border: 3px blue solid; */
     order: 1;
     margin-top: 2%;
 }
 
-#current-choice {
+#current-choice, #edit-info {
     font-weight: bold;
     margin-bottom: 4%;
     text-align: center;
+    font-size: 20px;
 }
+
+.edit-page-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    margin: 2%;
+    background-color: #bebebe;
+    padding: 20px;
+}
+
+.add-images-container{
+    text-align: center;
+}
+
 #chosen {
-/*     border: 3px red solid; */
+    /*     border: 3px red solid; */
     font-family: 'Merriweather Sans';
     font-size: 20px;
 }
@@ -271,14 +283,15 @@ input {
     padding: 4%;
     text-align: center;
     border: 1px #9A9A9A solid;
-     height: 15px;
+    height: 15px;
     width: 230px;
     border-radius: 3px;
     margin-bottom: 6%;
     background-color: #F8F8F8;
 }
+
 #edit-scrapbook-form {
-/*     border: 1px blue solid; */
+    /*     border: 1px blue solid; */
     display: flex;
     flex-direction: column;
 }
@@ -290,20 +303,19 @@ input {
 }
 
 #image-uploader {
-/*     border: 2px red solid; */
+    /*     border: 2px red solid; */
     display: flex;
-/*     flex-direction: column; */
+    /*     flex-direction: column; */
     height: 200px;
     width: 250px;
     text-align: center;
     margin-left: 8%;
-
 }
 
 .image-field {
     height: 35px;
     width: 230px;
-    margin-top:5%;
+    margin-top: 5%;
 }
 
 #addnewpage-button, .edit-scrapbook-button, #add-page-button, #image-button {
@@ -318,8 +330,7 @@ input {
 
 #edit-button {
     margin-left: 7%;
-/*     width: 216px; */
-
+    /*     width: 216px; */
 }
 
 #scrapbook-template {
@@ -329,31 +340,35 @@ input {
 #page-header {
     position: absolute;
     top: 550px;
-/*     border: 3px red solid; */
+    /*     border: 3px red solid; */
     left: 670px;
-     font-family: 'Merriweather Sans';
+    font-family: 'Merriweather Sans';
 }
+
 /* --------------------My Scrapbook------------------------ */
 
+#myscrapbooks-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
 #scrapbook-tile {
-        /* border: 2px blue solid; */
+    /* border: 2px blue solid; */
     height: 350px;
     width: 375px;
     background-image: url(./images/tile-bk.jpg);
     background-size: contain;
-
 }
 
 .tile-container {
-/*         border:3px orange dotted; */
+    /*         border:3px orange dotted; */
     display: flex;
 }
 
 #button-tile-container {
-/*         border: 3px green solid; */
+    /*         border: 3px green solid; */
     display: flex;
     justify-content: center;
-
 }
 
 .tile-button {
@@ -375,6 +390,7 @@ input {
     background-color: #ff4d08;
     transition: background-color 0.5s ease;
 }
+
 .left-font {
     /*     border: 2px red solid; */
     font-size: 28px;
@@ -396,15 +412,15 @@ input {
     color: white;
 }
 
-#test {
+.myscrapbooks-single-wrapper {
     /*      border: 2px red solid; */
     display: inline-block;
     padding: 2%;
     margin-left: 3%;
     margin-top: 3%;
 }
-/* --------------------Scrapbook------------------------ */
 
+/* --------------------Scrapbook------------------------ */
 
 #scrapbook-cover-container {
     /*     border: 5px yellow solid; */
@@ -464,7 +480,7 @@ input {
 .pic {
     height: 225px;
     width: 225px;
-/*     border: 2px #7b7d7b solid; */
+    /*     border: 2px #7b7d7b solid; */
 }
 
 #top-pic-container {
@@ -538,18 +554,22 @@ input {
     height: 225px;
     width: 225px;
 }
+
 #travel2 {
     height: 225px;
     width: 225px;
 }
+
 #travel3 {
     height: 225px;
     width: 225px;
 }
+
 #travel4 {
     height: 225px;
     width: 225px;
 }
+
 #travel5 {
     height: 225px;
     width: 225px;

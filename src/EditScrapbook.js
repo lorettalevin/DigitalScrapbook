@@ -62,11 +62,10 @@ class EditScrapbook extends React.Component {
 
         return this.props.pages.map(page => {
             return (
-                <div key={page.id}>
-                    <EditPage
-                        page={page}
-                        />
-                </div>
+                <EditPage
+                    key={page.id}
+                    page={page}
+                    />
             )
         })
     }
@@ -75,66 +74,53 @@ class EditScrapbook extends React.Component {
         return (
             <div>
                 <div id="chosen-and-edit-form-container">
-                <div id="chosen">
-                    <div id="current-choice">Currently Selected:</div>
-                    <div className ="current">{this.props.scrapbook.scrapbook_title}</div>
-                    <div className ="current">{this.props.scrapbook.theme}</div>
-                    <div className ="current">{this.props.scrapbook.color}</div>
-                </div>
-            <div id="edit-form-container">
-                <form id="edit-scrapbook-form">
-                    <input className="edit-field" onChange={this.handleChange} name="scrapbook_title" placeholder="Scrapbook Title" id="" />
-                    <select className="edit-field" onChange={this.handleChange} name="theme" id="">
-                        <option value="Default">Select Theme</option>
-                        <option value="Travel">Travel</option>
-                        <option value="New Year's Eve">New Year's Eve</option>
-                        <option value="Graduation">Graduation</option>
-                        <option value="Baby's First Milestones">Baby's First Milestones</option>
-                    </select>
-                    <select className="edit-field" onChange={this.handleChange}name="color" id="">
-                        <option value="Default">Select Color</option>
-                        <option value="Blue">Blue</option>
-                        <option value="Green">Green</option>
-                        <option value="Yellow">Yellow</option>
-                        <option value="Pink">Pink</option>
-                    </select>
-                    <button id="edit-button" className="edit-scrapbook-button" onClick={this.handleSubmit}>SUBMIT</button>
-                </form>
-            </div>
+                    <div id="chosen">
+                        <div id="current-choice">Currently Selected:</div>
+                        <div className ="current">{this.props.scrapbook.scrapbook_title}</div>
+                        <div className ="current">{this.props.scrapbook.theme}</div>
+                        <div className ="current">{this.props.scrapbook.color}</div>
+                    </div>
 
-                <div id="toggle-page">
-                { this.state.showForm &&
-                    <AddPage
-                        scrapbook_id={this.props.match.params.id}
-                    /> }
-                    <button id="addnewpage-button" onClick={this.togglePageForm}>Add New Page</button>
+                    <div id="edit-form-container">
+                        <form id="edit-scrapbook-form">
+                            <div id="edit-info">Edit Info:</div>
+                            <input className="edit-field" onChange={this.handleChange} name="scrapbook_title" placeholder="Scrapbook Title" id="" />
+                            <select className="edit-field" onChange={this.handleChange} name="theme" id="">
+                                <option value="Default">Select Theme</option>
+                                <option value="Travel">Travel</option>
+                                <option value="New Year's Eve">New Year's Eve</option>
+                                <option value="Graduation">Graduation</option>
+                                <option value="Baby's First Milestones">Baby's First Milestones</option>
+                            </select>
+                            <select className="edit-field" onChange={this.handleChange}name="color" id="">
+                                <option value="Default">Select Color</option>
+                                <option value="Blue">Blue</option>
+                                <option value="Green">Green</option>
+                                <option value="Yellow">Yellow</option>
+                                <option value="Pink">Pink</option>
+                            </select>
+                            <button id="edit-button" className="edit-scrapbook-button" onClick={this.handleSubmit}>SUBMIT</button>
+                        </form>
+                    </div>
                 </div>
-                </div>
-                <div id="edit-pages">{this.renderEditPages()}</div>
+
+                <div className="edit-page-wrapper">
+                    <div id="edit-pages">
+                        <div id="toggle-page">
+                            { this.state.showForm &&
+                                <AddPage
+                                    scrapbook_id={this.props.match.params.id}
+                                    />
+                            }
+                            <button id="addnewpage-button" onClick={this.togglePageForm}>Add New Page</button>
+                        </div>
+                        {this.renderEditPages()}
+                    </div>
 
                     <div id="editpage-scrapbook-page-container">
-                        <div className={this.props.selectedColor} id="editpage-scrapbook-page">
-                            {/*<img id="editpage-planetail" src="../images/planetail.png"></img>
-                            <img id="editpage-suitcase" src="../images/suitcase1.png"></img>
-                            <img id="editpage-bike" src="../images/bike2.png"></img>
-                            <img id="editpage-sunglasses" src="../images/sunglasses.png"></img>
-                            <img id="editpage-map" src="../images/map.png"></img>
-                            <img id="editpage-passport" src="../images/passport.png"></img>
-                            <img id="editpage-sign" src="../images/sign.png"></img>*/}
-                            <img id="scrapbook-template" src="../images/scrapbook-template.png"></img>
-                            <div id="editpage-top-pic-container">
-                                {/*<div className="pic" id="editpage-pic1">
-                                    <img src={this.props.scrapbookInfo.pages[0].images[0].file}></img>
-                                </div>*/}
-                                {/*<div className="pic" id="editpage-pic2"></div>*/}
-                            </div>
-                            <div id="editpage-bottom-pic-container">
-                            {/*<div className="pic" id="editpage-pic3"></div>
-                            <div className="pic" id="editpage-pic4"></div>
-                            <div className="pic" id="editpage-pic5"></div>*/}
-                            </div>
-                        </div>
+
                     </div>
+                </div>
 
             </div>
         )
@@ -142,3 +128,29 @@ class EditScrapbook extends React.Component {
 }
 
 export default connect(mapStateToProps)(EditScrapbook)
+
+
+
+
+
+// <div className={this.props.selectedColor} id="editpage-scrapbook-page">
+//     <img id="editpage-planetail" src="../images/planetail.png"></img>
+//     <img id="editpage-suitcase" src="../images/suitcase1.png"></img>
+//     <img id="editpage-bike" src="../images/bike2.png"></img>
+//     <img id="editpage-sunglasses" src="../images/sunglasses.png"></img>
+//     <img id="editpage-map" src="../images/map.png"></img>
+//     <img id="editpage-passport" src="../images/passport.png"></img>
+//     <img id="editpage-sign" src="../images/sign.png"></img>
+//     {/*<img id="scrapbook-template" src="../images/scrapbook-template.png"></img>*/}
+//     <div id="editpage-top-pic-container">
+//         {/*<div className="pic" id="editpage-pic1">
+//             <img src={this.props.scrapbookInfo.pages[0].images[0].file}></img>
+//             </div>*/}
+//         <div className="pic" id="editpage-pic2"></div>
+//     </div>
+//     <div id="editpage-bottom-pic-container">
+//         <div className="pic" id="editpage-pic3"></div>
+//         <div className="pic" id="editpage-pic4"></div>
+//         <div className="pic" id="editpage-pic5"></div>
+//     </div>
+// </div>
