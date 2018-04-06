@@ -1,7 +1,16 @@
 import React from 'react';
 import Modal from 'react-modal';
+import {connect} from 'react-redux';
 const placeholder = 'http://via.placeholder.com/550x450';
 Modal.setAppElement('main');
+
+
+const mapStateToProps = state => {
+    return {
+        scrapbookInfo: state.scrapbookInfo
+    }
+}
+
 
 class Page extends React.Component {
     constructor(props) {
@@ -30,19 +39,24 @@ class Page extends React.Component {
         if (!this.props.page || this.props.page.images.length == 0) {
             return (<div id="not-enough">You don't have enough images to render this page.</div>)
         }
+        if (!this.props.scrapbookInfo) {
+            return null
+        }
+
         console.log(this.props);
         return (
             <div id="scrapbook-page-container">
-
-                <Modal
+                <Modal className="modal"
                   isOpen={this.state.showModal}
                   onRequestClose={this.closeModal}
-                  contentLabel="Example Modal"
+                  contentLabel="Modal"
                   >
-                  <h2 onClick={this.closeModal}>X</h2>
-                      <img src={this.state.imageSource}/>
+                  <h2 id="x" onClick={this.closeModal}>X</h2>
+                  <p id="description">{this.props.scrapbookInfo.pages[0].header}</p>
+                  <img className="img" src={this.state.imageSource}/>
 
                 </Modal>
+
 
                 <div id="scrapbook-page">
                     <h1 id="header">{this.props.page.header}</h1>
@@ -93,4 +107,4 @@ class Page extends React.Component {
 }
 
 
-export default Page
+export default connect(mapStateToProps)(Page)

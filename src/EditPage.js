@@ -34,9 +34,10 @@ class EditPage extends React.Component {
          return this.props.images.map( image => {
              console.log(image.file);
              return (
-
+                
                 <img className="render-images" key={image.id} src={image.file} alt="Scrapbook Photos"
                     />
+
              )
          })
     }
