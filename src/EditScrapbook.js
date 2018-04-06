@@ -92,11 +92,11 @@ class EditScrapbook extends React.Component {
                             <div id="edit-info">Edit Info:</div>
                             <input className="edit-field" onChange={this.handleChange} name="scrapbook_title" placeholder="Scrapbook Title" id="" />
                             <select className="edit-field" onChange={this.handleChange} name="theme" id="">
-                                <option value="Default">Select Theme</option>
-                                <option value="Travel">Travel</option>
-                                <option value="New Year's Eve">New Year's Eve</option>
-                                <option value="Graduation">Graduation</option>
-                                <option value="Baby's First Milestones">Baby's First Milestones</option>
+                                <option value="default">Select Theme</option>
+                                <option value="travel">Travel</option>
+                                <option value="new_years_eve">New Year's Eve</option>
+                                <option value="graduation">Graduation</option>
+                                <option value="babys_first_milestones">Baby's First Milestones</option>
                             </select>
                             <select className="edit-field" onChange={this.handleChange}name="color" id="">
                                 <option value="Default">Select Color</option>

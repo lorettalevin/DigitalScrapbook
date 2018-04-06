@@ -353,6 +353,11 @@ input {
     margin-left: 20px;
 }
 
+.coverpic {
+    height: 650px;
+    width: 1300px;
+}
+
 #addnewpage-button, .edit-scrapbook-button, #add-page-button, #image-button {
     border: 2px #12bbee solid;
     font-size: 15px;
@@ -468,7 +473,7 @@ input {
 
 /* --------------------Scrapbook------------------------ */
 
-#scrapbook-cover-container {
+.scrapbook-cover-container {
     /*     border: 5px yellow solid; */
     display: flex;
     justify-content: center;
@@ -481,6 +486,8 @@ input {
 #main-container {
     display: flex;
     justify-content: center;
+    height: 650px;
+    width: 1300px;
 }
 
 .cover-title {
@@ -607,4 +614,8 @@ input {
 .full-width {
     width: 100%;
     box-sizing: border-box;
+}
+
+#no-pages {
+    display: none;
 }
