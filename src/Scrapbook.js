@@ -2,6 +2,7 @@ import React from 'react';
 import { getFullScrapbook } from "./actions";
 import {connect} from 'react-redux';
 import Page from './Page';
+import { GridLoader } from 'react-spinners';
 
 const mapStateToProps = state => {
     return {
@@ -21,7 +22,13 @@ class Scrapbook extends React.Component {
 
     renderPages() {
         if (this.props.scrabookInfo && !this.props.scrabookInfo.pages) {
-            return (<div>Loading...</div>)
+            return (
+                <div className='sweet-loading'>
+                    <GridLoader
+                        color={'#123abc'}
+                    />
+                </div>
+            )
         } else if (this.props.scrapbookInfo.pages.length == 0) {
             return (<div>You have not added any pages.</div>)
         } else {
@@ -36,7 +43,13 @@ class Scrapbook extends React.Component {
 
     render() {
         if (!this.props.scrapbookInfo) {
-            return (<div>Loading...</div>)
+            return (
+                <div className='sweet-loading'>
+                    <GridLoader
+                        color={'#123abc'}
+                    />
+                </div>
+            )
         }
         const renderedPages = this.props.scrapbookInfo.pages.map((page, i) => {
             return (

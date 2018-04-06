@@ -43,9 +43,9 @@ class AddImages extends React.Component {
     render() {
         return (
             <form className="add-images-container">
-                <input className="image-field" onChange={this.handleChange} name="file" type="file"/>
                 <input className="image-field" onChange={this.handleChange} name="image_title" type="text" placeholder="Image Title"/>
                 <input className="image-field" onChange={this.handleChange} name="description" type="text" placeholder="Image Caption"/>
+                <input className="image-field" onChange={this.handleChange} name="file" type="file"/>
                 <button id="image-button" onClick={this.handleSubmit}>SUBMIT</button>
             </form>
         )}
