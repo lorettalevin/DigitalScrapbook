@@ -315,7 +315,11 @@ input {
 }
 
 #header {
+    font-family: 'Petit Formal Script';
+    font-weight: bold;
+    font-size: 25px;
     text-align: center;
+    color: #777070;
 }
 
 .edit-field {
@@ -341,7 +345,12 @@ input {
 }
 
 .render-images {
-    height: 150px;
+    height: 140px;
+    width: 200px;
+    position: relative;
+    top: -150px;
+    float: right;
+    margin-left: 20px;
 }
 
 #addnewpage-button, .edit-scrapbook-button, #add-page-button, #image-button {
@@ -420,7 +429,11 @@ input {
 
 #delete-button {
     background-color: #ad0e0e;
+}
 
+#delete-button:hover {
+    background-color: #ff3434;
+    transition: background-color 0.5s ease;
 }
 
 .left-font {
@@ -470,7 +483,7 @@ input {
     justify-content: center;
 }
 
-#cover-title {
+.cover-title {
     /*     border: 2px red solid; */
     width: 267px;
     height: 55px;
@@ -555,6 +568,38 @@ input {
 #travel5 {
     height: 225px;
     width: 225px;
+}
+
+#x {
+    font-size: 25px;
+    /*     border: 3px green solid; */
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 3%;
+    padding-top: 2%;
+    color: #62A0C0;
+}
+
+.img {
+    height: 250px;
+    width: 400px;
+    padding-left: 28px;
+}
+
+#description {
+    font-family: 'Petit Formal Script';
+    font-weight: bold;
+    font-size: 30px;
+    color: #62A0C0;
+    /*     text-align: center; */
+}
+
+.modal {
+    background-color: #def188de;
+    width: 850px;
+    height: 500px;
+    margin-left: 20%;
+    margin-top: 7%;
 }
 
 /* -------------------------Helper Classes------------------ */
