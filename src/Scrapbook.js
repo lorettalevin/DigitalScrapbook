@@ -31,7 +31,7 @@ class Scrapbook extends React.Component {
                 </div>
             )
         } else if (this.props.scrapbookInfo.pages.length == 0) {
-            return (<div>You have not added any pages.</div>)
+            return (<div id="no-pages">You have not added any pages.</div>)
         } else {
             return this.props.scrapbookInfo.pages.map(page => (
                 <Page
