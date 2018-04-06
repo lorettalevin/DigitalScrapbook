@@ -28,7 +28,7 @@ class Page extends React.Component {
     }
     render() {
         if (!this.props.page || this.props.page.images.length == 0) {
-            return (<div>You don't have enough images to render this page.</div>)
+            return (<div id="not-enough">You don't have enough images to render this page.</div>)
         }
         console.log(this.props);
         return (

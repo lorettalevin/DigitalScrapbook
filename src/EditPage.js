@@ -35,14 +35,13 @@ class EditPage extends React.Component {
              console.log(image.file);
              return (
 
-                <img className="render-images" key={image.id} src={image.file} alt="scrapbook pictures"
+                <img className="render-images" key={image.id} src={image.file} alt="Scrapbook Photos"
                     />
              )
          })
     }
 
     render() {
-        console.log("rendinger", this.props);
         return (
             <div className="edit-page-single">
                 <AddImages

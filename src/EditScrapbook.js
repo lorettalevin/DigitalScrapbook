@@ -78,7 +78,7 @@ class EditScrapbook extends React.Component {
     render() {
         return (
             <div id="edit-scrapbook-page">
-                <h1>Edit Your Scrapbook</h1>
+                <h1 id="edit-your-sb">Edit Your Scrapbook</h1>
                 <div id="chosen-and-edit-form-container">
                     <div id="chosen">
                         <div id="current-choice">Currently Selected:</div>
