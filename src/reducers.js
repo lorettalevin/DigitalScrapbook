@@ -35,10 +35,10 @@ export default function reducer(state = INITIAL_STATE, action) {
     if (action.type === 'ADD_PAGE') {
         const pages = state.pages.slice()
         pages.push(action.page)
+        console.log("THE PAGE WE ARE ADDING AHHHH", action.page);
 
         state = Object.assign({}, state, {
             pages
-
         });
         console.log("ADDED page to the STATE", state);
     }

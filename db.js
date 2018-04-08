@@ -124,7 +124,7 @@ function addPage(scrapbook_id, header) {
         `;
         const params = [scrapbook_id, header];
         db.query(q, params).then(results => {
-            resolve(results.rows[0]);
+            resolve(results.rows[0].id);
         }).catch(err => {
             reject(err);
         });
@@ -148,6 +148,7 @@ function getPages(scrapbook_id) {
 }
 
 function addImages(page_id, file, description, image_title) {
+
     return new Promise((resolve, reject) => {
         const q = `
         INSERT INTO images (page_id, file, description, image_title)
@@ -155,7 +156,10 @@ function addImages(page_id, file, description, image_title) {
         RETURNING *
         `;
         const params = [page_id, file, description, image_title];
+        console.log("These are our params", params);
+
         db.query(q, params).then(results => {
+            console.log("these are our results", results.rows);
             resolve(results.rows);
         }).catch(err => {
             reject(err);

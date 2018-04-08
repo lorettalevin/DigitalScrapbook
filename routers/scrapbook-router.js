@@ -94,6 +94,7 @@ router.get('/getpages/:scrapbook_id', (req, res) => {
 });
 
 router.post('/addimages/:page_id', uploader.single('file'), s3.upload, (req, res) => {
+
     db.addImages(req.params.page_id, req.file.filename, req.body.image_title, req.body.description).then(images => {
         //when we add multiple images we will need to REDO the logic in this route
         const file = s3Url + req.file.filename;

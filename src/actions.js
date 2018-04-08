@@ -60,6 +60,7 @@ export function getPages(scrapbook_id) {
 }
 
 export function addImages(page_id, formData) {
+    console.log("about to run axios.post", page_id);
     return axios.post(`/addimages/${page_id}`, formData).then(resp => {
         return {
             type: "ADD_IMAGES",
