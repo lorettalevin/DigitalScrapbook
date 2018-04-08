@@ -6,7 +6,8 @@ import { GridLoader } from 'react-spinners';
 
 const mapStateToProps = (state, props) => {
     return {
-        images: state.images.filter( image => props.page.id == image.page_id)
+        images: state.images.filter( image => props.page.id == image.page_id),
+        scrapbookInfo: state.scrapbookInfo
     }
 }
 
@@ -34,7 +35,7 @@ class EditPage extends React.Component {
          return this.props.images.map( image => {
              console.log(image.file);
              return (
-                
+
                 <img className="render-images" key={image.id} src={image.file} alt="Scrapbook Photos"
                     />
 
@@ -45,6 +46,7 @@ class EditPage extends React.Component {
     render() {
         return (
             <div className="edit-page-single">
+                 <h1 id="page-header">{this.props.page.header}</h1>
                 <AddImages
                     page_id={this.props.page.id}
                     />

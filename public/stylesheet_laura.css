@@ -353,10 +353,10 @@ input {
     margin-left: 20px;
 }
 
-.coverpic {
+/* .coverpic {
     height: 650px;
     width: 1300px;
-}
+} */
 
 #addnewpage-button, .edit-scrapbook-button, #add-page-button, #image-button {
     border: 2px #12bbee solid;
@@ -384,11 +384,16 @@ input {
 }
 
 #page-header {
-    position: absolute;
-    top: 550px;
-    /*     border: 3px red solid; */
-    left: 670px;
-    font-family: 'Merriweather Sans';
+    font-family: 'Open Sans';
+    font-size: 23px;
+    margin-top: -5px;
+    background-color: #bccebebd;
+    height: 34px;
+    width: 100%;
+    text-align: center;
+    /* border: 2px red solid; */
+    color: #ffffff;
+    text-transform: uppercase;
 }
 
 /* --------------------My Scrapbook------------------------ */
@@ -474,7 +479,7 @@ input {
 /* --------------------Scrapbook------------------------ */
 
 .scrapbook-cover-container {
-    /*     border: 5px yellow solid; */
+    /* border: 5px yellow solid; */
     display: flex;
     justify-content: center;
     background-color: #4EA2C3;
@@ -483,12 +488,12 @@ input {
     width: 1300px;
 }
 
-#main-container {
+/* #main-container {
     display: flex;
     justify-content: center;
     height: 650px;
     width: 1300px;
-}
+} */
 
 .cover-title {
     /*     border: 2px red solid; */

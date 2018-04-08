@@ -25,6 +25,7 @@ class AddImages extends React.Component {
         formData.append('file', this.state.file);
         formData.append('image_title', this.state.image_title);
         formData.append('description', this.state.description);
+        console.log("ABOUT TO SEND THIS SHIT AHHH", this.props);
         this.props.dispatch(addImages(this.props.page_id, formData));
     }
 
